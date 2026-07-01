@@ -1,0 +1,3018 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backyard × Bike · Kurz-Pitch · Karl+Karla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Backyard × Bike · Pitch HTML v1
+   CI: KarlvonDrais Brand-Book-Variant + Display-Stack
+   ============================================================ */
+
+/* Dharma Gothic E (Display) */
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_ExLight_R.otf") format("opentype"); font-weight:200; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Light_R.otf")   format("opentype"); font-weight:300; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Regular_R.otf") format("opentype"); font-weight:400; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Bold_R.otf")    format("opentype"); font-weight:700; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_ExBold_R.otf")  format("opentype"); font-weight:800; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Heavy_R.otf")   format("opentype"); font-weight:900; font-style:normal; font-display:block; }
+
+:root {
+  /* ── Karl+Karla CI ── */
+  --kvd-white:   #FFFFFF;
+  --kvd-black:   #0A0A0A;
+  --kvd-sand:    #F4F4F2;
+  --kvd-grau:    #EBEBEA;
+  --kvd-flieder: rgba(0,0,254,.8);
+  --kvd-rot:     #0000FE;
+  --kvd-gelb:    #0000FE;
+  --f-standard:  'Plus Jakarta Sans', 'Helvetica Neue', sans-serif;
+  --f-display:   'Barlow Condensed', 'Bebas Neue', sans-serif;
+  --f-quote:     'Barlow Condensed', Georgia, serif;
+  --pad: 96px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--kvd-sand);
+  color: var(--kvd-black);
+  font-family: var(--f-standard);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page { max-width: 1080px; margin: 0 auto; padding: 64px var(--pad) 96px; }
+.eyebrow {
+  color: var(--kvd-flieder);
+  font-size: 13px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 0 24px 0;
+}
+.eyebrow-rot { color: var(--kvd-rot); }
+.eyebrow-white { color: var(--kvd-flieder); }
+
+h1, h2, h3, h4 { font-family: var(--f-standard); margin: 0; }
+h1 { font-weight: 700; font-size: 64px; line-height: 1.04; letter-spacing: -0.01em; text-transform: uppercase; }
+h2 { font-weight: 700; font-size: 40px; line-height: 1.08; letter-spacing: -0.005em; text-transform: uppercase; margin: 96px 0 24px 0; }
+h3 { font-weight: 700; font-size: 22px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.01em; margin: 48px 0 12px 0; }
+h4 { font-weight: 700; font-size: 15px; letter-spacing: 0.10em; text-transform: uppercase; margin: 28px 0 8px 0; }
+p { margin: 0 0 16px 0; }
+strong { font-weight: 700; }
+ul, ol { padding-left: 1.3em; margin: 0 0 16px 0; }
+li { margin: 6px 0; }
+a { color: var(--kvd-black); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============================================================
+   HERO · Full-viewport dramatic
+   ============================================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--kvd-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  filter: contrast(1.10) saturate(0.85);
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.20) 40%, rgba(0,0,0,0.75) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 56px var(--pad) 0 var(--pad);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: var(--kvd-white);
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+.hero-top img.logo { height: 72px; width: auto; }
+.hero-meta {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.7;
+}
+.hero-meta .accent { color: var(--kvd-rot); font-weight: 700; }
+.hero-meta .meta-block { display: inline-block; padding: 6px 12px; border: 1px solid var(--kvd-white); margin-bottom: 8px; }
+
+.hero-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px;
+}
+.hero-eyebrow {
+  color: var(--kvd-flieder);
+  font-size: 16px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+.hero h1 {
+  font-family: var(--f-standard);
+  font-weight: 700;
+  font-size: 188px;
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  color: var(--kvd-white);
+  margin: 0 0 36px 0;
+}
+.hero h1 .of {
+  display: inline-block;
+  color: var(--kvd-rot);
+  font-weight: 400;
+  font-style: italic;
+  font-family: var(--f-quote);
+  letter-spacing: -0.015em;
+  font-size: 162px;
+  vertical-align: baseline;
+}
+.hero-tagline {
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 400;
+  max-width: 920px;
+  color: var(--kvd-white);
+  margin-bottom: 12px;
+}
+.hero-tagline strong { color: var(--kvd-rot); }
+.hero-sub {
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  max-width: 920px;
+}
+
+.hero-cta {
+  position: relative;
+  z-index: 1;
+  padding: 24px var(--pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: var(--kvd-white);
+}
+.hero-cta-left {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.hero-cta-right {
+  font-family: var(--f-quote);
+  font-style: italic;
+  color: var(--kvd-flieder);
+  font-size: 14px;
+}
+
+/* ============================================================
+   STATS TICKER · Black bar right after hero
+   ============================================================ */
+.ticker {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 64px var(--pad);
+  width: 100%;
+}
+.ticker-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+.ticker-cell {
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 20px;
+}
+.ticker-cell:first-child { border-left: none; padding-left: 0; }
+.ticker-num {
+  font-family: var(--f-standard);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.ticker-num.rot { color: var(--kvd-rot); }
+.ticker-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ARDA REFERENCE · Sand bg, big quote
+   ============================================================ */
+.frame-statement {
+  background: var(--kvd-sand);
+  padding: 120px var(--pad);
+  width: 100%;
+}
+.frame-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.frame-statement .eyebrow { margin-bottom: 32px; }
+.frame-quote {
+  font-family: var(--f-quote);
+  font-size: 52px;
+  line-height: 1.18;
+  color: var(--kvd-rot);
+  margin: 0 0 28px 0;
+  letter-spacing: -0.005em;
+}
+.frame-attr {
+  font-family: var(--f-quote);
+  font-style: italic;
+  color: var(--kvd-rot);
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   FACT BLOCK · Was das Format ist
+   ============================================================ */
+.facts {
+  background: var(--kvd-sand);
+  padding: 0 var(--pad) 96px var(--pad);
+  width: 100%;
+}
+.facts-inner { max-width: 1280px; margin: 0 auto; }
+.facts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 32px;
+}
+.facts-header h2 { margin: 0; max-width: 700px; }
+.facts-header-right {
+  text-align: right;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-black);
+  max-width: 320px;
+  line-height: 1.6;
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.fact {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.fact-num {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--kvd-black);
+}
+.fact-num.rot { color: var(--kvd-rot); }
+.fact-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.fact-body { font-size: 15px; line-height: 1.45; }
+
+/* ============================================================
+   SECTION DIVIDER · Full-width black bands
+   ============================================================ */
+.divider {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 96px var(--pad);
+  width: 100%;
+  position: relative;
+}
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--kvd-rot);
+}
+.divider-inner { max-width: 1280px; margin: 0 auto; }
+.divider .num {
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+}
+.divider h2 {
+  color: var(--kvd-white);
+  font-weight: 400;
+  font-size: 108px;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.divider h2 strong { font-weight: 700; }
+.divider h2 .rot { color: var(--kvd-rot); }
+.divider-sub {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--kvd-white);
+  max-width: 720px;
+  margin-top: 32px;
+}
+
+/* ============================================================
+   SPONSOR TIERS · Investment cards
+   ============================================================ */
+.tiers {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.tiers-inner { max-width: 1280px; margin: 0 auto; }
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.tier {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.tier.title-tier {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+}
+.tier.title-tier .tier-name,
+.tier.title-tier .tier-slots,
+.tier.title-tier .tier-price,
+.tier.title-tier .tier-list li { color: var(--kvd-white); }
+.tier-name {
+  font-size: 13px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--kvd-rot);
+}
+.tier.title-tier .tier-name { color: var(--kvd-rot); }
+.tier-slots {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--kvd-black);
+  opacity: 0.7;
+}
+.tier-price {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+  color: var(--kvd-black);
+}
+.tier-price-suffix {
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--kvd-black);
+  opacity: 0.7;
+}
+.tier.title-tier .tier-price-suffix { color: var(--kvd-flieder); opacity: 1; }
+.tier-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.tier-list li {
+  padding: 6px 0 6px 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  position: relative;
+}
+.tier.title-tier .tier-list li { border-bottom: 1px solid rgba(255,255,255,0.15); }
+.tier-list li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: var(--kvd-rot);
+  font-weight: 700;
+}
+.tier-list li:last-child { border-bottom: none; }
+
+.tier-totals {
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.tier-total-num {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.tier-total-num.rot { color: var(--kvd-rot); }
+.tier-total-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+}
+
+/* ============================================================
+   CAST · Roster grid
+   ============================================================ */
+.cast {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.cast-inner { max-width: 1280px; margin: 0 auto; }
+.cast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cast-header h2 { margin: 0; }
+.cast-status {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  border: 1px solid var(--kvd-rot);
+  padding: 6px 12px;
+}
+.cast-intro {
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.cast-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+.cast-num {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--kvd-rot);
+  letter-spacing: -0.02em;
+}
+.cast-info { min-width: 0; }
+.cast-name {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.cast-role {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-black);
+  opacity: 0.65;
+  margin-bottom: 2px;
+}
+.cast-platform {
+  font-size: 12px;
+  color: var(--kvd-black);
+  opacity: 0.7;
+}
+.cast-reach {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.cast-reach .small { font-size: 10px; letter-spacing: 0.15em; display: block; text-transform: uppercase; opacity: 0.6; font-weight: 400; }
+.cast-via {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  border-top: 1px solid var(--kvd-rot);
+  padding-top: 4px;
+}
+
+.cast-totals {
+  margin-top: 32px;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cast-totals .big {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-rot);
+}
+.cast-totals .label {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   FORMAT BLOCK · 24/7 Online
+   ============================================================ */
+.format-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.format-inner { max-width: 1280px; margin: 0 auto; }
+.format-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.pillar {
+  background: var(--kvd-white);
+  border-left: 6px solid var(--kvd-rot);
+  padding: 32px;
+}
+.pillar-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.pillar h3 {
+  margin: 0 0 16px 0;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.pillar p { font-size: 15px; line-height: 1.5; }
+.pillar ul { font-size: 15px; padding-left: 1.1em; }
+
+/* ============================================================
+   DATA OVERLAY VISUAL · Stream-Daten preview
+   ============================================================ */
+.data-strip {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 48px var(--pad);
+  width: 100%;
+}
+.data-strip-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.data-cell {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 16px;
+}
+.data-cell-label {
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  margin-bottom: 8px;
+}
+.data-cell-val {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--kvd-white);
+  font-variant-numeric: tabular-nums;
+}
+.data-cell-val.rot { color: var(--kvd-rot); }
+
+/* ============================================================
+   TABLES · Base
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 32px;
+  font-size: 15px;
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--kvd-grau);
+}
+thead th {
+  background: var(--kvd-grau);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  border-bottom: 2px solid var(--kvd-black);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: #F4F4F2; }
+
+.callout {
+  background: var(--kvd-white);
+  border-left: 4px solid var(--kvd-rot);
+  padding: 24px 28px;
+  margin: 32px 0;
+  font-size: 16px;
+}
+.callout h4 { margin-top: 0; color: var(--kvd-rot); font-size: 13px; letter-spacing: 0.15em; }
+
+.quote-block {
+  font-family: var(--f-quote);
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--kvd-rot);
+  text-align: left;
+  margin: 64px 0;
+  max-width: 880px;
+}
+.quote-attr {
+  font-family: var(--f-quote);
+  font-size: 14px;
+  color: var(--kvd-rot);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+.figure { margin: 48px 0; }
+.figure img { width: 100%; height: auto; display: block; }
+.figure-caption {
+  font-family: var(--f-quote);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--kvd-rot);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+.figure--full { width: 100%; }
+.figure--full img { width: 100%; height: 620px; object-fit: cover; }
+.figure--full .figure-caption { padding: 10px var(--pad) 0; max-width: 1280px; margin: 0 auto; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin: 32px 0; }
+
+/* Location 3-tile grid */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 32px 0 48px 0;
+}
+.location-tile {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--kvd-black);
+}
+.location-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.location-tile-label {
+  position: absolute;
+  bottom: 0; left: 0;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+}
+.location-tile-label .accent { color: var(--kvd-rot); }
+
+/* Track Record 4-tile */
+.trackrec {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.trackrec-inner { max-width: 1280px; margin: 0 auto; }
+.trackrec-header { margin-bottom: 48px; }
+.trackrec-lead {
+  position: relative;
+  margin-bottom: 16px;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+.trackrec-lead img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trackrec-lead-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 32px;
+}
+.trackrec-lead-caption .label {
+  color: var(--kvd-rot);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.trackrec-lead-caption .text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 720px;
+}
+.trackrec-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.trackrec-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--kvd-black);
+}
+.trackrec-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trackrec-tile-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 20px 18px;
+}
+.trackrec-tile-caption .label {
+  color: var(--kvd-rot);
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.trackrec-tile-caption .text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Reach Chart */
+.reach-chart {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 96px var(--pad);
+}
+.reach-inner { max-width: 1280px; margin: 0 auto; }
+.reach-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.reach-header-row h2 { color: var(--kvd-white); margin: 0; }
+.reach-headline-num {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--kvd-rot);
+}
+.reach-headline-label {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  text-align: right;
+  line-height: 1.5;
+}
+.reach-bars { display: flex; flex-direction: column; gap: 4px; }
+.reach-bar {
+  display: grid;
+  grid-template-columns: 200px 1fr 120px;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.reach-bar-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.reach-bar-name .sub {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.reach-bar-track {
+  position: relative;
+  height: 22px;
+  background: rgba(255,255,255,0.05);
+}
+.reach-bar-fill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  background: var(--kvd-rot);
+}
+.reach-bar-fill.muted { background: rgba(255,255,255,0.55); }
+.reach-bar-value {
+  font-size: 14px;
+  text-align: right;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.reach-bar-value .sub {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--kvd-flieder);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.reach-legend {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.reach-legend-item { display: flex; align-items: center; gap: 10px; }
+.reach-legend-dot { width: 14px; height: 14px; }
+.reach-legend-dot.rot { background: var(--kvd-rot); }
+.reach-legend-dot.muted { background: rgba(255,255,255,0.55); }
+
+/* Sponsor activation matrix */
+.matrix {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.matrix-inner { max-width: 1280px; margin: 0 auto; }
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  font-size: 14px;
+}
+.matrix-table th, .matrix-table td {
+  text-align: center;
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--kvd-grau);
+  border-right: 1px solid var(--kvd-grau);
+}
+.matrix-table th:last-child, .matrix-table td:last-child { border-right: none; }
+.matrix-table thead th {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+.matrix-table tbody td:first-child {
+  text-align: left;
+  font-weight: 700;
+  background: var(--kvd-grau);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+}
+.matrix-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.matrix-dot.full { background: var(--kvd-rot); }
+.matrix-dot.half { background: var(--kvd-rot); opacity: 0.45; }
+.matrix-dot.empty { background: var(--kvd-grau); border: 1px solid var(--kvd-black); }
+.matrix-text { font-size: 12px; font-weight: 700; }
+
+.matrix-scroll-hint { display: none; }
+
+/* Dryll-Highlight in der Matrix-Zeile */
+.matrix-table tbody tr.is-dryll td {
+  background: #F4F4F2;
+  border-top: 2px solid var(--kvd-rot);
+  border-bottom: 2px solid var(--kvd-rot);
+}
+.matrix-table tbody tr.is-dryll td:first-child {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  position: relative;
+}
+.matrix-table tbody tr.is-dryll td:first-child::after {
+  content: "Du";
+  position: absolute;
+  top: 6px; right: 8px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  padding: 2px 6px;
+  font-weight: 700;
+}
+
+/* Premium-Tier Dryll-Badge */
+.tier.is-dryll {
+  outline: 3px solid var(--kvd-rot);
+  outline-offset: -3px;
+  position: relative;
+}
+.tier.is-dryll::before {
+  content: "Vorschlag · Dryll";
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+/* "Personalisiert für"-Stripe im Hero */
+.dryll-stripe {
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  padding: 14px var(--pad);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.dryll-stripe span.accent {
+  color: #F4F4F2;
+  font-weight: 700;
+}
+
+/* Strategische Bridge: 3 Argumente jetzt */
+.strat-bridge {
+  background: var(--kvd-sand);
+  padding: 120px var(--pad);
+}
+.strat-bridge-inner { max-width: 1280px; margin: 0 auto; }
+.strat-bridge-eyebrow {
+  color: var(--kvd-rot);
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+.strat-bridge-h {
+  font-size: 56px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 1000px;
+}
+.strat-bridge-lead {
+  font-size: 19px;
+  line-height: 1.5;
+  max-width: 880px;
+  margin: 0 0 64px 0;
+}
+.strat-bridge-lead strong { color: var(--kvd-rot); }
+.bridge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.bridge-card {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 36px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  border-top: 8px solid var(--kvd-rot);
+  position: relative;
+}
+.bridge-card .bridge-num {
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.bridge-card .bridge-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  margin-bottom: 28px;
+}
+.bridge-card h3 {
+  font-size: 22px;
+  line-height: 1.22;
+  text-transform: none;
+  margin: 0 0 20px 0;
+  color: var(--kvd-white);
+  letter-spacing: -0.005em;
+}
+.bridge-card h3 .rot { color: var(--kvd-rot); }
+.bridge-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 14px 0;
+}
+.bridge-card p:last-child { margin-bottom: 0; }
+.bridge-card ul {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 8px 0 14px 0;
+  padding-left: 20px;
+  color: rgba(255,255,255,0.85);
+}
+.bridge-card ul li { margin: 4px 0; }
+.bridge-payoff {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.bridge-payoff strong {
+  display: block;
+  color: var(--kvd-rot);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* "Warum Dryll"-Pitch-Section */
+.why-dryll {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 120px var(--pad);
+}
+.why-dryll-inner { max-width: 1080px; margin: 0 auto; }
+.why-dryll h2 { color: var(--kvd-white); margin: 0 0 32px 0; font-size: 56px; line-height: 1.05; }
+.why-dryll h2 .rot { color: var(--kvd-rot); }
+.why-dryll-lead {
+  font-size: 22px;
+  line-height: 1.4;
+  max-width: 880px;
+  margin-bottom: 64px;
+  color: var(--kvd-white);
+}
+.why-dryll-lead strong { color: var(--kvd-rot); }
+.why-dryll-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.why-dryll-card {
+  border-left: 4px solid var(--kvd-rot);
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.04);
+}
+.why-dryll-card .num {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-rot);
+  margin-bottom: 12px;
+}
+.why-dryll-card h3 {
+  color: var(--kvd-white);
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+.why-dryll-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ============================================================
+   RESPONSIVE · Tablet ≤ 1024px, Phone ≤ 640px
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root { --pad: 48px; }
+  body { font-size: 16px; }
+  h1 { font-size: 52px; }
+  h2 { font-size: 34px; margin: 72px 0 20px 0; }
+  h3 { font-size: 20px; }
+
+  .page { padding: 56px var(--pad) 80px; }
+
+  /* Hero */
+  .hero h1 { font-size: 110px; }
+  .hero h1 .of { font-size: 96px; }
+  .hero-tagline { font-size: 22px; }
+  .hero-sub { font-size: 14px; }
+  .hero-top img.logo { height: 60px; }
+  .hero-meta { font-size: 11px; }
+  .hero-content { padding: 40px var(--pad) 0; }
+
+  /* Ticker */
+  .ticker { padding: 48px var(--pad); }
+  .ticker-grid { grid-template-columns: repeat(3, 1fr); gap: 24px 20px; }
+  .ticker-num { font-size: 44px; }
+  .ticker-label { font-size: 10px; }
+
+  /* Frame-Statement */
+  .frame-statement { padding: 80px var(--pad); }
+  .frame-quote { font-size: 36px; }
+
+  /* Facts */
+  .facts-grid { grid-template-columns: repeat(2, 1fr); }
+  .facts-header { flex-wrap: wrap; }
+  .fact-num { font-size: 36px; }
+
+  /* Divider */
+  .divider { padding: 72px var(--pad); }
+  .divider h2 { font-size: 64px; }
+  .divider-sub { font-size: 18px; }
+
+  /* Tiers */
+  .tiers { padding: 64px var(--pad); }
+  .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+  .tier-totals { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tier-total-num { font-size: 26px; }
+
+  /* Reach-chart */
+  .reach-chart { padding: 64px var(--pad); }
+  .reach-bar { grid-template-columns: 140px 1fr 80px; gap: 10px; }
+  .reach-bar-name { font-size: 12px; }
+  .reach-headline-num { font-size: 64px; }
+
+  /* Matrix */
+  .matrix { padding: 64px var(--pad); }
+  .matrix-table { font-size: 12px; }
+  .matrix-table th, .matrix-table td { padding: 10px 6px; }
+  .matrix-text { font-size: 10px; }
+
+  /* Timeline */
+  .timeline { padding: 64px var(--pad); }
+  .timeline-item { grid-template-columns: 80px 160px 1fr; gap: 16px; }
+
+  /* Trackrec */
+  .trackrec { padding: 64px var(--pad); }
+  .trackrec-tiles { grid-template-columns: repeat(2, 1fr); }
+
+  /* Cast */
+  .cast { padding: 64px var(--pad); }
+  .cast-card { padding: 16px 18px; grid-template-columns: 44px 1fr auto; gap: 14px; }
+  .cast-name { font-size: 17px; }
+
+  /* Format-block */
+  .format-block { padding: 64px var(--pad); }
+
+  /* Data-strip */
+  .data-strip-inner { grid-template-columns: repeat(3, 1fr); }
+  .data-cell-val { font-size: 22px; }
+
+  /* Strat-bridge */
+  .strat-bridge { padding: 80px var(--pad); }
+  .strat-bridge-h { font-size: 40px; }
+  .strat-bridge-lead { font-size: 17px; }
+  .bridge-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Why-dryll */
+  .why-dryll { padding: 80px var(--pad); }
+  .why-dryll h2 { font-size: 40px; }
+  .why-dryll-lead { font-size: 18px; }
+
+  /* Two-col + Location-grid */
+  .two-col { grid-template-columns: 1fr; gap: 24px; }
+  .location-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Quote-block */
+  .quote-block { font-size: 32px; margin: 48px 0; }
+
+  /* Footer */
+  .footer { padding: 32px var(--pad); }
+}
+
+@media (max-width: 640px) {
+  :root { --pad: 20px; }
+  body { font-size: 15px; line-height: 1.5; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 26px; line-height: 1.1; margin: 56px 0 16px 0; }
+  h3 { font-size: 17px; margin: 32px 0 10px 0; }
+  h4 { font-size: 13px; }
+  p { margin: 0 0 12px 0; }
+
+  .page { padding: 40px var(--pad) 56px; }
+
+  /* Dryll-Stripe oben */
+  .dryll-stripe { font-size: 10px; letter-spacing: 0.18em; padding: 12px var(--pad); line-height: 1.6; }
+
+  /* Hero */
+  .hero { min-height: auto; }
+  .hero-content { padding: 28px var(--pad) 0; }
+  .hero-top { flex-direction: column; align-items: flex-start; margin-bottom: 36px; }
+  .hero-top img.logo { height: 44px; }
+  .hero-meta { text-align: left; font-size: 10px; }
+  .hero-meta .meta-block { padding: 4px 8px; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 0.18em; margin-bottom: 24px; }
+  .hero-body { padding-bottom: 32px; }
+  .hero h1 { font-size: 64px; line-height: 0.92; margin-bottom: 24px; }
+  .hero h1 .of { font-size: 54px; }
+  .hero-tagline { font-size: 17px; line-height: 1.4; }
+  .hero-sub { font-size: 12px; letter-spacing: 0.12em; }
+  .hero-cta { flex-direction: column; align-items: flex-start; padding: 18px var(--pad); }
+  .hero-cta-left, .hero-cta-right { font-size: 11px; }
+  .hero-cta-right { font-size: 14px; line-height: 1.4; }
+
+  /* Ticker · 3 columns on phone */
+  .ticker { padding: 36px var(--pad); }
+  .ticker-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; }
+  .ticker-cell { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.18); padding-top: 16px; }
+  .ticker-cell:first-child, .ticker-cell:nth-child(2) { border-top: none; padding-top: 0; }
+  .ticker-num { font-size: 34px; }
+  .ticker-label { font-size: 9px; letter-spacing: 0.15em; line-height: 1.4; }
+
+  /* Frame-Statement */
+  .frame-statement { padding: 56px var(--pad); }
+  .frame-quote { font-size: 22px; line-height: 1.3; }
+  .frame-attr { font-size: 13px; }
+
+  /* Facts */
+  .facts { padding: 0 var(--pad) 56px; }
+  .facts-grid { grid-template-columns: 1fr; gap: 12px; }
+  .facts-header { flex-direction: column; align-items: flex-start; margin-bottom: 32px; }
+  .facts-header-right { text-align: left; font-size: 12px; max-width: 100%; }
+  .fact { padding: 20px; }
+  .fact-num { font-size: 30px; }
+  .fact-body { font-size: 14px; }
+
+  /* Divider */
+  .divider { padding: 56px var(--pad); }
+  .divider h2 { font-size: 40px; line-height: 1; }
+  .divider-sub { font-size: 15px; }
+  .divider .num { font-size: 11px; }
+
+  /* Tiers */
+  .tiers { padding: 56px var(--pad); }
+  .tiers-grid { grid-template-columns: 1fr; gap: 14px; }
+  .tier.is-dryll::before { left: 12px; font-size: 9px; padding: 3px 8px; }
+  .tier-totals { grid-template-columns: 1fr; gap: 20px; padding: 20px; margin-top: 32px; }
+  .tier-total-num { font-size: 24px; }
+
+  /* Reach-chart */
+  .reach-chart { padding: 56px var(--pad); }
+  .reach-header-row { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
+  .reach-headline-num { font-size: 56px; }
+  .reach-headline-label { text-align: left; }
+  .reach-bar { grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 4px 12px; padding: 10px 0; }
+  .reach-bar-name { font-size: 12px; }
+  .reach-bar-track { grid-column: 1 / -1; height: 18px; }
+  .reach-bar-value { font-size: 13px; }
+  .reach-legend { flex-direction: column; gap: 10px; font-size: 11px; }
+
+  /* Matrix · Scroll-x mit normaler Textumbruch */
+  .matrix { padding: 56px var(--pad); }
+  .matrix-inner > p { font-size: 14px; }
+  .matrix-wrap-mobile {
+    margin: 0 calc(var(--pad) * -1);
+    padding: 0 var(--pad);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .matrix-table {
+    display: table;
+    min-width: 720px;
+    white-space: normal;
+    font-size: 11px;
+  }
+  .matrix-table th, .matrix-table td {
+    padding: 8px 6px;
+    min-width: 88px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .matrix-table tbody td:first-child {
+    min-width: 130px;
+    text-align: left;
+    white-space: normal;
+  }
+  .matrix-table thead th { font-size: 10px; letter-spacing: 0.08em; }
+  .matrix-text { font-size: 9px; }
+  .matrix-table tbody tr.is-dryll td:first-child::after { font-size: 8px; padding: 1px 4px; top: 4px; right: 4px; }
+  .matrix-scroll-hint {
+    display: block !important;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--kvd-rot);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  /* Timeline · Als Block-Stack statt Grid */
+  .timeline { padding: 56px var(--pad); }
+  .timeline-list { padding-left: 0; border-left: none; }
+  .timeline-item {
+    display: block !important;
+    grid-template-columns: none !important;
+    padding: 16px 14px !important;
+    margin: 0 0 10px 0 !important;
+    border-left: 4px solid rgba(255,255,255,0.15) !important;
+    background: rgba(255,255,255,0.03);
+  }
+  .timeline-item[style*="rgba(0,0,254"] {
+    background: rgba(0,0,254,0.12) !important;
+    border-left: 4px solid var(--kvd-rot) !important;
+  }
+  .timeline-time {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--kvd-rot);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .timeline-brand {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--kvd-flieder);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .timeline-action {
+    display: block;
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+  }
+
+  /* Trackrec */
+  .trackrec { padding: 56px var(--pad); }
+  .trackrec-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .trackrec-lead-caption { padding: 18px; }
+  .trackrec-lead-caption .text { font-size: 15px; }
+  .trackrec-tile-caption { padding: 14px 12px; }
+
+  /* Cast */
+  .cast { padding: 56px var(--pad); }
+  .cast-header { gap: 12px; }
+  .cast-grid { grid-template-columns: 1fr; gap: 10px; }
+  .cast-card { grid-template-columns: 36px 1fr; padding: 14px; gap: 12px; }
+  .cast-num { font-size: 26px; }
+  .cast-name { font-size: 15px; }
+  .cast-role { font-size: 10px; }
+  .cast-reach { grid-column: 1 / -1; text-align: left; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; }
+  .cast-totals { padding: 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .cast-totals .big { font-size: 40px; }
+
+  /* Format-block */
+  .format-block { padding: 56px var(--pad); }
+  .format-pillars { grid-template-columns: 1fr; gap: 14px; }
+  .pillar { padding: 22px; }
+
+  /* Data-strip */
+  .data-strip { padding: 32px var(--pad); }
+  .data-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .data-cell { padding: 12px; }
+  .data-cell-val { font-size: 18px; }
+
+  /* Strat-bridge */
+  .strat-bridge { padding: 56px var(--pad); }
+  .strat-bridge-h { font-size: 28px; line-height: 1.1; }
+  .strat-bridge-lead { font-size: 15px; margin-bottom: 36px; }
+  .bridge-grid { grid-template-columns: 1fr; gap: 14px; }
+  .bridge-card { padding: 28px 22px; border-top-width: 6px; }
+  .bridge-card h3 { font-size: 18px; }
+  .bridge-card p, .bridge-card ul { font-size: 13px; }
+
+  /* Why-dryll */
+  .why-dryll { padding: 56px var(--pad); }
+  .why-dryll h2 { font-size: 28px; line-height: 1.1; }
+  .why-dryll-lead { font-size: 15px; margin-bottom: 40px; }
+  .why-dryll-grid { grid-template-columns: 1fr; gap: 16px; }
+  .why-dryll-card { padding: 20px 22px; }
+  .why-dryll-card .num { font-size: 32px; }
+  .why-dryll-card h3 { font-size: 16px; }
+
+  /* Two-col + Location-grid */
+  .location-grid { grid-template-columns: 1fr; gap: 10px; }
+
+  /* Quote-block */
+  .quote-block { font-size: 22px; line-height: 1.3; margin: 36px 0; }
+  .quote-attr { font-size: 12px; }
+
+  /* Tables · Auf Mobile als Card-Stack (außer .matrix-table) */
+  table:not(.matrix-table) {
+    display: block;
+    border: none;
+    background: transparent;
+    margin: 16px 0 24px;
+  }
+  table:not(.matrix-table) thead { display: none; }
+  table:not(.matrix-table) tbody { display: block; }
+  table:not(.matrix-table) tr {
+    display: block;
+    background: var(--kvd-white);
+    border: 1px solid var(--kvd-black);
+    margin: 0 0 10px 0;
+    padding: 14px 16px;
+  }
+  table:not(.matrix-table) tr:nth-child(even) { background: var(--kvd-white); }
+  table:not(.matrix-table) td {
+    display: block;
+    padding: 4px 0;
+    border: none;
+    background: transparent !important;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  table:not(.matrix-table) td:first-child {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--kvd-rot);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Figures */
+  .figure--full img { height: 280px; }
+  .figure-caption { font-size: 12px; }
+
+  /* Footer */
+  .footer { padding: 24px var(--pad); }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-meta { font-size: 11px; text-align: left; }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  a { padding: 4px 0; display: inline-block; }
+}
+
+/* Product timeline */
+.timeline {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 96px var(--pad);
+}
+.timeline-inner { max-width: 1080px; margin: 0 auto; }
+.timeline h2 { color: var(--kvd-white); }
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+  border-left: 2px solid var(--kvd-rot);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 200px 1fr;
+  gap: 24px;
+  padding: 18px 0 18px 24px;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.timeline-time {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--kvd-rot);
+  font-variant-numeric: tabular-nums;
+}
+.timeline-brand {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  font-weight: 700;
+}
+.timeline-action { font-size: 15px; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 64px var(--pad);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer img { height: 56px; width: auto; }
+.footer-meta {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.7;
+  text-align: right;
+}
+
+@media print {
+  body { background: var(--kvd-sand); }
+  .kk-nav { display: none !important; }
+  .pitch-stripe { margin-top: 0 !important; }
+  .hero { min-height: 100vh; }
+  .divider { page-break-before: always; }
+  h2 { page-break-after: avoid; }
+  table { page-break-inside: avoid; }
+}
+
+/* ============================================================
+   Backyard-spezifische Section-Styles
+   ============================================================ */
+
+.pitch-stripe {
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  padding: 14px var(--pad);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.pitch-stripe span.accent { color: #0000FE; font-weight: 700; }
+
+.safety-block {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 120px var(--pad);
+}
+.safety-inner { max-width: 1280px; margin: 0 auto; }
+.safety-block h2 { color: var(--kvd-white); margin: 0 0 24px 0; }
+.safety-lead {
+  font-size: 20px;
+  line-height: 1.45;
+  max-width: 860px;
+  margin: 0 0 56px 0;
+  color: rgba(255,255,255,0.92);
+}
+.safety-lead strong { color: var(--kvd-rot); }
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.safety-card {
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid var(--kvd-rot);
+  padding: 28px 26px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.safety-card .stamp {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.safety-card h3 {
+  color: var(--kvd-white);
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+  text-transform: none;
+  letter-spacing: -0.005em;
+}
+.safety-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+}
+
+.live-map-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.live-map-inner { max-width: 1280px; margin: 0 auto; }
+.live-map-header { margin-bottom: 32px; }
+.live-map-frame {
+  background: #0A0A0A;
+  border: 1px solid var(--kvd-black);
+  padding: 56px 32px 32px 32px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 32px;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+.live-map-frame::before {
+  content: "● LIVE";
+  position: absolute;
+  top: 18px; left: 22px;
+  z-index: 5;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.live-map-frame::after {
+  content: "TRACK · DUDENHOFEN HIGH-SPEED-OVAL";
+  position: absolute;
+  top: 18px; right: 22px;
+  z-index: 5;
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  color: var(--kvd-flieder);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.live-map-svg-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.live-map-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.live-map-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--kvd-white);
+  font-family: var(--f-standard);
+}
+.live-map-overlay h4 {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  color: var(--kvd-flieder);
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+.live-rider-row {
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid var(--kvd-rot);
+  font-size: 12px;
+}
+.live-rider-row .pos { color: var(--kvd-rot); font-weight: 700; font-size: 14px; letter-spacing: -0.01em; }
+.live-rider-row .nm { font-weight: 700; color: var(--kvd-white); }
+.live-rider-row .nm small {
+  display: block; font-size: 9px; letter-spacing: 0.15em;
+  color: var(--kvd-flieder); font-weight: 400; margin-top: 2px; text-transform: uppercase;
+}
+.live-rider-row .val {
+  text-align: right; font-variant-numeric: tabular-nums;
+  font-weight: 700; color: var(--kvd-white); font-size: 13px;
+}
+.live-rider-row .val small {
+  display: block; font-size: 9px; letter-spacing: 0.15em;
+  color: var(--kvd-flieder); font-weight: 400;
+}
+
+.map-dot { fill: var(--kvd-rot); filter: drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-2 { fill: #0000FE; filter: drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-3 { fill: #0000FE; filter: drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-4 { fill: #FFFFFF; filter: drop-shadow(0 0 4px rgba(255,255,255,0.85)); }
+.map-dot-5 { fill: #FFFFFF; filter: drop-shadow(0 0 4px rgba(255,255,255,0.85)); }
+
+.uni-team-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.uni-team-inner { max-width: 1280px; margin: 0 auto; }
+.uni-team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+.uni-team-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.uni-team-card .slot {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.uni-team-card .num {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-black);
+  margin-bottom: 18px;
+}
+.uni-team-card .role {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-black);
+  opacity: 0.7;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.uni-team-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 14px 0;
+}
+.uni-team-card .uni-stack {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+}
+
+.energy-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.energy-inner { max-width: 1280px; margin: 0 auto; }
+.energy-lead {
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 880px;
+  margin: 0 0 40px 0;
+}
+.energy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.energy-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.energy-card.is-redbull {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  border-color: var(--kvd-black);
+}
+.energy-card .badge {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.energy-card.is-redbull .badge { color: var(--kvd-gelb); }
+.energy-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.energy-card.is-redbull h3 { color: var(--kvd-white); }
+.energy-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 10px 0;
+}
+.energy-card.is-redbull p { color: rgba(255,255,255,0.88); }
+.energy-card .owner {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+}
+.energy-card.is-redbull .owner {
+  border-top: 1px solid rgba(255,255,255,0.20);
+  color: var(--kvd-gelb);
+}
+
+.partner-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.partner-inner { max-width: 1280px; margin: 0 auto; }
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.partner-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.partner-card.is-main {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  border-color: var(--kvd-black);
+}
+.partner-card.is-main p,
+.partner-card.is-main li { color: rgba(255,255,255,0.88); }
+.partner-card .tier-tag {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.partner-card.is-main .tier-tag { color: var(--kvd-gelb); }
+.partner-card h3 {
+  font-size: 30px;
+  line-height: 1.05;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.partner-card.is-main h3 { color: var(--kvd-white); }
+.partner-card .lead {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 18px 0;
+}
+.partner-card ul {
+  font-size: 13px;
+  line-height: 1.55;
+  padding-left: 18px;
+  margin: 0 0 20px 0;
+}
+.partner-card .deal {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--kvd-rot);
+}
+.partner-card.is-main .deal {
+  border-top: 1px solid rgba(255,255,255,0.20);
+  color: var(--kvd-gelb);
+}
+
+.cam-strip {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 64px var(--pad);
+}
+.cam-strip-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.cam-strip-cell {
+  border-left: 1px solid rgba(255,255,255,0.20);
+  padding-left: 20px;
+}
+.cam-strip-cell:first-child { border-left: none; padding-left: 0; }
+.cam-strip-num {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-rot);
+  margin-bottom: 10px;
+}
+.cam-strip-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  line-height: 1.5;
+}
+
+.location-strip {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad) 32px;
+}
+.location-strip-inner { max-width: 1280px; margin: 0 auto; }
+.location-photo-lead {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  margin: 32px 0 12px 0;
+}
+.location-photo-lead img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.location-photo-lead .cap {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 28px;
+}
+.location-photo-lead .cap .label {
+  color: var(--kvd-rot);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.location-photo-lead .cap .text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 760px;
+}
+.location-photo-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+.location-photo-row .tile {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--kvd-black);
+}
+.location-photo-row .tile img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+}
+.location-photo-row .tile .cap {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 18px;
+}
+.location-photo-row .tile .label {
+  color: var(--kvd-rot);
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.location-photo-row .tile .text {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .safety-block { padding: 80px var(--pad); }
+  .safety-grid { grid-template-columns: repeat(2, 1fr); }
+  .safety-lead { font-size: 17px; }
+
+  .live-map-block { padding: 64px var(--pad); }
+  .live-map-frame { grid-template-columns: 1fr; padding: 56px 20px 20px; }
+  .live-rider-row { font-size: 11px; }
+
+  .uni-team-block { padding: 64px var(--pad); }
+  .uni-team-grid { grid-template-columns: repeat(2, 1fr); }
+  .uni-team-card .num { font-size: 44px; }
+
+  .energy-block { padding: 64px var(--pad); }
+  .energy-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .partner-block { padding: 64px var(--pad); }
+  .partner-grid { grid-template-columns: 1fr; }
+  .partner-card h3 { font-size: 24px; }
+
+  .cam-strip { padding: 48px var(--pad); }
+  .cam-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cam-strip-cell { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.20); padding-top: 14px; }
+  .cam-strip-cell:first-child, .cam-strip-cell:nth-child(2) { border-top: none; padding-top: 0; }
+  .cam-strip-num { font-size: 40px; }
+
+  .location-strip { padding: 64px var(--pad) 28px; }
+  .location-photo-lead .cap .text { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+  .pitch-stripe { font-size: 10px; letter-spacing: 0.18em; padding: 12px var(--pad); line-height: 1.6; }
+  .safety-block { padding: 56px var(--pad); }
+  .safety-grid { grid-template-columns: 1fr; gap: 12px; }
+  .safety-card { padding: 22px 20px 24px; }
+  .safety-card h3 { font-size: 17px; }
+  .safety-lead { font-size: 15px; }
+
+  .live-map-block { padding: 56px var(--pad); }
+  .live-map-frame { padding: 50px 14px 14px; gap: 16px; }
+  .live-map-frame::before, .live-map-frame::after { font-size: 9px; }
+  .live-map-frame::after { display: none; }
+  .live-map-svg-wrap text { display: none; }
+
+  .uni-team-block { padding: 56px var(--pad); }
+  .uni-team-grid { grid-template-columns: 1fr; gap: 10px; }
+  .uni-team-card .num { font-size: 36px; }
+
+  .energy-block { padding: 56px var(--pad); }
+  .energy-grid { grid-template-columns: 1fr; gap: 12px; }
+  .energy-card h3 { font-size: 19px; }
+
+  .partner-block { padding: 56px var(--pad); }
+  .partner-card h3 { font-size: 22px; }
+
+  .cam-strip { padding: 36px var(--pad); }
+  .cam-strip-inner { grid-template-columns: 1fr; gap: 14px; }
+  .cam-strip-cell { border-top: 1px solid rgba(255,255,255,0.20); padding-top: 14px; }
+  .cam-strip-cell:first-child { border-top: none; padding-top: 0; }
+  .cam-strip-num { font-size: 36px; }
+
+  .location-strip { padding: 56px var(--pad) 24px; }
+  .location-photo-lead .cap { padding: 18px; }
+  .location-photo-lead .cap .text { font-size: 14px; }
+  .location-photo-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* Mobile-Härtung gegen Long-Text-Overflow + iOS-Quirks */
+@media (max-width: 640px) {
+  .fact-num { word-break: break-word; overflow-wrap: anywhere; line-height: 1.05; }
+  .tier-total-num { word-break: break-word; }
+  .partner-card h3, .energy-card h3, .safety-card h3 { word-break: break-word; }
+  .hero h1 { word-break: keep-all; }
+  .reach-headline-num { font-size: 44px; }
+  .hero-tagline { font-size: 17px; }
+}
+
+/* Tablet-Bereich: long-text safety */
+@media (max-width: 1024px) {
+  .fact-num { line-height: 1.05; }
+}
+
+/* Body smooth scroll plus Safari-Mobile-Vh-Fix */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@supports (height: 100dvh) {
+  .hero { min-height: 100dvh; }
+}
+
+/* SVG dots: explizite Pointer-Sicherheit */
+.live-map-svg-wrap svg, .live-map-svg-wrap circle, .live-map-svg-wrap path { pointer-events: none; }
+
+/* Bilder: lazy-load auf größeren Hero/Photo-Slots → spart Mobile-Daten */
+img { max-width: 100%; }
+
+/* ══════════════════════════════════════════════════════════════
+   KARL+KARLA CI OVERRIDES · Injected
+   ══════════════════════════════════════════════════════════════ */
+
+/* Body + base typography */
+body { line-height: 1.6; font-size: 17px; }
+
+/* Headings → Barlow Condensed */
+h1, h2, h3, h4 {
+  font-family: 'Barlow Condensed', var(--f-standard) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+h1 { font-size: 72px !important; line-height: 0.95 !important; }
+h2 { font-size: 48px !important; line-height: 0.95 !important; margin-top: 80px !important; }
+
+/* Eyebrows on LIGHT bg → dark */
+.eyebrow, .eyebrow-rot {
+  color: var(--kvd-black) !important;
+  opacity: .5;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+}
+/* Eyebrows on DARK bg → yellow hint */
+.eyebrow-white,
+.divider .eyebrow, .reach-chart .eyebrow,
+.timeline .eyebrow, .why-dryll .eyebrow,
+.safety-block .eyebrow, .cast .eyebrow {
+  color: var(--kvd-flieder) !important;
+  opacity: 1;
+}
+
+/* Quote / frame text on light bg → dark */
+.frame-quote { font-family:'Barlow Condensed',sans-serif !important; font-weight:900 !important; font-style:normal !important; color:var(--kvd-black) !important; letter-spacing:-0.02em !important; line-height:.95 !important; }
+.frame-attr  { font-style:normal !important; color:var(--kvd-black) !important; opacity:.5; font-size:12px !important; letter-spacing:.12em !important; }
+.quote-block { font-family:'Barlow Condensed',sans-serif !important; font-weight:900 !important; font-style:normal !important; color:var(--kvd-black) !important; letter-spacing:-0.02em !important; }
+.quote-attr  { color:var(--kvd-black) !important; opacity:.5; }
+
+/* Fact / tier / cast labels on white cards → dark */
+.fact-label, .tier-name, .cast-via, .callout h4,
+.strat-bridge-eyebrow, .partner-card .tier-tag,
+.exec-eyebrow, .exec-tag { color:var(--kvd-black) !important; opacity:.5; }
+
+/* Yellow on dark cards = fine */
+.divider .eyebrow, .tier.title-tier .tier-name,
+.partner-card.is-main .tier-tag { color:var(--kvd-flieder) !important; opacity:1; }
+
+/* Cast status → K+K pill */
+.cast-status { font-size:10px !important; letter-spacing:.16em !important; font-weight:700 !important; border:none !important; background:var(--kvd-black) !important; color:var(--kvd-rot) !important; padding:6px 14px !important; border-radius:100px !important; }
+
+/* Cards → rounded K+K style */
+.fact, .tier, .cast-card, .partner-card, .energy-card, .uni-team-card, .exec-pillar, .bridge-card, .why-dryll-card, .safety-card {
+  border-radius: 12px !important;
+  border-color: rgba(0,0,0,.08) !important;
+}
+.tier.title-tier, .partner-card.is-main { border-color: var(--kvd-black) !important; }
+.tier.is-dryll { outline-color: var(--kvd-rot) !important; }
+
+/* Pitch stripe → dark K+K */
+.pitch-stripe { background:var(--kvd-black) !important; color:rgba(255,255,255,.55) !important; }
+.pitch-stripe span.accent { color:var(--kvd-rot) !important; }
+
+/* Table heads → dark */
+thead th { background:var(--kvd-black) !important; }
+tbody tr:nth-child(even) td { background:#F4F4F2 !important; }
+
+/* Footer → K+K dark */
+.footer { background:var(--kvd-black) !important; }
+
+/* Hero meta badges → subtle */
+.hero-meta .meta-block { border:none !important; background:rgba(0,0,254,.15) !important; border-radius:100px !important; padding:5px 14px !important; font-size:11px !important; }
+
+/* Divider headings tighter */
+.divider h2 { font-size:clamp(56px,8vw,108px) !important; line-height:.9 !important; font-weight:900 !important; letter-spacing:-0.03em !important; }
+
+/* Exec summary section → round corners, K+K style */
+.exec-pillar { border-top-color: var(--kvd-rot) !important; }
+.exec-num { color: var(--kvd-rot) !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+.exec-eyebrow { color: var(--kvd-black) !important; opacity: .5; }
+</style>
+</head>
+<body>
+
+<!-- ── Karl+Karla Nav Bar ── -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Plus+Jakarta+Sans:wght@500;600&display=swap');
+.kk-nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:10px 10px 10px 20px;border-radius:100px;background:rgba(255,255,255,.72);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.85);box-shadow:0 4px 24px rgba(0,0,0,.10),inset 0 1.5px 0 rgba(255,255,255,.95);white-space:nowrap}
+.kk-nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;text-transform:uppercase;letter-spacing:-.01em;color:#0A0A0A;text-decoration:none;display:flex;align-items:center;gap:3px}
+.kk-nav-logo .plus{color:#0A0A0A}
+.kk-nav-badge{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.4);padding:0 4px}
+.kk-nav-logout{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:100px;background:#0A0A0A;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.03em;text-decoration:none;transition:opacity .2s,transform .2s;border:none;cursor:pointer}
+.kk-nav-logout:hover{opacity:.76;transform:translateY(-1px)}
+.pitch-stripe{margin-top:72px}
+@media(max-width:600px){.kk-nav{top:12px;padding:8px 8px 8px 16px;gap:16px}.kk-nav-badge{display:none}.pitch-stripe{margin-top:64px}}
+</style>
+<nav class="kk-nav">
+  <a href="https://karlundkarla.com" class="kk-nav-logo">KARL<span class="plus">+</span>KARLA</a>
+  <span class="kk-nav-badge">Kurz-Version · 1 Minute Read</span>
+  <a href="/redbull-backyard" class="kk-nav-logout">Vollversion lesen ↗</a>
+</nav>
+
+
+<div class="pitch-stripe">
+  Pitch für <span class="accent">Red Bull Deutschland</span> &nbsp;·&nbsp; Backyard Bike Race · Opel Test Center Dudenhofen · Q2 2027
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero">
+  <div class="hero-bg">
+    <img src="assets/redbull/photos/photo-frankfurt-cyclist-redbull.jpg" alt="">
+  </div>
+  <div class="hero-content">
+    <div class="hero-top">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase;letter-spacing:-.02em;color:#fff;line-height:1;">
+        KARL+KARLA
+      </div>
+      <div class="hero-meta">
+        <span class="meta-block">Pitch · Red Bull Deutschland</span><br>
+        <span class="accent">Q2 2027 · Vertraulich</span>
+      </div>
+    </div>
+    <div class="hero-body">
+      <div class="hero-eyebrow">Backyard Bike Race &nbsp;·&nbsp; Eine Runde pro Stunde &nbsp;·&nbsp; Last One Riding &nbsp;·&nbsp; 24/7 Live</div>
+      <h1>Backyard<br><span class="of">x</span>&nbsp;Bike</h1>
+      <p class="hero-tagline">Eine Runde pro Stunde. <strong>Jede Runde ein Sieg.</strong> 100 Teilnehmer · Closed Course · 24/7 Live.</p>
+      <p class="hero-sub">Warum dieser Pitch in deinem Postfach liegt: weil <strong>Only Red Bull can do</strong>. Stunde für Stunde, vor laufender Kamera · bis nur noch einer fährt.</p>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <div class="hero-cta-left">
+      Produced &amp; hosted by <strong style="color: var(--kvd-rot);">Karl + Karla</strong>
+    </div>
+    <div class="hero-cta-right">
+      <strong>Backyard Bike Race</strong><br>
+      24/7 Live · Q2 2027<br>
+      25 km östlich Frankfurt am Main
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     EXECUTIVE SUMMARY · Die ersten Seiten
+     ============================================================ -->
+<style>
+.exec-summary { padding: 80px 80px 64px; background: var(--kvd-sand); color: var(--kvd-black); }
+.exec-inner { max-width: 1280px; margin: 0 auto; }
+.exec-eyebrow { font-size: 14px; letter-spacing: 0.30em; text-transform: uppercase; color: var(--kvd-rot); margin: 0 0 18px 0; }
+.exec-headline { font-size: 56px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 24px 0; }
+.exec-headline .rot { color: var(--kvd-rot); }
+.exec-lead { font-size: 19px; line-height: 1.5; max-width: 1040px; margin-bottom: 48px; }
+.exec-pillar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.exec-pillar { padding: 26px 24px; background: var(--kvd-white); border: 1px solid var(--kvd-black); border-top: 4px solid var(--kvd-rot); display: flex; flex-direction: column; gap: 10px; min-height: 240px; }
+.exec-pillar .exec-tag { font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(10,10,10,0.55); }
+.exec-pillar .exec-title { font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--kvd-black); }
+.exec-pillar .exec-body { font-size: 14.5px; line-height: 1.5; color: var(--kvd-black); }
+.exec-pillar .exec-num { font-family: var(--kvd-display, "Helvetica Neue"), Helvetica, Arial, sans-serif; font-weight: 800; font-size: 38px; color: var(--kvd-rot); line-height: 1; letter-spacing: -0.01em; margin-top: auto; }
+
+.exec-cta { padding: 80px; background: var(--kvd-black); color: var(--kvd-white); }
+.exec-cta-inner { max-width: 1080px; margin: 0 auto; text-align: left; }
+.exec-cta .eyebrow { color: var(--kvd-rot); }
+.exec-cta-headline { font-size: 64px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 24px 0; color: var(--kvd-white); }
+.exec-cta-headline .rot { color: var(--kvd-rot); }
+.exec-cta-lead { font-size: 20px; line-height: 1.5; color: rgba(255,255,255,0.85); max-width: 880px; margin-bottom: 36px; }
+.exec-cta-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 36px; }
+.exec-cta-step { padding: 24px; background: rgba(255,255,255,0.06); border-left: 4px solid var(--kvd-rot); }
+.exec-cta-step .step-num { font-size: 13px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--kvd-gelb); margin-bottom: 8px; }
+.exec-cta-step .step-title { font-size: 18px; font-weight: 700; color: var(--kvd-white); margin-bottom: 6px; line-height: 1.2; }
+.exec-cta-step .step-body { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.78); }
+.exec-cta-ps { padding: 22px 26px; background: rgba(0,0,254,0.12); border: 1px solid var(--kvd-rot); font-size: 17px; line-height: 1.5; color: var(--kvd-white); }
+.exec-cta-ps strong { color: var(--kvd-rot); }
+
+/* Mobile Exec-Fixes */
+@media (max-width: 1024px) {
+  .exec-pillar-grid { grid-template-columns: repeat(2, 1fr); }
+  .exec-cta-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .exec-summary { padding: 48px 20px 40px; }
+  .exec-cta { padding: 48px 20px; }
+  .exec-pillar-grid { grid-template-columns: 1fr; }
+  .exec-cta-steps { grid-template-columns: 1fr; }
+  .exec-cta-headline { font-size: 36px; line-height: 1.05; }
+  .exec-headline { font-size: 32px; }
+  .exec-lead { font-size: 16px; }
+  .exec-pillar .exec-title { font-size: 18px; }
+  .exec-pillar .exec-num { font-size: 28px; }
+  .grundidee-block { padding: 48px 20px; }
+  .grundidee-block > div { max-width: 100%; }
+}
+</style>
+
+<!-- ============================================================
+     GRUNDIDEE · Worum geht's überhaupt
+     ============================================================ -->
+<section class="grundidee-block" style="background:var(--kvd-black);color:var(--kvd-white);padding:72px 80px;">
+  <div style="max-width:1040px;margin:0 auto;">
+    <p style="font-size:14px;letter-spacing:0.30em;text-transform:uppercase;color:var(--kvd-rot);margin:0 0 18px;">Die Idee in 30 Sekunden · Worum geht's</p>
+    <h2 style="font-size:42px;line-height:1.06;letter-spacing:-0.01em;margin:0 0 22px;color:var(--kvd-white);">Ein Radrennen, bei dem es nicht ums Schnellsein geht. <span style="color:var(--kvd-rot);">Sondern ums Durchhalten.</span></h2>
+    <p style="font-size:19px;line-height:1.55;max-width:920px;color:rgba(255,255,255,0.85);margin:0;">
+      Backyard × Bike ist ein <strong>24/7-Radrennen</strong> nach der Backyard-Regel: <strong>eine Runde pro Stunde, jede Stunde, ohne Pause.</strong> Wer seine Stundenrunde schafft, bleibt im Rennen · so lange er kann. <strong>100 Fahrer</strong> (30 Uni-Teams + 70 Influencer &amp; Sportler) drehen ihre Runden auf einer abgesperrten Hochsicherheits-Strecke bei Frankfurt, rund um die Uhr live übertragen. Nicht das schnellste Rad zählt, sondern das längste Durchhalten · und jeder, der antritt, gehört zur Geschichte.
+    </p>
+  </div>
+</section>
+
+<!-- ============================================================
+     LIVE-STRECKEN-ELEMENT · So sieht man das Rennen (aus Langversion portiert)
+     ============================================================ -->
+<style>
+.live-map-block { background: var(--kvd-sand); padding: 96px var(--pad); }
+.live-map-inner { max-width: 1280px; margin: 0 auto; }
+.live-map-frame { background:#0A0A0A; border:1px solid var(--kvd-black); padding:56px 32px 32px 32px; display:grid; grid-template-columns:1fr 280px; gap:32px; align-items:stretch; position:relative; overflow:hidden; }
+.live-map-frame::before { content:"● LIVE"; position:absolute; top:18px; left:22px; z-index:5; font-size:11px; letter-spacing:0.22em; color:var(--kvd-rot); font-weight:700; text-transform:uppercase; }
+.live-map-frame::after { content:"TRACK · DUDENHOFEN HIGH-SPEED-OVAL"; position:absolute; top:18px; right:22px; z-index:5; font-size:10px; letter-spacing:0.20em; color:var(--kvd-flieder); font-weight:700; text-transform:uppercase; }
+.live-map-svg-wrap { position:relative; width:100%; aspect-ratio:16/9; }
+.live-map-svg-wrap svg { width:100%; height:100%; display:block; }
+.live-map-svg-wrap svg, .live-map-svg-wrap circle, .live-map-svg-wrap path { pointer-events:none; }
+.live-map-overlay { display:flex; flex-direction:column; gap:8px; color:var(--kvd-white); font-family:var(--f-standard); }
+.live-map-overlay h4 { font-size:11px; letter-spacing:0.20em; color:var(--kvd-flieder); margin:0 0 6px 0; font-weight:700; }
+.live-rider-row { display:grid; grid-template-columns:26px 1fr auto; gap:10px; align-items:center; padding:8px 10px; background:rgba(255,255,255,0.05); border-left:3px solid var(--kvd-rot); font-size:12px; }
+.live-rider-row .pos { color:var(--kvd-rot); font-weight:700; font-size:14px; letter-spacing:-0.01em; }
+.live-rider-row .nm { font-weight:700; color:var(--kvd-white); }
+.live-rider-row .nm small { display:block; font-size:9px; letter-spacing:0.15em; color:var(--kvd-flieder); font-weight:400; margin-top:2px; text-transform:uppercase; }
+.live-rider-row .val { text-align:right; font-variant-numeric:tabular-nums; font-weight:700; color:var(--kvd-white); font-size:13px; }
+.live-rider-row .val small { display:block; font-size:9px; letter-spacing:0.15em; color:var(--kvd-flieder); font-weight:400; }
+.map-dot { fill:var(--kvd-rot); filter:drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-2 { fill:#0000FE; filter:drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-3 { fill:#0000FE; filter:drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-4 { fill:#FFFFFF; filter:drop-shadow(0 0 4px rgba(255,255,255,0.85)); }
+.map-dot-5 { fill:#FFFFFF; filter:drop-shadow(0 0 4px rgba(255,255,255,0.85)); }
+@media (max-width:980px){ .live-map-block { padding:64px var(--pad); } .live-map-frame { grid-template-columns:1fr; padding:56px 20px 20px; } .live-rider-row { font-size:11px; } }
+@media (max-width:600px){ .live-map-frame::after { display:none; } .live-map-svg-wrap text { display:none; } }
+</style>
+<section class="live-map-block">
+  <div class="live-map-inner">
+    <p style="font-size:13px;letter-spacing:0.20em;text-transform:uppercase;color:var(--kvd-rot);margin:0 0 18px;">Live · Daten-Layer · So sieht man das Rennen</p>
+    <h2 style="margin-top:0;">Eine Map. Alle Fahrer. Live-Metriken.<br><span style="color:var(--kvd-rot);">So sieht der Zuschauer das Rennen.</span></h2>
+    <p style="max-width:880px;">Jeder Fahrer ein Dot auf der Live-Map, jede Runde eine Bewegung, jeder Wert vom Garmin-Armband. Der Master-Feed schaltet zwischen Live-Map, Strecken-Cams und Top-5-Streams · wie eine Sport-Konferenz. <strong>Unten eine animierte Vorschau des Daten-Layers.</strong></p>
+
+    <div class="live-map-frame">
+      <div class="live-map-svg-wrap">
+        <svg viewBox="0 0 1400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <pattern id="grid-short" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="1400" height="400" fill="url(#grid-short)"/>
+
+          <path id="trackPathShort" d="M 120,200 C 120,80 280,80 460,80 L 940,80 C 1120,80 1280,80 1280,200 C 1280,320 1120,320 940,320 L 460,320 C 280,320 120,320 120,200 Z"
+                fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="48"/>
+          <path d="M 120,200 C 120,80 280,80 460,80 L 940,80 C 1120,80 1280,80 1280,200 C 1280,320 1120,320 940,320 L 460,320 C 280,320 120,320 120,200 Z"
+                fill="none" stroke="rgba(0,0,254,0.45)" stroke-width="2" stroke-dasharray="6 6"/>
+
+          <rect x="115" y="180" width="8" height="40" fill="var(--kvd-rot)"/>
+          <text x="60" y="208" fill="rgba(255,255,255,0.85)" font-size="10" font-family="Helvetica" letter-spacing="2" font-weight="700">START</text>
+
+          <circle cx="460" cy="80" r="6" fill="#0000FE"/>
+          <text x="470" y="68" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 01</text>
+          <circle cx="940" cy="80" r="6" fill="#0000FE"/>
+          <text x="950" y="68" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 02</text>
+          <circle cx="940" cy="320" r="6" fill="#0000FE"/>
+          <text x="780" y="345" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 03</text>
+          <circle cx="460" cy="320" r="6" fill="#0000FE"/>
+          <text x="300" y="345" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 04</text>
+
+          <rect x="690" y="186" width="20" height="14" fill="#FFFFFF" rx="2"/>
+          <rect x="697" y="184" width="6" height="18" fill="var(--kvd-rot)"/>
+          <text x="650" y="230" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">RTW · SANI · 24/7</text>
+
+          <circle cx="700" cy="40" r="5" fill="#FFFFFF"/>
+          <line x1="700" y1="40" x2="700" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="630" y="32" fill="#FFFFFF" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">DRONE · AERIAL CAM</text>
+
+          <!-- Red Bull Energy Home (gegenüberliegende Streckenseite) -->
+          <rect x="1028" y="192" width="30" height="16" fill="#0000FE" rx="2"/>
+          <path d="M 1028,192 L 1043,180 L 1058,192 Z" fill="#FFFFFF"/>
+          <text x="978" y="232" fill="rgba(255,255,255,0.85)" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">RED BULL ENERGY HOME</text>
+
+          <!-- Camping Ground · Unis -->
+          <path d="M 298,208 L 311,186 L 324,208 Z" fill="#FFFFFF"/>
+          <path d="M 320,208 L 331,191 L 342,208 Z" fill="#0000FE"/>
+          <text x="278" y="232" fill="rgba(255,255,255,0.85)" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">CAMPING GROUND · UNIS</text>
+
+          <circle r="9" class="map-dot"><animateMotion dur="24s" repeatCount="indefinite" rotate="auto"><mpath href="#trackPathShort"/></animateMotion></circle>
+          <circle r="8" class="map-dot-2"><animateMotion dur="26s" begin="-4s" repeatCount="indefinite" rotate="auto"><mpath href="#trackPathShort"/></animateMotion></circle>
+          <circle r="8" class="map-dot-3"><animateMotion dur="28s" begin="-8s" repeatCount="indefinite" rotate="auto"><mpath href="#trackPathShort"/></animateMotion></circle>
+          <circle r="7" class="map-dot-4"><animateMotion dur="30s" begin="-12s" repeatCount="indefinite" rotate="auto"><mpath href="#trackPathShort"/></animateMotion></circle>
+          <circle r="7" class="map-dot-5"><animateMotion dur="32s" begin="-16s" repeatCount="indefinite" rotate="auto"><mpath href="#trackPathShort"/></animateMotion></circle>
+        </svg>
+      </div>
+
+      <div class="live-map-overlay">
+        <h4>● Top 5 · Live · Eine Wertung · Stunde 42</h4>
+        <div class="live-rider-row"><div class="pos">01</div><div class="nm">Uni-Team #17<small>Uni · TU Darmstadt</small></div><div class="val">312 W<small>HF 168 · 38.2 km/h</small></div></div>
+        <div class="live-rider-row"><div class="pos">02</div><div class="nm">Influencer #42<small>Influencer · Endurance-Creator</small></div><div class="val">298 W<small>HF 172 · 37.4 km/h</small></div></div>
+        <div class="live-rider-row"><div class="pos">03</div><div class="nm">Uni-Team #08<small>Uni · RWTH Aachen</small></div><div class="val">285 W<small>HF 165 · 36.8 km/h</small></div></div>
+        <div class="live-rider-row"><div class="pos">04</div><div class="nm">Influencer #11<small>Influencer · Cycling-Pro</small></div><div class="val">272 W<small>HF 175 · 36.1 km/h</small></div></div>
+        <div class="live-rider-row"><div class="pos">05</div><div class="nm">Uni-Team #23<small>Uni · Sporthochschule Köln</small></div><div class="val">261 W<small>HF 169 · 35.6 km/h</small></div></div>
+
+        <h4 style="margin-top:14px;">Stream-Schaltung</h4>
+        <div class="live-rider-row"><div class="pos" style="color:var(--kvd-gelb);">M</div><div class="nm">Konferenz-Feed<small>Race-Control Master</small></div><div class="val">YT/TW<small>Master</small></div></div>
+        <div class="live-rider-row"><div class="pos" style="color:var(--kvd-gelb);">5×</div><div class="nm">Top-5 Indi-Streams<small>pro Fahrer eigene Cam</small></div><div class="val">YT<small>Multi-Cam</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exec-summary">
+  <div class="exec-inner">
+    <p class="exec-eyebrow">Der Pitch in einer Folie</p>
+    <h2 class="exec-headline">Format, Reichweite, Strecke, Benefits.<br><span class="rot">Alles Wichtige auf einen Blick.</span></h2>
+    <p class="exec-lead">24/7-Cycling-Race auf einer Hochsicherheits-Strecke, 100 Teilnehmer, Last One Riding. Red Bull Deutschland als <strong>Brand-Anker und Content-Co-Producer</strong> · 24/7 Live aus jeder Achse, Highlight-Stack über das Red Bull Media-House.</p>
+
+    <div class="exec-pillar-grid">
+      <div class="exec-pillar">
+        <div class="exec-tag">01 · Format</div>
+        <div class="exec-title">Eine Backyard-Regel, 24/7 live</div>
+        <div class="exec-body">Eine Runde pro Stunde, jede Stunde, ohne Pause. Wer eine Stunde nicht voll fährt, beendet sein Rennen als Finisher. Wer am längsten fährt, ist Last One Riding. Kein Zeitlimit · Das Format endet, wenn nur noch einer fährt.</div>
+        <div class="exec-num">60 Min</div>
+      </div>
+      <div class="exec-pillar">
+        <div class="exec-tag">02 · Reichweite</div>
+        <div class="exec-title">Cast = Reichweite</div>
+        <div class="exec-body">100 Teilnehmer, 100 Fan-Communities. Junge Männer 18-25 (Strava-Generation, wettkampfgetrieben) werden organisch über die Channels der Teilnehmer erreicht · Deutscher Cycling-Space, von Campus bis Creator. Keine Cold-Reach.</div>
+        <div class="exec-num">100</div>
+      </div>
+      <div class="exec-pillar">
+        <div class="exec-tag">03 · Strecke</div>
+        <div class="exec-title">Opel Test Center Dudenhofen</div>
+        <div class="exec-body">Yard-Loop 22-28 km auf Steilkurven-Oval + Handling-Course, 25 km östlich Frankfurt. Vollständig abgesperrt, eigener Security-Dienst, 24/7 Sanität, RTW in Minuten, lückenlose Kameraabdeckung. Closed Course statt Stadtrennen.</div>
+        <div class="exec-num">25 km</div>
+      </div>
+      <div class="exec-pillar">
+        <div class="exec-tag">04 · Benefits Red Bull</div>
+        <div class="exec-title">Only Red Bull can do</div>
+        <div class="exec-body">Content-Möglichkeiten, die nur Red Bull liefert: 24/7 Live aus jeder Achse, Highlight-Edits aus dem eigenen Content-Stack, Athleten-Storys über Red Bull Media-House, Owned Distribution über Red Bull TV und Cycling Social. Nicht Logo-Platzierung · <strong>Content-Co-Production</strong>.</div>
+        <div class="exec-num">Content</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exec-cta">
+  <div class="exec-cta-inner">
+    <p class="eyebrow">Nächster Schritt · Auftakt</p>
+    <h2 class="exec-cta-headline">Gemeinsamer Auftakt zur Besprechung.<br><span class="rot">PS auf die Straße.</span></h2>
+    <p class="exec-cta-lead">45-Minuten-Auftakt zwischen <strong>Red Bull Deutschland</strong> und dem Karl + Karla Team. Format-Check, offene Punkte, Slot-Klarheit. Im Anschluss läuft das Setup.</p>
+
+    <div class="exec-cta-steps">
+      <div class="exec-cta-step">
+        <div class="step-num">Schritt 01</div>
+        <div class="step-title">45-Minuten-Auftakt</div>
+        <div class="step-body">Call mit Red Bull Deutschland und dem Karl + Karla Team. Format-Check, Slot-Klarheit. Wir bringen die Antworten, ihr die offenen Fragen.</div>
+      </div>
+      <div class="exec-cta-step">
+        <div class="step-num">Schritt 02</div>
+        <div class="step-title">Partner-Letter</div>
+        <div class="step-body">Im Nachgang zum Auftakt: Letter mit allen Beitragspositionen (Brand · Bühne · Content · Cast · Investment) und Pre-Hype-Plan. Zeitfenster offen, je nach interner Abstimmung.</div>
+      </div>
+      <div class="exec-cta-step">
+        <div class="step-num">Schritt 03</div>
+        <div class="step-title">Production geht live</div>
+        <div class="step-body">Sobald Red Bull als Anker steht: Canyon-Co-Partner-Gespräch, Garmin-Setup, Uni-Bewerbungsphase, Influencer-Cast-Akquise. Die Produktion startet · PS auf die Straße.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS TICKER
+     ============================================================ -->
+<section class="ticker">
+  <div class="ticker-grid">
+    <div class="ticker-cell">
+      <div class="ticker-num rot">40-80h</div>
+      <div class="ticker-label">Erwartete Event-Dauer<br>bis der letzte Cyclist nicht mehr fährt</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num">3</div>
+      <div class="ticker-label">Onboard-Cams pro Bike<br>Front, Heck, Rider-Facing</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num">22-28 km</div>
+      <div class="ticker-label">Yard-Loop-Länge<br>Steilkurven-Oval + Handling-Course</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num">Garmin</div>
+      <div class="ticker-label">Live-Daten pro Fahrer<br>Puls, Watt, GPS, Speed im Stream</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num rot">4</div>
+      <div class="ticker-label">Stream-Plattformen<br>YouTube, Twitch, TikTok, Instagram</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num rot">Drohne</div>
+      <div class="ticker-label">Aerial-Footage<br>Luftbild 24/7, perfekte Cam-Achsen</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FRAME / RED-BULL-HOOK
+     ============================================================ -->
+<section class="frame-statement">
+  <div class="frame-inner">
+    <p class="eyebrow">Warum dieser Pitch · An Red Bull Deutschland</p>
+    <p class="frame-quote">„Red Bull verleiht Flügel · <strong>Backyard × Bike macht daraus ein 24/7-Format.</strong> Stunde für Stunde, vor laufender Kamera, bis nur noch einer fährt."</p>
+    <p class="frame-attr">· Backyard × Bike · Pitch für Red Bull Deutschland</p>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     ROLLEN · Wer macht was
+     ============================================================ -->
+<style>
+.kurz-roles { background: var(--kvd-white); padding: 80px var(--pad); }
+.kurz-roles-inner { max-width: 1280px; margin: 0 auto; }
+.kurz-roles h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(40px, 6vw, 64px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0 0 12px 0; color: var(--kvd-black); }
+.kurz-roles .eyebrow { color: var(--kvd-rot); margin-bottom: 16px; }
+.kurz-roles-lead { font-size: 17px; line-height: 1.5; max-width: 720px; margin: 0 0 40px 0; color: rgba(10,10,10,0.78); }
+.kurz-roles-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.kurz-role { padding: 26px 24px; background: var(--kvd-sand); border: 1px solid var(--kvd-black); border-top: 4px solid var(--kvd-rot); display: flex; flex-direction: column; gap: 8px; min-height: 220px; }
+.kurz-role .role-tag { font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(10,10,10,0.55); }
+.kurz-role .role-name { font-family: var(--f-display); font-weight: 900; font-size: 30px; line-height: 0.95; text-transform: uppercase; letter-spacing: -0.01em; color: var(--kvd-black); }
+.kurz-role .role-job { font-size: 15px; font-weight: 700; line-height: 1.3; color: var(--kvd-black); margin-top: 2px; }
+.kurz-role .role-body { font-size: 13.5px; line-height: 1.5; color: rgba(10,10,10,0.78); margin-top: auto; }
+@media (max-width: 980px) { .kurz-roles-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .kurz-roles-grid { grid-template-columns: 1fr; } .kurz-roles { padding: 56px 24px; } }
+</style>
+<section class="kurz-roles">
+  <div class="kurz-roles-inner">
+    <p class="eyebrow">Rollen · Wer macht was</p>
+    <h2>Vier Rollen.<br>Eine Bühne.</h2>
+    <p class="kurz-roles-lead">Backyard × Bike läuft End-to-End in einer Hand: Karl + Karla produziert, Red Bull ankert die Brand und das Content-Universum, Canyon stellt das Material, Garmin das Live-Data-Layer. Keine Agentur-Kette, kein Asset-Loch.</p>
+
+    <div class="kurz-roles-grid">
+      <div class="kurz-role">
+        <div class="role-tag">01 · Brand-Anker</div>
+        <div class="role-name">Red Bull<br>Deutschland</div>
+        <div class="role-job">Brand-Anker &amp; Content-Co-Producer</div>
+        <div class="role-body">Naming-Anker, Brand-Hoheit auf dem General-Energy-House, Highlight-Edits über Red Bull Media-House, Distribution über Red Bull TV und Cycling Social.</div>
+      </div>
+      <div class="kurz-role">
+        <div class="role-tag">02 · Veranstalter</div>
+        <div class="role-name">Karl<br>+ Karla</div>
+        <div class="role-job">End-to-End-Produktion</div>
+        <div class="role-body">Format, Strecke, Stream, Cast, Genehmigungen, Pre-Hype, Sign-off-Roadmap. KvD-Agentur Frankfurt · 10 Min Fahrt zur Strecke.</div>
+      </div>
+      <div class="kurz-role">
+        <div class="role-tag">03 · Bike-Co-Partner</div>
+        <div class="role-name">Canyon</div>
+        <div class="role-job">Material &amp; Tech</div>
+        <div class="role-body">Race-Bikes für den Cast, Mechaniker-Zone, Material-Wechsel-Logistik. Co-Branding nicht-konkurrierend zum Red-Bull-Slot.</div>
+      </div>
+      <div class="kurz-role">
+        <div class="role-tag">04 · Live-Data</div>
+        <div class="role-name">Garmin</div>
+        <div class="role-job">Telemetrie &amp; Leaderboard</div>
+        <div class="role-body">Puls, Watt, GPS pro Fahrer. Live-Map-Layer, Leaderboard, Daten-Overlay für den Stream. Tech-Story trägt das Format.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PHOTOS · Strecke + Umgebung
+     ============================================================ -->
+<style>
+.kurz-photos { background: var(--kvd-sand); padding: 80px var(--pad); }
+.kurz-photos-inner { max-width: 1280px; margin: 0 auto; }
+.kurz-photos h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(40px, 6vw, 64px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0 0 12px 0; color: var(--kvd-black); }
+.kurz-photos .eyebrow { color: var(--kvd-rot); margin-bottom: 16px; }
+.kurz-photos-lead { font-size: 17px; line-height: 1.5; max-width: 760px; margin: 0 0 40px 0; color: rgba(10,10,10,0.78); }
+.kurz-photo-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 14px; }
+.kurz-photo-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.kurz-photo { position: relative; overflow: hidden; border: 1px solid var(--kvd-black); background: var(--kvd-black); }
+.kurz-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.kurz-photo.tall { aspect-ratio: 4/5; }
+.kurz-photo.wide { aspect-ratio: 4/3; }
+.kurz-photo-caption { position: absolute; bottom: 0; left: 0; right: 0; padding: 14px 18px; background: linear-gradient(180deg, rgba(10,10,10,0) 0%, rgba(10,10,10,0.85) 100%); color: var(--kvd-white); font-size: 12.5px; line-height: 1.4; letter-spacing: 0.04em; }
+.kurz-photo-caption strong { display: block; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--kvd-rot); margin-bottom: 4px; font-weight: 700; }
+@media (max-width: 860px) { .kurz-photo-grid, .kurz-photo-row { grid-template-columns: 1fr; } .kurz-photos { padding: 56px 24px; } }
+</style>
+<section class="kurz-photos">
+  <div class="kurz-photos-inner">
+    <p class="eyebrow">Strecke · Was passiert drumherum</p>
+    <h2>Closed Course.<br>Eigene Welt.</h2>
+    <p class="kurz-photos-lead"><strong>30 Min Auto von Frankfurt.</strong> Eine der größten Auto-Test-Anlagen Deutschlands · 60 km Strecken-Netzwerk · Paddock als Camp-Zone für Cast und Energy Houses · Closed-Perimeter mit eigener Security und 24/7 Sanität.</p>
+
+    <div class="kurz-photo-grid">
+      <div class="kurz-photo tall">
+        <img src="assets/redbull/photos/photo-dudenhofen-aerial.jpg" alt="Aerial Opel Test Center">
+        <div class="kurz-photo-caption">
+          <strong>Aerial</strong>
+          Opel Test Center Rodgau-Dudenhofen · Steilkurven-Oval + Handling-Course als Yard-Loop
+        </div>
+      </div>
+      <div style="display: grid; grid-template-rows: 1fr 1fr; gap: 14px;">
+        <div class="kurz-photo wide">
+          <img src="assets/redbull/photos/photo-dudenhofen-loop.jpg" alt="Loop">
+          <div class="kurz-photo-caption">
+            <strong>Yard-Loop</strong>
+            22-28 km kombiniert · ebene Strecke · keine technischen Hindernisse
+          </div>
+        </div>
+        <div class="kurz-photo wide">
+          <img src="assets/redbull/photos/photo-dudenhofen-fahrtraining.jpg" alt="Fahrtraining">
+          <div class="kurz-photo-caption">
+            <strong>Closed Course</strong>
+            Abgesperrtes Gelände · keine externen Verkehrsteilnehmer · eigene Sicherheits-Struktur
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PROOF OF CONCEPT
+     ============================================================ -->
+<style>
+.kurz-proof { background: var(--kvd-white); padding: 80px var(--pad); }
+.kurz-proof-inner { max-width: 1280px; margin: 0 auto; }
+.kurz-proof h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(40px, 6vw, 64px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0 0 12px 0; color: var(--kvd-black); }
+.kurz-proof .eyebrow { color: var(--kvd-rot); margin-bottom: 16px; }
+.kurz-proof-lead { font-size: 17px; line-height: 1.5; max-width: 760px; margin: 0 0 40px 0; color: rgba(10,10,10,0.78); }
+.kurz-proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.kurz-proof-card { padding: 28px 26px; background: var(--kvd-sand); border-left: 4px solid var(--kvd-rot); display: flex; flex-direction: column; gap: 10px; }
+.kurz-proof-card .proof-source { font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(10,10,10,0.55); }
+.kurz-proof-card .proof-name { font-family: var(--f-display); font-weight: 900; font-size: 26px; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1; color: var(--kvd-black); margin-bottom: 4px; }
+.kurz-proof-card .proof-by { font-size: 13px; color: rgba(10,10,10,0.65); letter-spacing: 0.02em; }
+.kurz-proof-card .proof-body { font-size: 14.5px; line-height: 1.5; color: var(--kvd-black); margin-top: 8px; }
+@media (max-width: 860px) { .kurz-proof-grid { grid-template-columns: 1fr; } .kurz-proof { padding: 56px 24px; } }
+</style>
+<section class="kurz-proof">
+  <div class="kurz-proof-inner">
+    <p class="eyebrow">Beweis · Strava-Daten 2025</p>
+    <h2>Junge Männer wollen<br>Wettkampf. Und Live.</h2>
+    <p class="kurz-proof-lead"><strong>Kern-Zielgruppe: junge Männer 18-25</strong>, Strava-Generation, Studenten und Berufsanfänger im urbanen Raum. Die Strava-Year-in-Sport-Daten 2025 (180 Mio User, 30.494 Befragte) zeigen, warum dieser Cast genau jetzt zusammenkommt · und warum Backyard × Bike das Format ist, das diese Generation sucht.</p>
+
+    <div class="kurz-proof-grid">
+      <div class="kurz-proof-card">
+        <div class="proof-source">Wettkampf-Hunger</div>
+        <div class="proof-name">+39%</div>
+        <div class="proof-by">Anstieg 10K-Race-Anmeldungen Gen Z (vs. Gen X +7%)</div>
+        <div class="proof-body">Die junge Generation will Wettkampf · Explosiv und messbar. Backyard × Bike liefert genau das Format dafür: eine klare Regel, eine messbare Leistung, ein Sieger auf Strava-Niveau.</div>
+      </div>
+      <div class="kurz-proof-card">
+        <div class="proof-source">Motivation</div>
+        <div class="proof-name">75%</div>
+        <div class="proof-by">Gen Z gibt Wettkampf/Event als Hauptmotivation an</div>
+        <div class="proof-body">Drei von vier Gen-Z-Sportlern trainieren auf einen Wettkampf hin · Nicht für Fitness allein. Backyard × Bike ist der Wettkampf, an den sich die Strava-Generation hochtrainieren will.</div>
+      </div>
+      <div class="kurz-proof-card">
+        <div class="proof-source">Strava-Reach</div>
+        <div class="proof-name">180 Mio</div>
+        <div class="proof-by">aktive Strava-User · >50% Gen Z will Strava 2026 noch mehr nutzen</div>
+        <div class="proof-body">Während Instagram und TikTok bei der jungen Zielgruppe stagnieren, wächst Strava. Cycling-Clubs +280% in 2025. Der Aufmerksamkeits-Gewinner unter den jungen Sportlern liegt im Format selbst.</div>
+      </div>
+    </div>
+
+    <p style="margin-top: 32px; font-size: 12px; color: rgba(10,10,10,0.5); letter-spacing: 0.04em;">Quelle: Strava „Year in Sport / Das Sportjahr 2025" (DE, 30.494 Befragte plus 180-Mio-User-Datenbasis).</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     ENERGY HOUSES
+     ============================================================ -->
+<style>
+.kurz-houses { background: var(--kvd-black); color: var(--kvd-white); padding: 80px var(--pad); }
+.kurz-houses-inner { max-width: 1280px; margin: 0 auto; }
+.kurz-houses h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(40px, 6vw, 64px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0 0 12px 0; color: var(--kvd-white); }
+.kurz-houses h2 .rot { color: var(--kvd-rot); }
+.kurz-houses .eyebrow { color: var(--kvd-rot); margin-bottom: 16px; }
+.kurz-houses-lead { font-size: 17px; line-height: 1.5; max-width: 760px; margin: 0 0 40px 0; color: rgba(255,255,255,0.82); }
+.kurz-houses-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.kurz-house { padding: 24px 22px; background: rgba(255,255,255,0.06); border-left: 4px solid var(--kvd-rot); }
+.kurz-house .house-tag { font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--kvd-gelb); margin-bottom: 10px; }
+.kurz-house .house-title { font-size: 18px; font-weight: 700; line-height: 1.2; color: var(--kvd-white); margin-bottom: 8px; }
+.kurz-house .house-body { font-size: 13.5px; line-height: 1.5; color: rgba(255,255,255,0.78); }
+@media (max-width: 980px) { .kurz-houses-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .kurz-houses-grid { grid-template-columns: 1fr; } .kurz-houses { padding: 56px 24px; } }
+</style>
+<section class="kurz-houses">
+  <div class="kurz-houses-inner">
+    <p class="eyebrow">Setup vor Ort · Fünf Hubs</p>
+    <h2>Fünf Hubs.<br>Eine <span class="rot">Strecke.</span></h2>
+    <p class="kurz-houses-lead">Auf der Strecke entstehen fünf Hubs mit klaren Rollen: zentrale Mechaniker-Zone, Uni-Team Energy Homes, General Red Bull Home auf der Gegenseite, individuelle Influencer-Homes und ein Camping Ground für Zuschauer und Studenten, ähnlich dem DTM-24-Stunden-Setup.</p>
+
+    <div class="kurz-houses-grid" style="grid-template-columns: repeat(5, 1fr); gap: 12px;">
+      <div class="kurz-house">
+        <div class="house-tag">KvD</div>
+        <div class="house-title">Mechaniker-Zone</div>
+        <div class="house-body">Zentrale Werkstatt für alle Teilnehmer. KvD-Mechanik-Team rund um die Uhr, eigener Pit-Eingang.</div>
+      </div>
+      <div class="kurz-house">
+        <div class="house-tag">Uni</div>
+        <div class="house-title">Uni-Team Energy Homes</div>
+        <div class="house-body">Jede Uni hat ihr eigenes Home. Eigene Crew, eigene Verpflegung, eigene Brand-Welt für den Uni-Rider.</div>
+      </div>
+      <div class="kurz-house">
+        <div class="house-tag">Red Bull</div>
+        <div class="house-title">General Red-Bull-Home</div>
+        <div class="house-body">Hauptverantwortlicher Hub auf der Gegenseite, wo jeder Teilnehmer hält. Eigene Kamera am Eingang dokumentiert die Touchpoints live.</div>
+      </div>
+      <div class="kurz-house">
+        <div class="house-tag">Influencer</div>
+        <div class="house-title">Influencer-Homes</div>
+        <div class="house-body">Einzelstarter bauen sich eigene Homes auf. Mehr Brand-Vielfalt, mehr Cast-Story im Paddock.</div>
+      </div>
+      <div class="kurz-house">
+        <div class="house-tag">Zuschauer</div>
+        <div class="house-title">Camping Ground</div>
+        <div class="house-body">Camping-Bereich für Studenten und Zuschauer, eigener Kiosk. DTM-24h-Setup als Vorbild.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CAST · Influencer-Beispiele
+     ============================================================ -->
+<style>
+.kurz-cast { background: var(--kvd-sand); padding: 80px var(--pad); }
+.kurz-cast-inner { max-width: 1280px; margin: 0 auto; }
+.kurz-cast h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(40px, 6vw, 64px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0 0 12px 0; color: var(--kvd-black); }
+.kurz-cast .eyebrow { color: var(--kvd-rot); margin-bottom: 16px; }
+.kurz-cast-lead { font-size: 17px; line-height: 1.5; max-width: 760px; margin: 0 0 40px 0; color: rgba(10,10,10,0.78); }
+.kurz-cast-pill-grid { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 32px; }
+.kurz-cast-pill { padding: 14px 22px; background: var(--kvd-white); border: 1px solid var(--kvd-black); border-radius: 100px; font-size: 14.5px; font-weight: 600; color: var(--kvd-black); white-space: nowrap; }
+.kurz-cast-pill .reach { display: inline-block; margin-left: 8px; padding: 2px 8px; background: var(--kvd-rot); color: var(--kvd-black); border-radius: 100px; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; }
+.kurz-cast-note { padding: 20px 24px; background: var(--kvd-white); border-left: 4px solid var(--kvd-rot); font-size: 14.5px; line-height: 1.55; color: var(--kvd-black); max-width: 880px; }
+.kurz-cast-note strong { color: var(--kvd-rot); }
+@media (max-width: 560px) { .kurz-cast { padding: 56px 24px; } }
+</style>
+<section class="kurz-cast">
+  <div class="kurz-cast-inner">
+    <p class="eyebrow">Cast · Beispiele aus der Long-List</p>
+    <h2>Wer fährt.<br>Wer streamt.</h2>
+    <p class="kurz-cast-lead">Der Cast wird gemischt aus deutschen Uni-Riders, Cycling-Creator und Pro-Athleten zusammengestellt. Die internationalen Namen unten sind dramaturgische Bench-Marks für die Reichweiten-Klasse, die wir im DACH-Cycling-Space spiegeln. Die finale DE-Long-List wird nach Red-Bull-Sign-off in der Cast-Akquise-Phase Q3/Q4 2026 zusammengestellt.</p>
+
+    <div class="kurz-cast-pill-grid">
+      <div class="kurz-cast-pill">Vegan Cyclist <span class="reach">~200k YT</span></div>
+      <div class="kurz-cast-pill">Cycling Maven <span class="reach">YouTube/IG</span></div>
+      <div class="kurz-cast-pill">Phil Gaimon <span class="reach">~150k YT</span></div>
+      <div class="kurz-cast-pill">GCN-Network <span class="reach">Personalities</span></div>
+      <div class="kurz-cast-pill">DACH-Cycling-Creator <span class="reach">TBD</span></div>
+      <div class="kurz-cast-pill">Uni-Rider Teams <span class="reach">30 Unis DE</span></div>
+      <div class="kurz-cast-pill">Pro-Sportler-Crossover <span class="reach">TBD</span></div>
+    </div>
+
+    <div class="kurz-cast-note">
+      <strong>Reichweite über den Cast statt über Cold-Reach:</strong> Mindestens 2-3 Athleten pro Team mit eigenem Twitch- oder YouTube-Stream parallel zur Hauptproduktion. Jeder streamt aus seinem Team-Home. Cross-Posting auf TikTok und Instagram ist Pflicht im Athleten-Vertrag. Die DE-Cast-Long-List liegt im internen Cast-Briefing · Wird auf Red-Bull-Sign-off freigegeben.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AKTIVIERUNG · Erwartungshaltung
+     ============================================================ -->
+<style>
+.kurz-activation { background: var(--kvd-white); padding: 80px var(--pad); }
+.kurz-activation-inner { max-width: 1280px; margin: 0 auto; }
+.kurz-activation h2 { font-family: var(--f-display); font-weight: 900; font-size: clamp(40px, 6vw, 64px); text-transform: uppercase; letter-spacing: -0.02em; line-height: 0.98; margin: 0 0 12px 0; color: var(--kvd-black); }
+.kurz-activation h2 .rot { color: var(--kvd-rot); }
+.kurz-activation .eyebrow { color: var(--kvd-rot); margin-bottom: 16px; }
+.kurz-activation-lead { font-size: 17px; line-height: 1.5; max-width: 760px; margin: 0 0 40px 0; color: rgba(10,10,10,0.78); }
+.kurz-act-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.kurz-act-card { padding: 28px 26px; background: var(--kvd-sand); border: 1px solid var(--kvd-black); display: flex; flex-direction: column; gap: 10px; }
+.kurz-act-card .act-when { font-size: 11px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--kvd-rot); font-weight: 700; }
+.kurz-act-card .act-group { font-family: var(--f-display); font-weight: 900; font-size: 28px; text-transform: uppercase; letter-spacing: -0.01em; line-height: 1; color: var(--kvd-black); }
+.kurz-act-card .act-body { font-size: 14.5px; line-height: 1.55; color: var(--kvd-black); }
+.kurz-act-card ul { padding-left: 18px; margin: 0; }
+.kurz-act-card li { font-size: 13.5px; line-height: 1.5; color: var(--kvd-black); margin-bottom: 4px; }
+@media (max-width: 860px) { .kurz-act-grid { grid-template-columns: 1fr; } .kurz-activation { padding: 56px 24px; } }
+</style>
+<section class="kurz-activation">
+  <div class="kurz-activation-inner">
+    <p class="eyebrow">Pre-Hype · Was wir vom Cast erwarten</p>
+    <h2>Aktivierung läuft<br>vor dem <span class="rot">Event.</span></h2>
+    <p class="kurz-activation-lead">Mit Sign-off Q3 2026 startet die Pre-Hype-Phase. Reichweite entsteht nicht am Event-Wochenende, sondern in den 6-9 Monaten davor · Influencer, Uni-Teams und Athleten haben klare Vertrags-Verpflichtungen.</p>
+
+    <div class="kurz-act-grid">
+      <div class="kurz-act-card">
+        <div class="act-when">Q3-Q4 2026 · Pre-Hype</div>
+        <div class="act-group">Influencer</div>
+        <div class="act-body">Cast-Bewerbung + Storyline-Setup:</div>
+        <ul>
+          <li>Wöchentlicher Pre-Hype-Content (Training, Bike-Setup, Team-Reveal)</li>
+          <li>Branded Cross-Posts mit Red Bull, Canyon, Garmin</li>
+          <li>2-3 Pre-Event-Kollabs zwischen Cast-Mitgliedern (Trainings-Camp, Tech-Test)</li>
+          <li>Eigener Stream-Channel beim Event Pflicht</li>
+        </ul>
+      </div>
+      <div class="kurz-act-card">
+        <div class="act-when">Q4 2026 - Q1 2027 · Bewerbungsphase</div>
+        <div class="act-group">Unis</div>
+        <div class="act-body">30 Uni-Teams bewerben sich um die 30 Slots:</div>
+        <ul>
+          <li>Campus-Aktivierung Bewerbungs-Phase (Vorlesungs-Aushang, Campus-Channel)</li>
+          <li>Team-Pitch-Video als Bewerbungs-Asset</li>
+          <li>Pre-Selection durch Karl+Karla + Red Bull-Cast-Lead</li>
+          <li>Finale 30 Teams ab Februar 2027 mit eigenem Team-Reveal-Content</li>
+        </ul>
+      </div>
+      <div class="kurz-act-card">
+        <div class="act-when">Q1-Q2 2027 · Race-Prep</div>
+        <div class="act-group">Athleten</div>
+        <div class="act-body">Pro-Sportler und Crossover-Cast:</div>
+        <ul>
+          <li>Trainings-Doku auf eigenen Channels (Strava, YT, IG)</li>
+          <li>Probelauf vor Ort im April 2027 (4-6 Wochen vor Event, mit Stream-Tech-Test)</li>
+          <li>Pflicht-Materialcheck Canyon + Pflicht-Setup Garmin-Telemetrie</li>
+          <li>Eigene Stream-Achse aus dem Team-Home während des Rennens</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     KURZ → LONG CTA  (added for short version only)
+     ============================================================ -->
+<style>
+.kurz-cta {
+  background: var(--kvd-rot);
+  color: var(--kvd-black);
+  padding: 96px var(--pad);
+  text-align: center;
+}
+.kurz-cta-inner { max-width: 860px; margin: 0 auto; }
+.kurz-cta .eyebrow {
+  color: var(--kvd-black);
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.kurz-cta h2 {
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: clamp(56px, 8vw, 96px);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  line-height: 0.95;
+  margin: 0 0 24px 0;
+  color: var(--kvd-black);
+}
+.kurz-cta-lead {
+  font-size: 19px;
+  line-height: 1.5;
+  color: var(--kvd-black);
+  max-width: 680px;
+  margin: 0 auto 40px auto;
+}
+.kurz-cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 44px;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  font-family: var(--f-standard);
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 100px;
+  transition: transform .2s, opacity .2s;
+}
+.kurz-cta-btn:hover { opacity: 0.88; transform: translateY(-1px); }
+.kurz-cta-btn .arrow {
+  font-family: var(--f-display);
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1;
+}
+.kurz-cta-sub {
+  margin-top: 28px;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(10,10,10,0.55);
+}
+@media (max-width: 720px) {
+  .kurz-cta { padding: 64px 24px; }
+  .kurz-cta-btn { padding: 18px 32px; font-size: 14px; }
+}
+</style>
+
+<section class="kurz-cta">
+  <div class="kurz-cta-inner">
+    <p class="eyebrow">Vollständiger Pitch</p>
+    <h2>Mehr Input?<br>Hier.</h2>
+    <p class="kurz-cta-lead">
+      Strecke im Detail, Sicherheits-Stack, Stream-Architektur, Format-Mechanik Stunde für Stunde, Sign-off-Roadmap, Risiko-Mitigation. Alles, was vor dem Auftakt-Call gelesen sein will.
+    </p>
+    <a href="/redbull-backyard" class="kurz-cta-btn">
+      Vollständigen Pitch öffnen <span class="arrow">↗</span>
+    </a>
+    <p class="kurz-cta-sub">~12 Min Read · 25 Sektionen · alle Backing-Zahlen</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<style>
+.kurz-footer {
+  background: var(--kvd-black);
+  color: rgba(255,255,255,0.6);
+  padding: 48px var(--pad);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+.kurz-footer a {
+  color: var(--kvd-rot);
+  text-decoration: none;
+}
+.kurz-footer a:hover { text-decoration: underline; }
+</style>
+
+<footer class="kurz-footer">
+  Karl + Karla · KvD-Agentur · Kontakt: <a href="mailto:hi@karlpluskarla.de">hi@karlpluskarla.de</a> · <a href="/redbull-backyard">Vollständiger Pitch</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,3804 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Backyard × Bike · Red Bull Pitch · Karl+Karla</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,800;1,900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   Backyard × Bike · Pitch HTML v1
+   CI: KarlvonDrais Brand-Book-Variant + Display-Stack
+   ============================================================ */
+
+/* Dharma Gothic E (Display) */
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_ExLight_R.otf") format("opentype"); font-weight:200; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Light_R.otf")   format("opentype"); font-weight:300; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Regular_R.otf") format("opentype"); font-weight:400; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Bold_R.otf")    format("opentype"); font-weight:700; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_ExBold_R.otf")  format("opentype"); font-weight:800; font-style:normal; font-display:block; }
+@font-face { font-family:"Dharma Gothic E"; src:url("assets/redbull/fonts/dharma-gothic-e/DharmaGothicE_Heavy_R.otf")   format("opentype"); font-weight:900; font-style:normal; font-display:block; }
+
+:root {
+  /* ── Karl+Karla CI ── */
+  --kvd-white:   #FFFFFF;
+  --kvd-black:   #0A0A0A;
+  --kvd-sand:    #F4F4F2;
+  --kvd-grau:    #EBEBEA;
+  --kvd-flieder: rgba(0,0,254,.8);
+  --kvd-rot:     #0000FE;
+  --kvd-gelb:    #0000FE;
+  --f-standard:  'Plus Jakarta Sans', 'Helvetica Neue', sans-serif;
+  --f-display:   'Barlow Condensed', 'Bebas Neue', sans-serif;
+  --f-quote:     'Barlow Condensed', Georgia, serif;
+  --pad: 96px;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--kvd-sand);
+  color: var(--kvd-black);
+  font-family: var(--f-standard);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.page { max-width: 1080px; margin: 0 auto; padding: 64px var(--pad) 96px; }
+.eyebrow {
+  color: var(--kvd-flieder);
+  font-size: 13px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0 0 24px 0;
+}
+.eyebrow-rot { color: var(--kvd-rot); }
+.eyebrow-white { color: var(--kvd-flieder); }
+
+h1, h2, h3, h4 { font-family: var(--f-standard); margin: 0; }
+h1 { font-weight: 700; font-size: 64px; line-height: 1.04; letter-spacing: -0.01em; text-transform: uppercase; }
+h2 { font-weight: 700; font-size: 40px; line-height: 1.08; letter-spacing: -0.005em; text-transform: uppercase; margin: 96px 0 24px 0; }
+h3 { font-weight: 700; font-size: 22px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.01em; margin: 48px 0 12px 0; }
+h4 { font-weight: 700; font-size: 15px; letter-spacing: 0.10em; text-transform: uppercase; margin: 28px 0 8px 0; }
+p { margin: 0 0 16px 0; }
+strong { font-weight: 700; }
+ul, ol { padding-left: 1.3em; margin: 0 0 16px 0; }
+li { margin: 6px 0; }
+a { color: var(--kvd-black); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============================================================
+   HERO · Full-viewport dramatic
+   ============================================================ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--kvd-black);
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.42;
+  filter: contrast(1.10) saturate(0.85);
+}
+.hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.20) 40%, rgba(0,0,0,0.75) 100%);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  padding: 56px var(--pad) 0 var(--pad);
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  color: var(--kvd-white);
+}
+.hero-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 80px;
+}
+.hero-top img.logo { height: 72px; width: auto; }
+.hero-meta {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-align: right;
+  line-height: 1.7;
+}
+.hero-meta .accent { color: var(--kvd-rot); font-weight: 700; }
+.hero-meta .meta-block { display: inline-block; padding: 6px 12px; border: 1px solid var(--kvd-white); margin-bottom: 8px; }
+
+.hero-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 1280px;
+}
+.hero-eyebrow {
+  color: var(--kvd-flieder);
+  font-size: 16px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  margin-bottom: 36px;
+  font-weight: 400;
+}
+.hero h1 {
+  font-family: var(--f-standard);
+  font-weight: 700;
+  font-size: 188px;
+  line-height: 0.86;
+  letter-spacing: -0.035em;
+  color: var(--kvd-white);
+  margin: 0 0 36px 0;
+}
+.hero h1 .of {
+  display: inline-block;
+  color: var(--kvd-rot);
+  font-weight: 400;
+  font-style: italic;
+  font-family: var(--f-quote);
+  letter-spacing: -0.015em;
+  font-size: 162px;
+  vertical-align: baseline;
+}
+.hero-tagline {
+  font-size: 28px;
+  line-height: 1.3;
+  font-weight: 400;
+  max-width: 920px;
+  color: var(--kvd-white);
+  margin-bottom: 12px;
+}
+.hero-tagline strong { color: var(--kvd-rot); }
+.hero-sub {
+  font-size: 16px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  max-width: 920px;
+}
+
+.hero-cta {
+  position: relative;
+  z-index: 1;
+  padding: 24px var(--pad);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  color: var(--kvd-white);
+}
+.hero-cta-left {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  line-height: 1.6;
+}
+.hero-cta-right {
+  font-family: var(--f-quote);
+  font-style: italic;
+  color: var(--kvd-flieder);
+  font-size: 14px;
+}
+
+/* ============================================================
+   STATS TICKER · Black bar right after hero
+   ============================================================ */
+.ticker {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 64px var(--pad);
+  width: 100%;
+}
+.ticker-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 24px;
+}
+.ticker-cell {
+  border-left: 1px solid rgba(255,255,255,0.25);
+  padding-left: 20px;
+}
+.ticker-cell:first-child { border-left: none; padding-left: 0; }
+.ticker-num {
+  font-family: var(--f-standard);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 12px;
+}
+.ticker-num.rot { color: var(--kvd-rot); }
+.ticker-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   ARDA REFERENCE · Sand bg, big quote
+   ============================================================ */
+.frame-statement {
+  background: var(--kvd-sand);
+  padding: 120px var(--pad);
+  width: 100%;
+}
+.frame-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.frame-statement .eyebrow { margin-bottom: 32px; }
+.frame-quote {
+  font-family: var(--f-quote);
+  font-size: 52px;
+  line-height: 1.18;
+  color: var(--kvd-rot);
+  margin: 0 0 28px 0;
+  letter-spacing: -0.005em;
+}
+.frame-attr {
+  font-family: var(--f-quote);
+  font-style: italic;
+  color: var(--kvd-rot);
+  font-size: 16px;
+  letter-spacing: 0.04em;
+}
+
+/* ============================================================
+   FACT BLOCK · Was das Format ist
+   ============================================================ */
+.facts {
+  background: var(--kvd-sand);
+  padding: 0 var(--pad) 96px var(--pad);
+  width: 100%;
+}
+.facts-inner { max-width: 1280px; margin: 0 auto; }
+.facts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 32px;
+}
+.facts-header h2 { margin: 0; max-width: 700px; }
+.facts-header-right {
+  text-align: right;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-black);
+  max-width: 320px;
+  line-height: 1.6;
+}
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.fact {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.fact-num {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  color: var(--kvd-black);
+}
+.fact-num.rot { color: var(--kvd-rot); }
+.fact-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+.fact-body { font-size: 15px; line-height: 1.45; }
+
+/* ============================================================
+   SECTION DIVIDER · Full-width black bands
+   ============================================================ */
+.divider {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 96px var(--pad);
+  width: 100%;
+  position: relative;
+}
+.divider::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 8px;
+  height: 100%;
+  background: var(--kvd-rot);
+}
+.divider-inner { max-width: 1280px; margin: 0 auto; }
+.divider .num {
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+}
+.divider h2 {
+  color: var(--kvd-white);
+  font-weight: 400;
+  font-size: 108px;
+  line-height: 0.95;
+  letter-spacing: -0.025em;
+  text-transform: uppercase;
+  margin: 0;
+}
+.divider h2 strong { font-weight: 700; }
+.divider h2 .rot { color: var(--kvd-rot); }
+.divider-sub {
+  font-size: 22px;
+  line-height: 1.4;
+  color: var(--kvd-white);
+  max-width: 720px;
+  margin-top: 32px;
+}
+
+/* ============================================================
+   SPONSOR TIERS · Investment cards
+   ============================================================ */
+.tiers {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.tiers-inner { max-width: 1280px; margin: 0 auto; }
+.tiers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+.tier {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.tier.title-tier {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+}
+.tier.title-tier .tier-name,
+.tier.title-tier .tier-slots,
+.tier.title-tier .tier-price,
+.tier.title-tier .tier-list li { color: var(--kvd-white); }
+.tier-name {
+  font-size: 13px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: var(--kvd-rot);
+}
+.tier.title-tier .tier-name { color: var(--kvd-rot); }
+.tier-slots {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--kvd-black);
+  opacity: 0.7;
+}
+.tier-price {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.015em;
+  margin-bottom: 4px;
+  color: var(--kvd-black);
+}
+.tier-price-suffix {
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  color: var(--kvd-black);
+  opacity: 0.7;
+}
+.tier.title-tier .tier-price-suffix { color: var(--kvd-flieder); opacity: 1; }
+.tier-list {
+  padding-left: 0;
+  list-style: none;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.45;
+}
+.tier-list li {
+  padding: 6px 0 6px 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.07);
+  position: relative;
+}
+.tier.title-tier .tier-list li { border-bottom: 1px solid rgba(255,255,255,0.15); }
+.tier-list li::before {
+  content: "+";
+  position: absolute;
+  left: 0;
+  color: var(--kvd-rot);
+  font-weight: 700;
+}
+.tier-list li:last-child { border-bottom: none; }
+
+.tier-totals {
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+.tier-total-num {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin-bottom: 8px;
+}
+.tier-total-num.rot { color: var(--kvd-rot); }
+.tier-total-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+}
+
+/* ============================================================
+   CAST · Roster grid
+   ============================================================ */
+.cast {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.cast-inner { max-width: 1280px; margin: 0 auto; }
+.cast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 16px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cast-header h2 { margin: 0; }
+.cast-status {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  border: 1px solid var(--kvd-rot);
+  padding: 6px 12px;
+}
+.cast-intro {
+  font-size: 17px;
+  line-height: 1.5;
+  max-width: 760px;
+  margin-bottom: 48px;
+}
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+.cast-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 20px;
+  align-items: center;
+}
+.cast-num {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--kvd-rot);
+  letter-spacing: -0.02em;
+}
+.cast-info { min-width: 0; }
+.cast-name {
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 4px;
+}
+.cast-role {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-black);
+  opacity: 0.65;
+  margin-bottom: 2px;
+}
+.cast-platform {
+  font-size: 12px;
+  color: var(--kvd-black);
+  opacity: 0.7;
+}
+.cast-reach {
+  font-size: 15px;
+  font-weight: 700;
+  text-align: right;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+.cast-reach .small { font-size: 10px; letter-spacing: 0.15em; display: block; text-transform: uppercase; opacity: 0.6; font-weight: 400; }
+.cast-via {
+  display: inline-block;
+  margin-top: 6px;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  border-top: 1px solid var(--kvd-rot);
+  padding-top: 4px;
+}
+
+.cast-totals {
+  margin-top: 32px;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 28px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.cast-totals .big {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-rot);
+}
+.cast-totals .label {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  line-height: 1.5;
+}
+
+/* ============================================================
+   FORMAT BLOCK · 24/7 Online
+   ============================================================ */
+.format-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.format-inner { max-width: 1280px; margin: 0 auto; }
+.format-pillars {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+.pillar {
+  background: var(--kvd-white);
+  border-left: 6px solid var(--kvd-rot);
+  padding: 32px;
+}
+.pillar-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.pillar h3 {
+  margin: 0 0 16px 0;
+  font-size: 26px;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.pillar p { font-size: 15px; line-height: 1.5; }
+.pillar ul { font-size: 15px; padding-left: 1.1em; }
+
+/* ============================================================
+   DATA OVERLAY VISUAL · Stream-Daten preview
+   ============================================================ */
+.data-strip {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 48px var(--pad);
+  width: 100%;
+}
+.data-strip-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  align-items: stretch;
+}
+.data-cell {
+  border: 1px solid rgba(255,255,255,0.2);
+  padding: 16px;
+}
+.data-cell-label {
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  margin-bottom: 8px;
+}
+.data-cell-val {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--kvd-white);
+  font-variant-numeric: tabular-nums;
+}
+.data-cell-val.rot { color: var(--kvd-rot); }
+
+/* ============================================================
+   TABLES · Base
+   ============================================================ */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0 32px;
+  font-size: 15px;
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+}
+th, td {
+  text-align: left;
+  vertical-align: top;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--kvd-grau);
+}
+thead th {
+  background: var(--kvd-grau);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  border-bottom: 2px solid var(--kvd-black);
+}
+tbody tr:last-child td { border-bottom: none; }
+tbody tr:nth-child(even) td { background: #F4F4F2; }
+
+.callout {
+  background: var(--kvd-white);
+  border-left: 4px solid var(--kvd-rot);
+  padding: 24px 28px;
+  margin: 32px 0;
+  font-size: 16px;
+}
+.callout h4 { margin-top: 0; color: var(--kvd-rot); font-size: 13px; letter-spacing: 0.15em; }
+
+.quote-block {
+  font-family: var(--f-quote);
+  font-size: 44px;
+  line-height: 1.2;
+  color: var(--kvd-rot);
+  text-align: left;
+  margin: 64px 0;
+  max-width: 880px;
+}
+.quote-attr {
+  font-family: var(--f-quote);
+  font-size: 14px;
+  color: var(--kvd-rot);
+  font-style: italic;
+  letter-spacing: 0.05em;
+  margin-top: 8px;
+}
+
+.figure { margin: 48px 0; }
+.figure img { width: 100%; height: auto; display: block; }
+.figure-caption {
+  font-family: var(--f-quote);
+  font-style: italic;
+  font-size: 14px;
+  color: var(--kvd-rot);
+  margin-top: 10px;
+  letter-spacing: 0.02em;
+}
+.figure--full { width: 100%; }
+.figure--full img { width: 100%; height: 620px; object-fit: cover; }
+.figure--full .figure-caption { padding: 10px var(--pad) 0; max-width: 1280px; margin: 0 auto; }
+
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; margin: 32px 0; }
+
+/* Location 3-tile grid */
+.location-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 32px 0 48px 0;
+}
+.location-tile {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--kvd-black);
+}
+.location-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.location-tile-label {
+  position: absolute;
+  bottom: 0; left: 0;
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  padding: 8px 14px;
+}
+.location-tile-label .accent { color: var(--kvd-rot); }
+
+/* Track Record 4-tile */
+.trackrec {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.trackrec-inner { max-width: 1280px; margin: 0 auto; }
+.trackrec-header { margin-bottom: 48px; }
+.trackrec-lead {
+  position: relative;
+  margin-bottom: 16px;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+.trackrec-lead img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trackrec-lead-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 32px;
+}
+.trackrec-lead-caption .label {
+  color: var(--kvd-rot);
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.trackrec-lead-caption .text {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 720px;
+}
+.trackrec-tiles {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.trackrec-tile {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  background: var(--kvd-black);
+}
+.trackrec-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.trackrec-tile-caption {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 20px 18px;
+}
+.trackrec-tile-caption .label {
+  color: var(--kvd-rot);
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.trackrec-tile-caption .text {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Reach Chart */
+.reach-chart {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 96px var(--pad);
+}
+.reach-inner { max-width: 1280px; margin: 0 auto; }
+.reach-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.reach-header-row h2 { color: var(--kvd-white); margin: 0; }
+.reach-headline-num {
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--kvd-rot);
+}
+.reach-headline-label {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  text-align: right;
+  line-height: 1.5;
+}
+.reach-bars { display: flex; flex-direction: column; gap: 4px; }
+.reach-bar {
+  display: grid;
+  grid-template-columns: 200px 1fr 120px;
+  gap: 16px;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.reach-bar-name {
+  font-size: 14px;
+  font-weight: 700;
+}
+.reach-bar-name .sub {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.reach-bar-track {
+  position: relative;
+  height: 22px;
+  background: rgba(255,255,255,0.05);
+}
+.reach-bar-fill {
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  background: var(--kvd-rot);
+}
+.reach-bar-fill.muted { background: rgba(255,255,255,0.55); }
+.reach-bar-value {
+  font-size: 14px;
+  text-align: right;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.reach-bar-value .sub {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  color: var(--kvd-flieder);
+  font-weight: 400;
+  margin-top: 2px;
+}
+.reach-legend {
+  display: flex;
+  gap: 32px;
+  margin-top: 32px;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+}
+.reach-legend-item { display: flex; align-items: center; gap: 10px; }
+.reach-legend-dot { width: 14px; height: 14px; }
+.reach-legend-dot.rot { background: var(--kvd-rot); }
+.reach-legend-dot.muted { background: rgba(255,255,255,0.55); }
+
+/* Sponsor activation matrix */
+.matrix {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.matrix-inner { max-width: 1280px; margin: 0 auto; }
+.matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 32px;
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  font-size: 14px;
+}
+.matrix-table th, .matrix-table td {
+  text-align: center;
+  padding: 14px 10px;
+  border-bottom: 1px solid var(--kvd-grau);
+  border-right: 1px solid var(--kvd-grau);
+}
+.matrix-table th:last-child, .matrix-table td:last-child { border-right: none; }
+.matrix-table thead th {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+}
+.matrix-table tbody td:first-child {
+  text-align: left;
+  font-weight: 700;
+  background: var(--kvd-grau);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.10em;
+}
+.matrix-dot {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+}
+.matrix-dot.full { background: var(--kvd-rot); }
+.matrix-dot.half { background: var(--kvd-rot); opacity: 0.45; }
+.matrix-dot.empty { background: var(--kvd-grau); border: 1px solid var(--kvd-black); }
+.matrix-text { font-size: 12px; font-weight: 700; }
+
+.matrix-scroll-hint { display: none; }
+
+/* Dryll-Highlight in der Matrix-Zeile */
+.matrix-table tbody tr.is-dryll td {
+  background: #F4F4F2;
+  border-top: 2px solid var(--kvd-rot);
+  border-bottom: 2px solid var(--kvd-rot);
+}
+.matrix-table tbody tr.is-dryll td:first-child {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  position: relative;
+}
+.matrix-table tbody tr.is-dryll td:first-child::after {
+  content: "Du";
+  position: absolute;
+  top: 6px; right: 8px;
+  font-size: 9px;
+  letter-spacing: 0.15em;
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  padding: 2px 6px;
+  font-weight: 700;
+}
+
+/* Premium-Tier Dryll-Badge */
+.tier.is-dryll {
+  outline: 3px solid var(--kvd-rot);
+  outline-offset: -3px;
+  position: relative;
+}
+.tier.is-dryll::before {
+  content: "Vorschlag · Dryll";
+  position: absolute;
+  top: -12px;
+  left: 16px;
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 4px 10px;
+}
+
+/* "Personalisiert für"-Stripe im Hero */
+.dryll-stripe {
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  padding: 14px var(--pad);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.dryll-stripe span.accent {
+  color: #F4F4F2;
+  font-weight: 700;
+}
+
+/* Strategische Bridge: 3 Argumente jetzt */
+.strat-bridge {
+  background: var(--kvd-sand);
+  padding: 120px var(--pad);
+}
+.strat-bridge-inner { max-width: 1280px; margin: 0 auto; }
+.strat-bridge-eyebrow {
+  color: var(--kvd-rot);
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+}
+.strat-bridge-h {
+  font-size: 56px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0 0 24px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  max-width: 1000px;
+}
+.strat-bridge-lead {
+  font-size: 19px;
+  line-height: 1.5;
+  max-width: 880px;
+  margin: 0 0 64px 0;
+}
+.strat-bridge-lead strong { color: var(--kvd-rot); }
+.bridge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.bridge-card {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 36px 32px 40px;
+  display: flex;
+  flex-direction: column;
+  border-top: 8px solid var(--kvd-rot);
+  position: relative;
+}
+.bridge-card .bridge-num {
+  font-size: 13px;
+  letter-spacing: 0.25em;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.bridge-card .bridge-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  margin-bottom: 28px;
+}
+.bridge-card h3 {
+  font-size: 22px;
+  line-height: 1.22;
+  text-transform: none;
+  margin: 0 0 20px 0;
+  color: var(--kvd-white);
+  letter-spacing: -0.005em;
+}
+.bridge-card h3 .rot { color: var(--kvd-rot); }
+.bridge-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 14px 0;
+}
+.bridge-card p:last-child { margin-bottom: 0; }
+.bridge-card ul {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 8px 0 14px 0;
+  padding-left: 20px;
+  color: rgba(255,255,255,0.85);
+}
+.bridge-card ul li { margin: 4px 0; }
+.bridge-payoff {
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.15);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+.bridge-payoff strong {
+  display: block;
+  color: var(--kvd-rot);
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* "Warum Dryll"-Pitch-Section */
+.why-dryll {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 120px var(--pad);
+}
+.why-dryll-inner { max-width: 1080px; margin: 0 auto; }
+.why-dryll h2 { color: var(--kvd-white); margin: 0 0 32px 0; font-size: 56px; line-height: 1.05; }
+.why-dryll h2 .rot { color: var(--kvd-rot); }
+.why-dryll-lead {
+  font-size: 22px;
+  line-height: 1.4;
+  max-width: 880px;
+  margin-bottom: 64px;
+  color: var(--kvd-white);
+}
+.why-dryll-lead strong { color: var(--kvd-rot); }
+.why-dryll-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.why-dryll-card {
+  border-left: 4px solid var(--kvd-rot);
+  padding: 24px 28px;
+  background: rgba(255,255,255,0.04);
+}
+.why-dryll-card .num {
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-rot);
+  margin-bottom: 12px;
+}
+.why-dryll-card h3 {
+  color: var(--kvd-white);
+  margin: 0 0 12px 0;
+  font-size: 18px;
+}
+.why-dryll-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ============================================================
+   RESPONSIVE · Tablet ≤ 1024px, Phone ≤ 640px
+   ============================================================ */
+@media (max-width: 1024px) {
+  :root { --pad: 48px; }
+  body { font-size: 16px; }
+  h1 { font-size: 52px; }
+  h2 { font-size: 34px; margin: 72px 0 20px 0; }
+  h3 { font-size: 20px; }
+
+  .page { padding: 56px var(--pad) 80px; }
+
+  /* Hero */
+  .hero h1 { font-size: 110px; }
+  .hero h1 .of { font-size: 96px; }
+  .hero-tagline { font-size: 22px; }
+  .hero-sub { font-size: 14px; }
+  .hero-top img.logo { height: 60px; }
+  .hero-meta { font-size: 11px; }
+  .hero-content { padding: 40px var(--pad) 0; }
+
+  /* Ticker */
+  .ticker { padding: 48px var(--pad); }
+  .ticker-grid { grid-template-columns: repeat(3, 1fr); gap: 24px 20px; }
+  .ticker-num { font-size: 44px; }
+  .ticker-label { font-size: 10px; }
+
+  /* Frame-Statement */
+  .frame-statement { padding: 80px var(--pad); }
+  .frame-quote { font-size: 36px; }
+
+  /* Facts */
+  .facts-grid { grid-template-columns: repeat(2, 1fr); }
+  .facts-header { flex-wrap: wrap; }
+  .fact-num { font-size: 36px; }
+
+  /* Divider */
+  .divider { padding: 72px var(--pad); }
+  .divider h2 { font-size: 64px; }
+  .divider-sub { font-size: 18px; }
+
+  /* Tiers */
+  .tiers { padding: 64px var(--pad); }
+  .tiers-grid { grid-template-columns: repeat(2, 1fr); }
+  .tier-totals { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tier-total-num { font-size: 26px; }
+
+  /* Reach-chart */
+  .reach-chart { padding: 64px var(--pad); }
+  .reach-bar { grid-template-columns: 140px 1fr 80px; gap: 10px; }
+  .reach-bar-name { font-size: 12px; }
+  .reach-headline-num { font-size: 64px; }
+
+  /* Matrix */
+  .matrix { padding: 64px var(--pad); }
+  .matrix-table { font-size: 12px; }
+  .matrix-table th, .matrix-table td { padding: 10px 6px; }
+  .matrix-text { font-size: 10px; }
+
+  /* Timeline */
+  .timeline { padding: 64px var(--pad); }
+  .timeline-item { grid-template-columns: 80px 160px 1fr; gap: 16px; }
+
+  /* Trackrec */
+  .trackrec { padding: 64px var(--pad); }
+  .trackrec-tiles { grid-template-columns: repeat(2, 1fr); }
+
+  /* Cast */
+  .cast { padding: 64px var(--pad); }
+  .cast-card { padding: 16px 18px; grid-template-columns: 44px 1fr auto; gap: 14px; }
+  .cast-name { font-size: 17px; }
+
+  /* Format-block */
+  .format-block { padding: 64px var(--pad); }
+
+  /* Data-strip */
+  .data-strip-inner { grid-template-columns: repeat(3, 1fr); }
+  .data-cell-val { font-size: 22px; }
+
+  /* Strat-bridge */
+  .strat-bridge { padding: 80px var(--pad); }
+  .strat-bridge-h { font-size: 40px; }
+  .strat-bridge-lead { font-size: 17px; }
+  .bridge-grid { grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  /* Why-dryll */
+  .why-dryll { padding: 80px var(--pad); }
+  .why-dryll h2 { font-size: 40px; }
+  .why-dryll-lead { font-size: 18px; }
+
+  /* Two-col + Location-grid */
+  .two-col { grid-template-columns: 1fr; gap: 24px; }
+  .location-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Quote-block */
+  .quote-block { font-size: 32px; margin: 48px 0; }
+
+  /* Footer */
+  .footer { padding: 32px var(--pad); }
+}
+
+@media (max-width: 640px) {
+  :root { --pad: 20px; }
+  body { font-size: 15px; line-height: 1.5; }
+  h1 { font-size: 36px; }
+  h2 { font-size: 26px; line-height: 1.1; margin: 56px 0 16px 0; }
+  h3 { font-size: 17px; margin: 32px 0 10px 0; }
+  h4 { font-size: 13px; }
+  p { margin: 0 0 12px 0; }
+
+  .page { padding: 40px var(--pad) 56px; }
+
+  /* Dryll-Stripe oben */
+  .dryll-stripe { font-size: 10px; letter-spacing: 0.18em; padding: 12px var(--pad); line-height: 1.6; }
+
+  /* Hero */
+  .hero { min-height: auto; }
+  .hero-content { padding: 28px var(--pad) 0; }
+  .hero-top { flex-direction: column; align-items: flex-start; margin-bottom: 36px; }
+  .hero-top img.logo { height: 44px; }
+  .hero-meta { text-align: left; font-size: 10px; }
+  .hero-meta .meta-block { padding: 4px 8px; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 0.18em; margin-bottom: 24px; }
+  .hero-body { padding-bottom: 32px; }
+  .hero h1 { font-size: 64px; line-height: 0.92; margin-bottom: 24px; }
+  .hero h1 .of { font-size: 54px; }
+  .hero-tagline { font-size: 17px; line-height: 1.4; }
+  .hero-sub { font-size: 12px; letter-spacing: 0.12em; }
+  .hero-cta { flex-direction: column; align-items: flex-start; padding: 18px var(--pad); }
+  .hero-cta-left, .hero-cta-right { font-size: 11px; }
+  .hero-cta-right { font-size: 14px; line-height: 1.4; }
+
+  /* Ticker · 3 columns on phone */
+  .ticker { padding: 36px var(--pad); }
+  .ticker-grid { grid-template-columns: repeat(2, 1fr); gap: 20px 16px; }
+  .ticker-cell { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.18); padding-top: 16px; }
+  .ticker-cell:first-child, .ticker-cell:nth-child(2) { border-top: none; padding-top: 0; }
+  .ticker-num { font-size: 34px; }
+  .ticker-label { font-size: 9px; letter-spacing: 0.15em; line-height: 1.4; }
+
+  /* Frame-Statement */
+  .frame-statement { padding: 56px var(--pad); }
+  .frame-quote { font-size: 22px; line-height: 1.3; }
+  .frame-attr { font-size: 13px; }
+
+  /* Facts */
+  .facts { padding: 0 var(--pad) 56px; }
+  .facts-grid { grid-template-columns: 1fr; gap: 12px; }
+  .facts-header { flex-direction: column; align-items: flex-start; margin-bottom: 32px; }
+  .facts-header-right { text-align: left; font-size: 12px; max-width: 100%; }
+  .fact { padding: 20px; }
+  .fact-num { font-size: 30px; }
+  .fact-body { font-size: 14px; }
+
+  /* Divider */
+  .divider { padding: 56px var(--pad); }
+  .divider h2 { font-size: 40px; line-height: 1; }
+  .divider-sub { font-size: 15px; }
+  .divider .num { font-size: 11px; }
+
+  /* Tiers */
+  .tiers { padding: 56px var(--pad); }
+  .tiers-grid { grid-template-columns: 1fr; gap: 14px; }
+  .tier.is-dryll::before { left: 12px; font-size: 9px; padding: 3px 8px; }
+  .tier-totals { grid-template-columns: 1fr; gap: 20px; padding: 20px; margin-top: 32px; }
+  .tier-total-num { font-size: 24px; }
+
+  /* Reach-chart */
+  .reach-chart { padding: 56px var(--pad); }
+  .reach-header-row { flex-direction: column; align-items: flex-start; gap: 16px; margin-bottom: 32px; }
+  .reach-headline-num { font-size: 56px; }
+  .reach-headline-label { text-align: left; }
+  .reach-bar { grid-template-columns: 1fr auto; grid-template-rows: auto auto; gap: 4px 12px; padding: 10px 0; }
+  .reach-bar-name { font-size: 12px; }
+  .reach-bar-track { grid-column: 1 / -1; height: 18px; }
+  .reach-bar-value { font-size: 13px; }
+  .reach-legend { flex-direction: column; gap: 10px; font-size: 11px; }
+
+  /* Matrix · Scroll-x mit normaler Textumbruch */
+  .matrix { padding: 56px var(--pad); }
+  .matrix-inner > p { font-size: 14px; }
+  .matrix-wrap-mobile {
+    margin: 0 calc(var(--pad) * -1);
+    padding: 0 var(--pad);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .matrix-table {
+    display: table;
+    min-width: 720px;
+    white-space: normal;
+    font-size: 11px;
+  }
+  .matrix-table th, .matrix-table td {
+    padding: 8px 6px;
+    min-width: 88px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .matrix-table tbody td:first-child {
+    min-width: 130px;
+    text-align: left;
+    white-space: normal;
+  }
+  .matrix-table thead th { font-size: 10px; letter-spacing: 0.08em; }
+  .matrix-text { font-size: 9px; }
+  .matrix-table tbody tr.is-dryll td:first-child::after { font-size: 8px; padding: 1px 4px; top: 4px; right: 4px; }
+  .matrix-scroll-hint {
+    display: block !important;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--kvd-rot);
+    margin-bottom: 10px;
+    font-weight: 700;
+  }
+
+  /* Timeline · Als Block-Stack statt Grid */
+  .timeline { padding: 56px var(--pad); }
+  .timeline-list { padding-left: 0; border-left: none; }
+  .timeline-item {
+    display: block !important;
+    grid-template-columns: none !important;
+    padding: 16px 14px !important;
+    margin: 0 0 10px 0 !important;
+    border-left: 4px solid rgba(255,255,255,0.15) !important;
+    background: rgba(255,255,255,0.03);
+  }
+  .timeline-item[style*="rgba(0,0,254"] {
+    background: rgba(0,0,254,0.12) !important;
+    border-left: 4px solid var(--kvd-rot) !important;
+  }
+  .timeline-time {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--kvd-rot);
+    margin-bottom: 4px;
+    line-height: 1;
+  }
+  .timeline-brand {
+    display: block;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--kvd-flieder);
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .timeline-action {
+    display: block;
+    font-size: 14px;
+    line-height: 1.55;
+    color: rgba(255,255,255,0.92);
+  }
+
+  /* Trackrec */
+  .trackrec { padding: 56px var(--pad); }
+  .trackrec-tiles { grid-template-columns: 1fr; gap: 12px; }
+  .trackrec-lead-caption { padding: 18px; }
+  .trackrec-lead-caption .text { font-size: 15px; }
+  .trackrec-tile-caption { padding: 14px 12px; }
+
+  /* Cast */
+  .cast { padding: 56px var(--pad); }
+  .cast-header { gap: 12px; }
+  .cast-grid { grid-template-columns: 1fr; gap: 10px; }
+  .cast-card { grid-template-columns: 36px 1fr; padding: 14px; gap: 12px; }
+  .cast-num { font-size: 26px; }
+  .cast-name { font-size: 15px; }
+  .cast-role { font-size: 10px; }
+  .cast-reach { grid-column: 1 / -1; text-align: left; padding-top: 8px; border-top: 1px solid rgba(0,0,0,0.08); font-size: 13px; }
+  .cast-totals { padding: 20px; flex-direction: column; align-items: flex-start; gap: 14px; }
+  .cast-totals .big { font-size: 40px; }
+
+  /* Format-block */
+  .format-block { padding: 56px var(--pad); }
+  .format-pillars { grid-template-columns: 1fr; gap: 14px; }
+  .pillar { padding: 22px; }
+
+  /* Data-strip */
+  .data-strip { padding: 32px var(--pad); }
+  .data-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+  .data-cell { padding: 12px; }
+  .data-cell-val { font-size: 18px; }
+
+  /* Strat-bridge */
+  .strat-bridge { padding: 56px var(--pad); }
+  .strat-bridge-h { font-size: 28px; line-height: 1.1; }
+  .strat-bridge-lead { font-size: 15px; margin-bottom: 36px; }
+  .bridge-grid { grid-template-columns: 1fr; gap: 14px; }
+  .bridge-card { padding: 28px 22px; border-top-width: 6px; }
+  .bridge-card h3 { font-size: 18px; }
+  .bridge-card p, .bridge-card ul { font-size: 13px; }
+
+  /* Why-dryll */
+  .why-dryll { padding: 56px var(--pad); }
+  .why-dryll h2 { font-size: 28px; line-height: 1.1; }
+  .why-dryll-lead { font-size: 15px; margin-bottom: 40px; }
+  .why-dryll-grid { grid-template-columns: 1fr; gap: 16px; }
+  .why-dryll-card { padding: 20px 22px; }
+  .why-dryll-card .num { font-size: 32px; }
+  .why-dryll-card h3 { font-size: 16px; }
+
+  /* Two-col + Location-grid */
+  .location-grid { grid-template-columns: 1fr; gap: 10px; }
+
+  /* Quote-block */
+  .quote-block { font-size: 22px; line-height: 1.3; margin: 36px 0; }
+  .quote-attr { font-size: 12px; }
+
+  /* Tables · Auf Mobile als Card-Stack (außer .matrix-table) */
+  table:not(.matrix-table) {
+    display: block;
+    border: none;
+    background: transparent;
+    margin: 16px 0 24px;
+  }
+  table:not(.matrix-table) thead { display: none; }
+  table:not(.matrix-table) tbody { display: block; }
+  table:not(.matrix-table) tr {
+    display: block;
+    background: var(--kvd-white);
+    border: 1px solid var(--kvd-black);
+    margin: 0 0 10px 0;
+    padding: 14px 16px;
+  }
+  table:not(.matrix-table) tr:nth-child(even) { background: var(--kvd-white); }
+  table:not(.matrix-table) td {
+    display: block;
+    padding: 4px 0;
+    border: none;
+    background: transparent !important;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  table:not(.matrix-table) td:first-child {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--kvd-rot);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  /* Figures */
+  .figure--full img { height: 280px; }
+  .figure-caption { font-size: 12px; }
+
+  /* Footer */
+  .footer { padding: 24px var(--pad); }
+  .footer-inner { flex-direction: column; align-items: flex-start; gap: 14px; }
+  .footer-meta { font-size: 11px; text-align: left; }
+}
+
+/* Touch-friendly tap targets */
+@media (hover: none) and (pointer: coarse) {
+  a { padding: 4px 0; display: inline-block; }
+}
+
+/* Product timeline */
+.timeline {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 96px var(--pad);
+}
+.timeline-inner { max-width: 1080px; margin: 0 auto; }
+.timeline h2 { color: var(--kvd-white); }
+.timeline-list {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+  border-left: 2px solid var(--kvd-rot);
+}
+.timeline-item {
+  display: grid;
+  grid-template-columns: 100px 200px 1fr;
+  gap: 24px;
+  padding: 18px 0 18px 24px;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.timeline-time {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--kvd-rot);
+  font-variant-numeric: tabular-nums;
+}
+.timeline-brand {
+  font-size: 12px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  font-weight: 700;
+}
+.timeline-action { font-size: 15px; }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 64px var(--pad);
+}
+.footer-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer img { height: 56px; width: auto; }
+.footer-meta {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  line-height: 1.7;
+  text-align: right;
+}
+
+@media print {
+  body { background: var(--kvd-sand); }
+  .hero { min-height: 100vh; }
+  .divider { page-break-before: always; }
+  h2 { page-break-after: avoid; }
+  table { page-break-inside: avoid; }
+}
+
+/* ============================================================
+   Backyard-spezifische Section-Styles
+   ============================================================ */
+
+.pitch-stripe {
+  background: var(--kvd-rot);
+  color: var(--kvd-white);
+  padding: 14px var(--pad);
+  font-size: 12px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+}
+.pitch-stripe span.accent { color: #0000FE; font-weight: 700; }
+
+.safety-block {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 120px var(--pad);
+}
+.safety-inner { max-width: 1280px; margin: 0 auto; }
+.safety-block h2 { color: var(--kvd-white); margin: 0 0 24px 0; }
+.safety-lead {
+  font-size: 20px;
+  line-height: 1.45;
+  max-width: 860px;
+  margin: 0 0 56px 0;
+  color: rgba(255,255,255,0.92);
+}
+.safety-lead strong { color: var(--kvd-rot); }
+.safety-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.safety-card {
+  background: rgba(255,255,255,0.04);
+  border-left: 4px solid var(--kvd-rot);
+  padding: 28px 26px 32px;
+  display: flex;
+  flex-direction: column;
+}
+.safety-card .stamp {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.safety-card h3 {
+  color: var(--kvd-white);
+  font-size: 19px;
+  line-height: 1.25;
+  margin: 0 0 12px 0;
+  text-transform: none;
+  letter-spacing: -0.005em;
+}
+.safety-card p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+}
+
+.live-map-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.live-map-inner { max-width: 1280px; margin: 0 auto; }
+.live-map-header { margin-bottom: 32px; }
+.live-map-frame {
+  background: #0A0A0A;
+  border: 1px solid var(--kvd-black);
+  padding: 56px 32px 32px 32px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 32px;
+  align-items: stretch;
+  position: relative;
+  overflow: hidden;
+}
+.live-map-frame::before {
+  content: "● LIVE";
+  position: absolute;
+  top: 18px; left: 22px;
+  z-index: 5;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.live-map-frame::after {
+  content: "TRACK · DUDENHOFEN HIGH-SPEED-OVAL";
+  position: absolute;
+  top: 18px; right: 22px;
+  z-index: 5;
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  color: var(--kvd-flieder);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.live-map-svg-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.live-map-svg-wrap svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.live-map-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: var(--kvd-white);
+  font-family: var(--f-standard);
+}
+.live-map-overlay h4 {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  color: var(--kvd-flieder);
+  margin: 0 0 6px 0;
+  font-weight: 700;
+}
+.live-rider-row {
+  display: grid;
+  grid-template-columns: 26px 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  background: rgba(255,255,255,0.05);
+  border-left: 3px solid var(--kvd-rot);
+  font-size: 12px;
+}
+.live-rider-row .pos { color: var(--kvd-rot); font-weight: 700; font-size: 14px; letter-spacing: -0.01em; }
+.live-rider-row .nm { font-weight: 700; color: var(--kvd-white); }
+.live-rider-row .nm small {
+  display: block; font-size: 9px; letter-spacing: 0.15em;
+  color: var(--kvd-flieder); font-weight: 400; margin-top: 2px; text-transform: uppercase;
+}
+.live-rider-row .val {
+  text-align: right; font-variant-numeric: tabular-nums;
+  font-weight: 700; color: var(--kvd-white); font-size: 13px;
+}
+.live-rider-row .val small {
+  display: block; font-size: 9px; letter-spacing: 0.15em;
+  color: var(--kvd-flieder); font-weight: 400;
+}
+
+.map-dot { fill: var(--kvd-rot); filter: drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-2 { fill: #0000FE; filter: drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-3 { fill: #0000FE; filter: drop-shadow(0 0 4px rgba(0,0,254,0.85)); }
+.map-dot-4 { fill: #FFFFFF; filter: drop-shadow(0 0 4px rgba(255,255,255,0.85)); }
+.map-dot-5 { fill: #FFFFFF; filter: drop-shadow(0 0 4px rgba(255,255,255,0.85)); }
+
+.uni-team-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.uni-team-inner { max-width: 1280px; margin: 0 auto; }
+.uni-team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+  margin-top: 32px;
+}
+.uni-team-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 22px 20px 24px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.uni-team-card .slot {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.uni-team-card .num {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-black);
+  margin-bottom: 18px;
+}
+.uni-team-card .role {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-black);
+  opacity: 0.7;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.uni-team-card p {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0 0 14px 0;
+}
+.uni-team-card .uni-stack {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 11px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+}
+
+.energy-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.energy-inner { max-width: 1280px; margin: 0 auto; }
+.energy-lead {
+  font-size: 17px;
+  line-height: 1.55;
+  max-width: 880px;
+  margin: 0 0 40px 0;
+}
+.energy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+.energy-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px 24px 30px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.energy-card.is-redbull {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  border-color: var(--kvd-black);
+}
+.energy-card .badge {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.energy-card.is-redbull .badge { color: var(--kvd-gelb); }
+.energy-card h3 {
+  font-size: 22px;
+  line-height: 1.2;
+  margin: 0 0 14px 0;
+  text-transform: uppercase;
+  letter-spacing: -0.005em;
+}
+.energy-card.is-redbull h3 { color: var(--kvd-white); }
+.energy-card p {
+  font-size: 13px;
+  line-height: 1.55;
+  margin: 0 0 10px 0;
+}
+.energy-card.is-redbull p { color: rgba(255,255,255,0.88); }
+.energy-card .owner {
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+}
+.energy-card.is-redbull .owner {
+  border-top: 1px solid rgba(255,255,255,0.20);
+  color: var(--kvd-gelb);
+}
+
+.partner-block {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad);
+}
+.partner-inner { max-width: 1280px; margin: 0 auto; }
+.partner-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 40px;
+}
+.partner-card {
+  background: var(--kvd-white);
+  border: 1px solid var(--kvd-black);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+}
+.partner-card.is-main {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  border-color: var(--kvd-black);
+}
+.partner-card.is-main p,
+.partner-card.is-main li { color: rgba(255,255,255,0.88); }
+.partner-card .tier-tag {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--kvd-rot);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.partner-card.is-main .tier-tag { color: var(--kvd-gelb); }
+.partner-card h3 {
+  font-size: 30px;
+  line-height: 1.05;
+  margin: 0 0 14px 0;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+.partner-card.is-main h3 { color: var(--kvd-white); }
+.partner-card .lead {
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 18px 0;
+}
+.partner-card ul {
+  font-size: 13px;
+  line-height: 1.55;
+  padding-left: 18px;
+  margin: 0 0 20px 0;
+}
+.partner-card .deal {
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid rgba(0,0,0,0.12);
+  font-size: 12px;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--kvd-rot);
+}
+.partner-card.is-main .deal {
+  border-top: 1px solid rgba(255,255,255,0.20);
+  color: var(--kvd-gelb);
+}
+
+.cam-strip {
+  background: var(--kvd-black);
+  color: var(--kvd-white);
+  padding: 64px var(--pad);
+}
+.cam-strip-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.cam-strip-cell {
+  border-left: 1px solid rgba(255,255,255,0.20);
+  padding-left: 20px;
+}
+.cam-strip-cell:first-child { border-left: none; padding-left: 0; }
+.cam-strip-num {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--kvd-rot);
+  margin-bottom: 10px;
+}
+.cam-strip-label {
+  font-size: 11px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  color: var(--kvd-flieder);
+  line-height: 1.5;
+}
+
+.location-strip {
+  background: var(--kvd-sand);
+  padding: 96px var(--pad) 32px;
+}
+.location-strip-inner { max-width: 1280px; margin: 0 auto; }
+.location-photo-lead {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  margin: 32px 0 12px 0;
+}
+.location-photo-lead img {
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+.location-photo-lead .cap {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 28px;
+}
+.location-photo-lead .cap .label {
+  color: var(--kvd-rot);
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+.location-photo-lead .cap .text {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  max-width: 760px;
+}
+.location-photo-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 16px;
+}
+.location-photo-row .tile {
+  position: relative;
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+  background: var(--kvd-black);
+}
+.location-photo-row .tile img {
+  width: 100%; height: 100%; object-fit: cover; object-position: center; display: block;
+}
+.location-photo-row .tile .cap {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.85), transparent);
+  color: var(--kvd-white);
+  padding: 18px;
+}
+.location-photo-row .tile .label {
+  color: var(--kvd-rot);
+  font-size: 10px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.location-photo-row .tile .text {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+@media (max-width: 1024px) {
+  .safety-block { padding: 80px var(--pad); }
+  .safety-grid { grid-template-columns: repeat(2, 1fr); }
+  .safety-lead { font-size: 17px; }
+
+  .live-map-block { padding: 64px var(--pad); }
+  .live-map-frame { grid-template-columns: 1fr; padding: 56px 20px 20px; }
+  .live-rider-row { font-size: 11px; }
+
+  .uni-team-block { padding: 64px var(--pad); }
+  .uni-team-grid { grid-template-columns: repeat(2, 1fr); }
+  .uni-team-card .num { font-size: 44px; }
+
+  .energy-block { padding: 64px var(--pad); }
+  .energy-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .partner-block { padding: 64px var(--pad); }
+  .partner-grid { grid-template-columns: 1fr; }
+  .partner-card h3 { font-size: 24px; }
+
+  .cam-strip { padding: 48px var(--pad); }
+  .cam-strip-inner { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .cam-strip-cell { border-left: none; padding-left: 0; border-top: 1px solid rgba(255,255,255,0.20); padding-top: 14px; }
+  .cam-strip-cell:first-child, .cam-strip-cell:nth-child(2) { border-top: none; padding-top: 0; }
+  .cam-strip-num { font-size: 40px; }
+
+  .location-strip { padding: 64px var(--pad) 28px; }
+  .location-photo-lead .cap .text { font-size: 16px; }
+}
+
+@media (max-width: 640px) {
+  .pitch-stripe { font-size: 10px; letter-spacing: 0.18em; padding: 12px var(--pad); line-height: 1.6; }
+  .safety-block { padding: 56px var(--pad); }
+  .safety-grid { grid-template-columns: 1fr; gap: 12px; }
+  .safety-card { padding: 22px 20px 24px; }
+  .safety-card h3 { font-size: 17px; }
+  .safety-lead { font-size: 15px; }
+
+  .live-map-block { padding: 56px var(--pad); }
+  .live-map-frame { padding: 50px 14px 14px; gap: 16px; }
+  .live-map-frame::before, .live-map-frame::after { font-size: 9px; }
+  .live-map-frame::after { display: none; }
+  .live-map-svg-wrap text { display: none; }
+
+  .uni-team-block { padding: 56px var(--pad); }
+  .uni-team-grid { grid-template-columns: 1fr; gap: 10px; }
+  .uni-team-card .num { font-size: 36px; }
+
+  .energy-block { padding: 56px var(--pad); }
+  .energy-grid { grid-template-columns: 1fr; gap: 12px; }
+  .energy-card h3 { font-size: 19px; }
+
+  .partner-block { padding: 56px var(--pad); }
+  .partner-card h3 { font-size: 22px; }
+
+  .cam-strip { padding: 36px var(--pad); }
+  .cam-strip-inner { grid-template-columns: 1fr; gap: 14px; }
+  .cam-strip-cell { border-top: 1px solid rgba(255,255,255,0.20); padding-top: 14px; }
+  .cam-strip-cell:first-child { border-top: none; padding-top: 0; }
+  .cam-strip-num { font-size: 36px; }
+
+  .location-strip { padding: 56px var(--pad) 24px; }
+  .location-photo-lead .cap { padding: 18px; }
+  .location-photo-lead .cap .text { font-size: 14px; }
+  .location-photo-row { grid-template-columns: 1fr; gap: 8px; }
+}
+
+/* Mobile-Härtung gegen Long-Text-Overflow + iOS-Quirks */
+@media (max-width: 640px) {
+  .fact-num { word-break: break-word; overflow-wrap: anywhere; line-height: 1.05; }
+  .tier-total-num { word-break: break-word; }
+  .partner-card h3, .energy-card h3, .safety-card h3 { word-break: break-word; }
+  .hero h1 { word-break: keep-all; }
+  .reach-headline-num { font-size: 44px; }
+  .hero-tagline { font-size: 17px; }
+}
+
+/* Tablet-Bereich: long-text safety */
+@media (max-width: 1024px) {
+  .fact-num { line-height: 1.05; }
+}
+
+/* Body smooth scroll plus Safari-Mobile-Vh-Fix */
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@supports (height: 100dvh) {
+  .hero { min-height: 100dvh; }
+}
+
+/* SVG dots: explizite Pointer-Sicherheit */
+.live-map-svg-wrap svg, .live-map-svg-wrap circle, .live-map-svg-wrap path { pointer-events: none; }
+
+/* Bilder: lazy-load auf größeren Hero/Photo-Slots → spart Mobile-Daten */
+img { max-width: 100%; }
+
+/* ══════════════════════════════════════════════════════════════
+   KARL+KARLA CI OVERRIDES · Injected
+   ══════════════════════════════════════════════════════════════ */
+
+/* Body + base typography */
+body { line-height: 1.6; font-size: 17px; }
+
+/* Headings → Barlow Condensed */
+h1, h2, h3, h4 {
+  font-family: 'Barlow Condensed', var(--f-standard) !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.02em !important;
+}
+h1 { font-size: 72px !important; line-height: 0.95 !important; }
+h2 { font-size: 48px !important; line-height: 0.95 !important; margin-top: 80px !important; }
+
+/* Eyebrows on LIGHT bg → dark */
+.eyebrow, .eyebrow-rot {
+  color: var(--kvd-black) !important;
+  opacity: .5;
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  font-weight: 700;
+}
+/* Eyebrows on DARK bg → yellow hint */
+.eyebrow-white,
+.divider .eyebrow, .reach-chart .eyebrow,
+.timeline .eyebrow, .why-dryll .eyebrow,
+.safety-block .eyebrow, .cast .eyebrow {
+  color: var(--kvd-flieder) !important;
+  opacity: 1;
+}
+
+/* Quote / frame text on light bg → dark */
+.frame-quote { font-family:'Barlow Condensed',sans-serif !important; font-weight:900 !important; font-style:normal !important; color:var(--kvd-black) !important; letter-spacing:-0.02em !important; line-height:.95 !important; }
+.frame-attr  { font-style:normal !important; color:var(--kvd-black) !important; opacity:.5; font-size:12px !important; letter-spacing:.12em !important; }
+.quote-block { font-family:'Barlow Condensed',sans-serif !important; font-weight:900 !important; font-style:normal !important; color:var(--kvd-black) !important; letter-spacing:-0.02em !important; }
+.quote-attr  { color:var(--kvd-black) !important; opacity:.5; }
+
+/* Fact / tier / cast labels on white cards → dark */
+.fact-label, .tier-name, .cast-via, .callout h4,
+.strat-bridge-eyebrow, .partner-card .tier-tag,
+.exec-eyebrow, .exec-tag { color:var(--kvd-black) !important; opacity:.5; }
+
+/* Yellow on dark cards = fine */
+.divider .eyebrow, .tier.title-tier .tier-name,
+.partner-card.is-main .tier-tag { color:var(--kvd-flieder) !important; opacity:1; }
+
+/* Cast status → K+K pill */
+.cast-status { font-size:10px !important; letter-spacing:.16em !important; font-weight:700 !important; border:none !important; background:var(--kvd-black) !important; color:var(--kvd-rot) !important; padding:6px 14px !important; border-radius:100px !important; }
+
+/* Cards → rounded K+K style */
+.fact, .tier, .cast-card, .partner-card, .energy-card, .uni-team-card, .exec-pillar, .bridge-card, .why-dryll-card, .safety-card {
+  border-radius: 12px !important;
+  border-color: rgba(0,0,0,.08) !important;
+}
+.tier.title-tier, .partner-card.is-main { border-color: var(--kvd-black) !important; }
+.tier.is-dryll { outline-color: var(--kvd-rot) !important; }
+
+/* Pitch stripe → dark K+K */
+.pitch-stripe { background:var(--kvd-black) !important; color:rgba(255,255,255,.55) !important; }
+.pitch-stripe span.accent { color:var(--kvd-rot) !important; }
+
+/* Table heads → dark */
+thead th { background:var(--kvd-black) !important; }
+tbody tr:nth-child(even) td { background:#F4F4F2 !important; }
+
+/* Footer → K+K dark */
+.footer { background:var(--kvd-black) !important; }
+
+/* Hero meta badges → subtle */
+.hero-meta .meta-block { border:none !important; background:rgba(0,0,254,.15) !important; border-radius:100px !important; padding:5px 14px !important; font-size:11px !important; }
+
+/* Divider headings tighter */
+.divider h2 { font-size:clamp(56px,8vw,108px) !important; line-height:.9 !important; font-weight:900 !important; letter-spacing:-0.03em !important; }
+
+/* Exec summary section → round corners, K+K style */
+.exec-pillar { border-top-color: var(--kvd-rot) !important; }
+.exec-num { color: var(--kvd-rot) !important; font-family: 'Barlow Condensed', sans-serif !important; font-weight: 900 !important; }
+.exec-eyebrow { color: var(--kvd-black) !important; opacity: .5; }
+</style>
+</head>
+<body>
+
+<!-- ── Karl+Karla Nav Bar ── -->
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@900&family=Plus+Jakarta+Sans:wght@500;600&display=swap');
+.kk-nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:10px 10px 10px 20px;border-radius:100px;background:rgba(255,255,255,.72);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.85);box-shadow:0 4px 24px rgba(0,0,0,.10),inset 0 1.5px 0 rgba(255,255,255,.95);white-space:nowrap}
+.kk-nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;text-transform:uppercase;letter-spacing:-.01em;color:#0A0A0A;text-decoration:none;display:flex;align-items:center;gap:3px}
+.kk-nav-logo .plus{color:#0A0A0A}
+.kk-nav-badge{font-family:'Plus Jakarta Sans',sans-serif;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(0,0,0,.4);padding:0 4px}
+.kk-nav-logout{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:100px;background:#0A0A0A;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:12px;font-weight:600;letter-spacing:.03em;text-decoration:none;transition:opacity .2s,transform .2s;border:none;cursor:pointer}
+.kk-nav-logout:hover{opacity:.76;transform:translateY(-1px)}
+.pitch-stripe{margin-top:72px}
+@media(max-width:600px){.kk-nav{top:12px;padding:8px 8px 8px 16px;gap:16px}.kk-nav-badge{display:none}.pitch-stripe{margin-top:64px}}
+@media print{.kk-nav{display:none !important}.pitch-stripe{margin-top:0 !important}}
+</style>
+<nav class="kk-nav">
+  <a href="https://karlundkarla.com" class="kk-nav-logo">KARL<span class="plus">+</span>KARLA</a>
+  <span class="kk-nav-badge">Backyard × Bike · Vertraulich</span>
+  <a href="/redbull-backyard-short" class="kk-nav-logout">Kurzversion ↗</a>
+</nav>
+
+
+<div class="pitch-stripe">
+  Pitch für <span class="accent">Red Bull Deutschland</span> &nbsp;·&nbsp; Backyard Bike Race · Opel Test Center Dudenhofen · Q2 2027
+</div>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<header class="hero">
+  <div class="hero-bg">
+    <img src="assets/redbull/photos/photo-frankfurt-cyclist-redbull.jpg" alt="">
+  </div>
+  <div class="hero-content">
+    <div class="hero-top">
+      <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:28px;text-transform:uppercase;letter-spacing:-.02em;color:#fff;line-height:1;">
+        KARL+KARLA
+      </div>
+      <div class="hero-meta">
+        <span class="meta-block">Pitch · Red Bull Deutschland</span><br>
+        <span class="accent">Q2 2027 · Vertraulich</span>
+      </div>
+    </div>
+    <div class="hero-body">
+      <div class="hero-eyebrow">Backyard Bike Race &nbsp;·&nbsp; Eine Runde pro Stunde &nbsp;·&nbsp; Last One Riding &nbsp;·&nbsp; 24/7 Live</div>
+      <h1>Backyard<br><span class="of">x</span>&nbsp;Bike</h1>
+      <p class="hero-tagline">Eine Runde pro Stunde. <strong>Jede Runde ein Sieg.</strong> 100 Teilnehmer · Closed Course · 24/7 Live. <strong style="color: var(--kvd-rot);">Red Bull Deutschland als Brand-Anker und Content-Co-Producer.</strong></p>
+      <p class="hero-sub">Warum dieser Pitch in deinem Postfach liegt: weil <strong>Only Red Bull can do</strong>. Stunde für Stunde, vor laufender Kamera · bis nur noch einer fährt.</p>
+    </div>
+  </div>
+  <div class="hero-cta">
+    <div class="hero-cta-left">
+      Produced &amp; hosted by <strong style="color: var(--kvd-rot);">Karl + Karla</strong>
+    </div>
+    <div class="hero-cta-right">
+      <strong>Backyard Bike Race</strong><br>
+      24/7 Live · Q2 2027<br>
+      25 km östlich Frankfurt am Main
+    </div>
+  </div>
+</header>
+
+<!-- ============================================================
+     EXECUTIVE SUMMARY · Die ersten Seiten
+     ============================================================ -->
+<style>
+.exec-summary { padding: 80px 80px 64px; background: var(--kvd-sand); color: var(--kvd-black); }
+.exec-inner { max-width: 1280px; margin: 0 auto; }
+.exec-eyebrow { font-size: 14px; letter-spacing: 0.30em; text-transform: uppercase; color: var(--kvd-rot); margin: 0 0 18px 0; }
+.exec-headline { font-size: 56px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 24px 0; }
+.exec-headline .rot { color: var(--kvd-rot); }
+.exec-lead { font-size: 19px; line-height: 1.5; max-width: 1040px; margin-bottom: 48px; }
+.exec-pillar-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.exec-pillar { padding: 26px 24px; background: var(--kvd-white); border: 1px solid var(--kvd-black); border-top: 4px solid var(--kvd-rot); display: flex; flex-direction: column; gap: 10px; min-height: 240px; }
+.exec-pillar .exec-tag { font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(10,10,10,0.55); }
+.exec-pillar .exec-title { font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--kvd-black); }
+.exec-pillar .exec-body { font-size: 14.5px; line-height: 1.5; color: var(--kvd-black); }
+.exec-pillar .exec-num { font-family: var(--kvd-display, "Helvetica Neue"), Helvetica, Arial, sans-serif; font-weight: 800; font-size: 38px; color: var(--kvd-rot); line-height: 1; letter-spacing: -0.01em; margin-top: auto; }
+
+.exec-cta { padding: 80px; background: var(--kvd-black); color: var(--kvd-white); }
+.exec-cta-inner { max-width: 1080px; margin: 0 auto; text-align: left; }
+.exec-cta .eyebrow { color: var(--kvd-rot); }
+.exec-cta-headline { font-size: 64px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 24px 0; color: var(--kvd-white); }
+.exec-cta-headline .rot { color: var(--kvd-rot); }
+.exec-cta-lead { font-size: 20px; line-height: 1.5; color: rgba(255,255,255,0.85); max-width: 880px; margin-bottom: 36px; }
+.exec-cta-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 36px; }
+.exec-cta-step { padding: 24px; background: rgba(255,255,255,0.06); border-left: 4px solid var(--kvd-rot); }
+.exec-cta-step .step-num { font-size: 13px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--kvd-gelb); margin-bottom: 8px; }
+.exec-cta-step .step-title { font-size: 18px; font-weight: 700; color: var(--kvd-white); margin-bottom: 6px; line-height: 1.2; }
+.exec-cta-step .step-body { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.78); }
+.exec-cta-ps { padding: 22px 26px; background: rgba(0,0,254,0.12); border: 1px solid var(--kvd-rot); font-size: 17px; line-height: 1.5; color: var(--kvd-white); }
+.exec-cta-ps strong { color: var(--kvd-rot); }
+
+/* Mobile Exec-Fixes */
+@media (max-width: 1024px) {
+  .exec-pillar-grid { grid-template-columns: repeat(2, 1fr); }
+  .exec-cta-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .exec-summary { padding: 48px 20px 40px; }
+  .exec-cta { padding: 48px 20px; }
+  .exec-pillar-grid { grid-template-columns: 1fr; }
+  .exec-cta-steps { grid-template-columns: 1fr; }
+  .exec-cta-headline { font-size: 36px; line-height: 1.05; }
+  .exec-headline { font-size: 32px; }
+  .exec-lead { font-size: 16px; }
+  .exec-pillar .exec-title { font-size: 18px; }
+  .exec-pillar .exec-num { font-size: 28px; }
+}
+</style>
+
+<section class="exec-summary">
+  <div class="exec-inner">
+    <p class="exec-eyebrow">Der Pitch in einer Folie</p>
+    <h2 class="exec-headline">Format, Reichweite, Strecke, Benefits.<br><span class="rot">Alles Wichtige auf einen Blick.</span></h2>
+    <p class="exec-lead">24/7-Cycling-Race auf einer Hochsicherheits-Strecke 25 km östlich Frankfurt. Eine Backyard-Regel, ein Last One Riding, 100 Teilnehmer aus dem deutschen Cycling-Space. Red Bull Deutschland als <strong>Brand-Anker und Content-Co-Producer</strong> · 24/7 Live aus jeder Achse, Highlight-Stack über das Red Bull Media-House, Owned Distribution über Red Bull TV und Cycling Social.</p>
+
+    <div class="exec-pillar-grid">
+      <div class="exec-pillar">
+        <div class="exec-tag">01 · Format</div>
+        <div class="exec-title">Eine Backyard-Regel, 24/7 live</div>
+        <div class="exec-body">Eine Runde pro Stunde, jede Stunde, ohne Pause. Wer eine Stunde nicht voll fährt, beendet sein Rennen als Finisher. Wer am längsten fährt, ist Last One Riding. Kein Zeitlimit · Das Format endet, wenn nur noch einer fährt.</div>
+        <div class="exec-num">60 Min</div>
+      </div>
+      <div class="exec-pillar">
+        <div class="exec-tag">02 · Reichweite</div>
+        <div class="exec-title">Cast = Reichweite</div>
+        <div class="exec-body">100 Teilnehmer, 100 Fan-Communities. Junge Männer 18-25 (Strava-Generation, wettkampfgetrieben) werden organisch über die Channels der Teilnehmer erreicht · Deutscher Cycling-Space, von Campus bis Creator. Keine Cold-Reach.</div>
+        <div class="exec-num">100</div>
+      </div>
+      <div class="exec-pillar">
+        <div class="exec-tag">03 · Strecke</div>
+        <div class="exec-title">Opel Test Center Dudenhofen</div>
+        <div class="exec-body">Yard-Loop 22-28 km auf Steilkurven-Oval + Handling-Course, 25 km östlich Frankfurt. Vollständig abgesperrt, eigener Security-Dienst, 24/7 Sanität, RTW in Minuten, lückenlose Kameraabdeckung. Closed Course statt Stadtrennen.</div>
+        <div class="exec-num">25 km</div>
+      </div>
+      <div class="exec-pillar">
+        <div class="exec-tag">04 · Benefits Red Bull</div>
+        <div class="exec-title">Only Red Bull can do</div>
+        <div class="exec-body">Content-Möglichkeiten, die nur Red Bull liefert: 24/7 Live aus jeder Achse, Highlight-Edits aus dem eigenen Content-Stack, Athleten-Storys über Red Bull Media-House, Owned Distribution über Red Bull TV und Cycling Social. Nicht Logo-Platzierung · <strong>Content-Co-Production</strong>.</div>
+        <div class="exec-num">Content</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="exec-cta">
+  <div class="exec-cta-inner">
+    <p class="eyebrow">Nächster Schritt · Auftakt</p>
+    <h2 class="exec-cta-headline">Gemeinsamer Auftakt zur Besprechung.<br><span class="rot">PS auf die Straße.</span></h2>
+    <p class="exec-cta-lead">45-Minuten-Auftakt zwischen <strong>Red Bull Deutschland</strong> und dem Karl + Karla Team. Format-Check, offene Punkte, Slot-Klarheit. Im Anschluss läuft das Setup zum Eventfenster Q2 2027.</p>
+
+    <div class="exec-cta-steps">
+      <div class="exec-cta-step">
+        <div class="step-num">Schritt 01</div>
+        <div class="step-title">45-Minuten-Auftakt</div>
+        <div class="step-body">Call mit Red Bull Deutschland und dem Karl + Karla Team. Format-Check, Slot-Klarheit. Wir bringen die Antworten, ihr die offenen Fragen.</div>
+      </div>
+      <div class="exec-cta-step">
+        <div class="step-num">Schritt 02</div>
+        <div class="step-title">Partner-Letter</div>
+        <div class="step-body">Im Nachgang zum Auftakt: Letter mit allen Beitragspositionen (Brand · Bühne · Content · Cast · Investment) und Pre-Hype-Plan. Zeitfenster offen, je nach interner Abstimmung.</div>
+      </div>
+      <div class="exec-cta-step">
+        <div class="step-num">Schritt 03</div>
+        <div class="step-title">Production geht live</div>
+        <div class="step-body">Sobald Red Bull als Anker steht: Canyon-Co-Partner-Gespräch, Garmin-Setup, Uni-Bewerbungsphase, Influencer-Cast-Akquise. Die Produktion startet · PS auf die Straße.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     STATS TICKER
+     ============================================================ -->
+<section class="ticker">
+  <div class="ticker-grid">
+    <div class="ticker-cell">
+      <div class="ticker-num rot">40-80h</div>
+      <div class="ticker-label">Erwartete Event-Dauer<br>bis der letzte Cyclist nicht mehr fährt</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num">3</div>
+      <div class="ticker-label">Onboard-Cams pro Bike<br>Front, Heck, Rider-Facing</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num">22-28 km</div>
+      <div class="ticker-label">Yard-Loop-Länge<br>Steilkurven-Oval + Handling-Course</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num">Garmin</div>
+      <div class="ticker-label">Live-Daten pro Fahrer<br>Puls, Watt, GPS, Speed im Stream</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num rot">4</div>
+      <div class="ticker-label">Stream-Plattformen<br>YouTube, Twitch, TikTok, Instagram</div>
+    </div>
+    <div class="ticker-cell">
+      <div class="ticker-num rot">Drohne</div>
+      <div class="ticker-label">Aerial-Footage<br>Luftbild 24/7, perfekte Cam-Achsen</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FRAME / RED-BULL-HOOK
+     ============================================================ -->
+<section class="frame-statement">
+  <div class="frame-inner">
+    <p class="eyebrow">Warum dieser Pitch · An Red Bull Deutschland</p>
+    <p class="frame-quote">„Red Bull verleiht Flügel · <strong>Backyard × Bike macht daraus ein 24/7-Format.</strong> Stunde für Stunde, vor laufender Kamera, bis nur noch einer fährt."</p>
+    <p class="frame-attr">· Backyard × Bike · Pitch für Red Bull Deutschland</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FACTS · Das Format auf einen Blick
+     ============================================================ -->
+<section class="facts">
+  <div class="facts-inner">
+    <div class="facts-header">
+      <h2>Das Format auf einen Blick</h2>
+      <div class="facts-header-right"></div>
+    </div>
+
+    <div class="facts-grid">
+      <div class="fact">
+        <div class="fact-num rot">24/7</div>
+        <div class="fact-label">Live-Stream</div>
+        <div class="fact-body">Konferenz-Stream als Master-Feed (Studio-Moderation, Top-Story-Cut) plus eigene Indi-Feeds für die <strong>Top 5</strong> Fahrer live. Multi-Plattform · YouTube, Twitch, TikTok, Instagram.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num rot">Backyard</div>
+        <div class="fact-label">Eine Regel</div>
+        <div class="fact-body">Eine Runde pro Stunde, jede Stunde, ohne Pause. Wer eine Stunde nicht voll fährt, beendet sein Rennen als Finisher. Wer am längsten fährt, ist <strong>Last One Riding</strong>. Kein Zeitlimit, das Format endet, wenn nur noch einer fährt.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">Garmin</div>
+        <div class="fact-label">Live-Daten</div>
+        <div class="fact-body">Jeder Teilnehmer trägt ein <strong>Garmin-Armband</strong>. Über die Garmin-Schnittstelle teilen wir Herzfrequenz, GPS, Speed, Power live in den Stream · Bei jedem Fahrer permanent on-screen.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">Cam</div>
+        <div class="fact-label">Pflicht-Setup</div>
+        <div class="fact-body">3 Onboard-Cams an jedem Fahrrad (Front, Heck, Rider-Facing) &nbsp;·&nbsp; Speed-Boards an der Strecke mit Kamera &nbsp;·&nbsp; Drohne in der Luft. Kein Meter ohne Bild.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">Live-Map</div>
+        <div class="fact-label">Tracking</div>
+        <div class="fact-body">Echtzeit-Map auf dem Stream. Jeder Fahrer ein Dot, jede Runde eine Bewegung. Live-Metrik-Overlay pro Teilnehmer. Wer wo ist, wer wieviel Watt schiebt, wer langsamer wird · Sichtbar in einem Bild.</div>
+      </div>
+      <div class="fact">
+        <div class="fact-num">DE</div>
+        <div class="fact-label">Reichweite Deutschland</div>
+        <div class="fact-body">Red Bull Deutschland bewirbt das Format über die eigenen Channels: Red Bull TV, Red Bull Cycling Social, Campus-Channel-Verteilung über die Unis. Distribution-Hub im deutschen Cycling-Space. Format produziert auf deutschem Boden, vermarktet im Heimatmarkt.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIVIDER 01 · LOCATION
+     ============================================================ -->
+<section class="divider">
+  <div class="divider-inner">
+    <p class="num">01 &nbsp; Location · Opel Test Center Dudenhofen</p>
+    <h2>Eine Strecke.<br>22-28 km <span class="rot">Yard-Loop.</span><br>25 km östlich Frankfurt.</h2>
+    <p class="divider-sub">Wir nehmen kein Stadtrennen, keinen Kurs durch den Wald. Wir fahren in einer Hochsicherheits-Testanlage, die Hochgeschwindigkeit, Crash-Tests und Fahrtrainings absichert. Abgesperrt. Drohne-freundlich. Sani vor Ort. Strecke ohne Hindernisse. Kein ungewollter Zuschauer kommt rein.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     LOCATION-STRIP · Dudenhofen Fotos
+     ============================================================ -->
+<section class="location-strip">
+  <div class="location-strip-inner">
+    <p class="eyebrow">Vor Ort &middot; Opel Test Center Dudenhofen</p>
+    <h2 style="margin-top: 0;">Die Bühne ist eine Test-Anlage. Genau das ist der Punkt.</h2>
+    <p style="max-width: 880px;">Das Opel Test Center Dudenhofen ist eine der größten Auto-Test-Anlagen Deutschlands, 25 km östlich Frankfurt am Main. Über 60 Kilometer Streckenmix, Hochgeschwindigkeits-Oval, Handling-Course, abgesperrter Perimeter, eigene Sicherheits- und Sanitätsstruktur, Live-Übertragungs-Infrastruktur.</p>
+
+    <div class="location-photo-lead">
+      <img src="assets/redbull/photos/photo-dudenhofen-aerial.jpg" alt="">
+      <div class="cap">
+        <div class="label">Hochgeschwindigkeits-Oval · Luftaufnahme</div>
+        <div class="text">Geschlossener Loop. Klare Sichtlinien. Filmbar aus allen Achsen · Auf dem Boden, aus den Speed-Towers, aus der Luft.</div>
+      </div>
+    </div>
+
+    <div class="location-photo-row">
+      <div class="tile">
+        <img src="assets/redbull/photos/photo-dudenhofen-50years.jpg" alt="">
+        <div class="cap">
+          <div class="label">Test Center · Closed Perimeter</div>
+          <div class="text">Erprobte Sicherheits-Infrastruktur, kein Ad-hoc-Setup. Genehmigungs- und Versicherungs-Realität ist gelöst.</div>
+        </div>
+      </div>
+      <div class="tile" style="display:none;">
+        <img src="assets/redbull/photos/photo-dudenhofen-loop.jpg" alt="">
+        <div class="cap">
+          <div class="label">Streckenführung</div>
+          <div class="text"></div>
+        </div>
+      </div>
+      <div class="tile">
+        <img src="assets/redbull/photos/photo-dudenhofen-fahrtraining.jpg" alt="">
+        <div class="cap">
+          <div class="label">Eigene Event-Infrastruktur</div>
+          <div class="text">Boxen, Pits, Sanitäts-Stationen, Stromversorgung, Übertragungs-Anschlüsse · Alles bereits Standard.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================================
+     CAM-STRIP · Kamera-Stack  (hidden per User-Request: Wiederholung)
+     ============================================================ -->
+<section class="cam-strip" style="display:none;">
+  <div class="cam-strip-inner">
+    <div class="cam-strip-cell">
+      <div class="cam-strip-num">1×</div>
+      <div class="cam-strip-label">3 Onboard-Cams<br>pro Bike · Front, Heck, Rider</div>
+    </div>
+    <div class="cam-strip-cell">
+      <div class="cam-strip-num">8+</div>
+      <div class="cam-strip-label">Strecken-Cams<br>an Speed-Boards verbaut</div>
+    </div>
+    <div class="cam-strip-cell">
+      <div class="cam-strip-num">∞</div>
+      <div class="cam-strip-label">Perimeter-Cams<br>Test-Center hat die Strecke seit Jahrzehnten unter Kontrolle</div>
+    </div>
+    <div class="cam-strip-cell">
+      <div class="cam-strip-num rot">Drohne</div>
+      <div class="cam-strip-label">Luftbild<br>perfekte Bedingungen für Aerial-Footage</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SAFETY-BLOCK · Warum die Strecke
+     ============================================================ -->
+<section class="safety-block">
+  <div class="safety-inner">
+    <p class="eyebrow eyebrow-white">Sicherheitskonzept &middot; Backyard ist hart, also muss die Strecke perfekt sein</p>
+    <h2>Closed Course. <span style="color: var(--kvd-rot);">Kontrollierte Strecke.</span></h2>
+    <p class="safety-lead">
+      Backyard heißt: Menschen fahren so lange, bis ihr Körper sie betrügt. Das größte Risiko ist nicht der Sturz · Es ist <strong>Sekundenschlaf</strong> auf dem Rad. Genau deshalb haben wir den Standort nicht nach Kulisse gewählt, sondern nach <strong>Reaktionszeit</strong>. In Dudenhofen sehen wir jeden Meter live, ein RTW ist in wenigen Minuten beim Fahrer, und keine Kurve ist tückisch genug, um schlimmer als eine Hautabschürfung zu werden.
+    </p>
+
+    <div class="safety-grid">
+      <div class="safety-card">
+        <div class="stamp">01 · Strecken-Profil</div>
+        <h3>Keine steilen Abfahrten. Keine versteckten Hindernisse.</h3>
+        <p>Das Hochgeschwindigkeits-Oval ist eben, breit, klar einsehbar. Keine schmalen Wald-Trails, keine Pavés, keine technischen Kurven mit blindem Auslauf. Genau das, was Backyard braucht: simple Geometrie, damit erschöpfte Fahrer keine technischen Fehler bestraft bekommen.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">02 · Sanitäts-Setup</div>
+        <h3>Medizinische Versorgung 24/7. RTW in Minuten beim Teilnehmer.</h3>
+        <p>Dudenhofen hat als Test-Anlage eigene Erste-Hilfe-Infrastruktur. Wir docken an: 24/7 Medical-Team auf dem Gelände, Notfallplan in Schichten, RTW-Standort innerhalb der Strecke. Im kritischen Backyard-Moment · Müdigkeit, Dehydration, Sekundenschlaf · sind Minuten der einzige Unterschied, und wir nehmen sie ernst.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">03 · Live-Sicht</div>
+        <h3>Alles unter Kamera. Alles in Echtzeit im Race-Control-Raum.</h3>
+        <p>Strecken-Cams an den Speed-Boards, Drohne in der Luft, 3 Onboard-Cams an jedem Bike (Front, Heck, Rider-Facing), Test-Center-eigene Perimeter-Kameras. Kein Streckenabschnitt ist blind. Das Race-Control-Team sieht jeden Sturz, jeden Wackler, jeden Fahrer, der nickt · und kann sofort reagieren.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">04 · Perimeter-Kontrolle</div>
+        <h3>Abgesperrtes Gelände. Kein Zugriff durch Unbefugte.</h3>
+        <p>Dudenhofen ist seit Jahrzehnten Hochsicherheits-Testgelände. Zugang über kontrollierte Schleusen, Zaun rund um das gesamte Areal, eigener Sicherheits-Dienst. Kein Spontan-Besucher kommt rein. Keine Demo-Gruppe kreuzt die Strecke. Kein Vorfall durch Unbeteiligte.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">05 · Übertragungs-DNA</div>
+        <h3>Infrastruktur, die seit Jahrzehnten Hochgeschwindigkeit überträgt.</h3>
+        <p>Stromanschlüsse, Bandbreite, OB-Van-Setup, Stand-Plätze · Auf dem Gelände gelöst, nicht erfunden. Backyard läuft hier mit der gleichen Standard-Setup-Logik, die das Test-Center für Fahr-Events längst etabliert hat.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">06 · Aus-der-Luft</div>
+        <h3>Perfekt für Drohne und Helikopter-Aufnahmen.</h3>
+        <p>Freie Sichtachsen, eindeutige Flugfreigaben, keine angrenzende Bebauung. Drohnen-Footage liefert die Backyard-Bilder, die im Stadt-Format technisch unmöglich sind. Aerial-Hero-Shots sind Standard, nicht Sonderfreigabe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     PARTNER-BLOCK · Red Bull · Garmin · Financiers
+     ============================================================ -->
+<section class="partner-block">
+  <div class="partner-inner">
+    <p class="eyebrow">02 &nbsp; Partner-Architektur</p>
+    <h2 style="margin-top: 0;">Vier Rollen. Eine Bühne.</h2>
+    <p style="max-width: 880px;">Red Bull Deutschland bekommt den Hauptpartner-Slot · Als <strong>Brand-Anker und Content-Co-Producer</strong>, nicht als reiner Geld-Sponsor. Der Beitrag mischt sich aus Brand-DNA, Distribution über Red Bull TV und Cycling Social, der Getränkeversorgung im General-Energy-Home und einer fairen Beteiligung an der Produktion. <strong>24/7 Live aus jeder Achse, Highlight-Stack über das Red Bull Media-House.</strong> Daneben holen wir einen grossen <strong>Cycling-Co-Partner (Ziel: Canyon)</strong> als Bike- und Performance-Marke ins Format. Garmin liefert die Daten-Schnittstelle, weitere Cash-Partner aus dem Cycling-Universum finanzieren die restliche Produktion.</p>
+
+    <div class="partner-grid">
+      <article class="partner-card is-main">
+        <div class="tier-tag">Brand-Anker · Red Bull Deutschland</div>
+        <h3>Only Red Bull<br>can do</h3>
+        <p class="lead">Red Bull Deutschland ist <strong>Brand-Anker und Content-Co-Producer</strong>, nicht zahlender Sponsor neben anderen. 24/7 Live aus jeder Achse, Highlight-Edits aus dem eigenen Content-Stack, Athleten-Storys über Red Bull Media-House, Owned Distribution über Red Bull TV und Cycling Social. Beitrag aus Brand-Hoheit, Channel-Distribution und Versorgung, nicht aus Cash allein.</p>
+        <ul>
+          <li>Naming-Anker: „Backyard × Bike powered by Red Bull"</li>
+          <li>Content-Co-Production: Highlight-Stack, Athleten-Doku, Recap-Cuts produziert mit Red Bull Media-House</li>
+          <li>Logo permanent im Stream-UI, in der Live-Map, am Speed-Board, in der Drohnen-Aerial-Identity</li>
+          <li>Uni-Team-Campus-Zonen unter Red-Bull-Branding · Der Cast besteht aus Studenten 18-25, exakt eure Zielgruppe</li>
+          <li>Brand-Hoheit auf dem General Energy Home · Red Bull als offizielle Getränke-Versorgung für alle Teilnehmer</li>
+          <li>Distribution: Red Bull TV, Red Bull Cycling Social, Campus-Channel-Verteilung über die Unis (Reichweite Deutschland)</li>
+          <li>Pre/Post-Brand-Lift-Studie inklusive</li>
+        </ul>
+        <div class="deal">Beitrag: Brand · Bühne · Getränke · Content-Co-Production</div>
+      </article>
+
+      <article class="partner-card">
+        <div class="tier-tag">Cycling-Co-Partner · Ziel: Canyon</div>
+        <h3>Der Bike-Brand, der den Cast einkleidet</h3>
+        <p class="lead">Zweiter grosser Partner: ein etablierter Cycling-Brand auf Augenhöhe mit Red Bull als Marken-Bühne. <strong>Ziel-Partner: Canyon</strong>. Bikes, Apparel und Performance-Equipment für die 100 Teilnehmer · Uni-Teams plus Influencer/Sportler · Plus eigene Brand-Hoheit im Bike-Setup-Bereich und auf den Onboard-Cams. Macht das Format zur authentischen Cycling-Plattform statt zur generischen Energy-Show.</p>
+        <ul>
+          <li>Bike-Equipment-Hoheit: Race-Bikes für alle Teilnehmer in Co-Branded Setup</li>
+          <li>Apparel-Slots: Team-Kits Uni-Teams + Influencer-Jerseys</li>
+          <li>Logo permanent auf den Onboard-Cam-Frames und Bike-Standern</li>
+          <li>Pre-Race-Hub auf den Canyon-Channels (Brand-Storytelling vor Race-Start)</li>
+          <li>Post-Race-Recap mit Canyon-Performance-Daten und Bike-Lifestyle-Cuts</li>
+        </ul>
+        <div class="deal">Beitrag: Bikes + Apparel + Performance-Brand-Authority im Cycling-Layer</div>
+      </article>
+
+      <article class="partner-card">
+        <div class="tier-tag">Tech-Partner · Garmin</div>
+        <h3>Die Schnittstelle, ohne die Backyard nicht sichtbar wäre</h3>
+        <p class="lead">Garmin stellt jedem Teilnehmer ein <strong>Garmin-Armband</strong>. Über die Garmin-Schnittstelle teilen wir die Live-Daten aller Fahrer in den Stream · Herzfrequenz, GPS, Speed, Power. Das macht aus einer Runde pro Stunde ein Daten-Drama.</p>
+        <ul>
+          <li>Armband-Bestückung für alle Teilnehmer inklusive aller Uni-Team-Rider</li>
+          <li>Live-API in den Konferenz-Stream + Top-5-Indi-Feeds</li>
+          <li>Garmin-Logo permanent im Daten-Overlay</li>
+          <li>Co-Branded Recap-Asset mit Garmin-Daten-Visualisierung</li>
+        </ul>
+        <div class="deal">Deal: Sachleistung + Tech-Integration &middot; Visibility 24/7 im Datenlayer</div>
+      </article>
+    </div>
+
+    <div style="margin-top: 28px; padding: 24px 28px; background: var(--kvd-grau, #F4F4F2); border: 1px solid var(--kvd-border, rgba(0,0,0,0.12));">
+      <div style="font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--kvd-rot); margin-bottom: 10px;">Cash-Sub-Partner · weitere Slots im Cycling-Universum</div>
+      <p style="font-size: 15px; line-height: 1.55; margin: 0 0 12px 0; max-width: 1080px;">Die Produktion finanziert sich über weitere Cash-Sponsorings, bewusst <strong>nur Marken aus dem Cycling-, Endurance- und Performance-Universum</strong>. Red Bull bleibt der erste Brand-Eindruck, Cash-Sub-Partner kommen über klare Sub-Slots.</p>
+      <ul style="font-size: 14px; line-height: 1.55; columns: 2; column-gap: 56px; padding-left: 18px; margin: 0;">
+        <li>Premium Partner (3-4 Slots): Bike-Komponenten, Apparel, Nutrition</li>
+        <li>Official Partner (4-6 Slots): Tools, Recovery, Hydration</li>
+        <li>Endurance- und Recovery-Marken: Schlaf-Tech, Eyewear, Wearables</li>
+        <li>Brand Friends: lokales Sampling, Recap-Cross-Promo im Cycling-Segment</li>
+      </ul>
+      <div style="margin-top: 14px; font-size: 13px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--kvd-black);">Akquise läuft über das Karl + Karla Team</div>
+    </div>
+
+    <div class="tier-totals" style="margin-top: 56px;">
+      <div>
+        <div class="tier-total-num rot">Brand-Anker</div>
+        <div class="tier-total-label">Red-Bull-Rolle<br>Brand · Bühne · Cast · Drinks · Content</div>
+      </div>
+      <div>
+        <div class="tier-total-num">Canyon</div>
+        <div class="tier-total-label">Cycling-Co-Partner<br>Bikes + Apparel für die 100 Teilnehmer</div>
+      </div>
+      <div>
+        <div class="tier-total-num">Garmin</div>
+        <div class="tier-total-label">Daten-Backbone<br>Armband + API für jeden Fahrer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     REACH CHART · Deutschland-First
+     ============================================================ -->
+<section class="reach-chart">
+  <div class="reach-inner">
+    <div class="reach-header-row">
+      <div>
+        <p class="eyebrow eyebrow-white">Reichweite · Deutschland</p>
+        <h2>Red Bull macht das Format<br>im deutschen Markt sichtbar.</h2>
+      </div>
+      <div>
+        <div class="reach-headline-num">DE</div>
+        <div class="reach-headline-label">Reichweite Deutschland<br>Red Bull Cycling + Cast-Communities</div>
+      </div>
+    </div>
+
+    <p style="max-width: 880px; color: rgba(255,255,255,0.85); margin-bottom: 32px;">Backyard × Bike spielt im <strong style="color: var(--kvd-rot);">deutschen Cycling-Space</strong>, getragen durch die Red-Bull-Cycling-Channels und die Uni-Campus-Verteilung. Stream auf Deutsch, optionaler englischer Sub-Layer für internationale Cast-Communities. Distribution läuft über Red Bull TV, Red Bull Cycling Social, Uni-Campus-Channels, plus Twitch, YouTube, TikTok und Instagram als offene Kanäle. Indikative Werte unten · Finale Zahlen kommen mit Uni-Auswahl und Channel-Sign-off.</p>
+
+    <div class="reach-bars">
+      <div class="reach-bar">
+        <div class="reach-bar-name">Red Bull Cycling · IG/YT/TT<span class="sub">Eigene Channels Deutschland</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill" style="width: 100%;"></div></div>
+        <div class="reach-bar-value">DE<span class="sub">Owned</span></div>
+      </div>
+      <div class="reach-bar">
+        <div class="reach-bar-name">Red Bull TV<span class="sub">Slot + On-Demand-Recap</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill" style="width: 90%;"></div></div>
+        <div class="reach-bar-value">DE<span class="sub">Owned</span></div>
+      </div>
+      <div class="reach-bar">
+        <div class="reach-bar-name">Uni-Campus-Channels<span class="sub">100 Teilnehmer aus dem deutschen Cycling-Space</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill" style="width: 75%;"></div></div>
+        <div class="reach-bar-value">Multi-M<span class="sub">Earned</span></div>
+      </div>
+      <div class="reach-bar">
+        <div class="reach-bar-name">YouTube Live · Master-Feed<span class="sub">Konferenz-Stream + Top-5</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill" style="width: 60%;"></div></div>
+        <div class="reach-bar-value">10-30K<span class="sub">Peak CCV</span></div>
+      </div>
+      <div class="reach-bar">
+        <div class="reach-bar-name">Twitch · Chat-Driver-Feed<span class="sub">Race-Control-Cam, Community-Vote-Layer</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill" style="width: 45%;"></div></div>
+        <div class="reach-bar-value">5-15K<span class="sub">Peak CCV</span></div>
+      </div>
+      <div class="reach-bar">
+        <div class="reach-bar-name">TikTok · Clip-Engine<span class="sub">24/7 Highlight-Cut + Cast-Crosspost</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill muted" style="width: 55%;"></div></div>
+        <div class="reach-bar-value">15-40M<span class="sub">Event-Woche</span></div>
+      </div>
+      <div class="reach-bar">
+        <div class="reach-bar-name">Cast-Fan-Zones · Earned<span class="sub">100 Teilnehmer × eigene Communities</span></div>
+        <div class="reach-bar-track"><div class="reach-bar-fill muted" style="width: 35%;"></div></div>
+        <div class="reach-bar-value">+ 5-10M<span class="sub">Cast-Reach</span></div>
+      </div>
+    </div>
+
+    <div class="reach-legend">
+      <div class="reach-legend-item"><span class="reach-legend-dot rot"></span> Red-Bull-Owned + Athleten · Die Bühne, die Red Bull mitbringt</div>
+      <div class="reach-legend-item"><span class="reach-legend-dot muted"></span> Open Plattformen + Campus · So das Format zusätzlich aufschlägt</div>
+    </div>
+
+    <div class="tier-totals" style="margin-top: 64px;">
+      <div>
+        <div class="tier-total-num rot">DE</div>
+        <div class="tier-total-label">Reichweite Deutschland<br>Red Bull Owned-Channels als Distribution-Hub</div>
+      </div>
+      <div>
+        <div class="tier-total-num">15-40M</div>
+        <div class="tier-total-label">TikTok-Clip-Views<br>Event-Woche · dediziertes Clip-Team</div>
+      </div>
+      <div>
+        <div class="tier-total-num">10-30K</div>
+        <div class="tier-total-label">Live-Stream Peak<br>Konferenz-Feed + Top-5 Indi-Streams</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     LIVE-MAP · Backyard-Tracking-Vorschau
+     ============================================================ -->
+<section class="live-map-block">
+  <div class="live-map-inner">
+    <p class="eyebrow">03 &nbsp; Live-Map &amp; Daten-Layer</p>
+    <h2 style="margin-top: 0;">Eine Map. Alle Fahrer. Live-Metriken.<br>So sieht der Zuschauer das Rennen.</h2>
+    <p style="max-width: 880px;">Jeder Teilnehmer ist ein Dot auf der Live-Map. Jede Runde eine Bewegung. Jeder Daten-Punkt vom Garmin-Armband. Der Master-Feed schaltet zwischen Live-Map, Strecken-Cams und den Top-5-Indi-Streams um · Wie eine Konferenz. <strong>Was unten zu sehen ist, ist eine animierte Vorschau des Daten-Layers</strong>, der live aus der Garmin-API gefüttert wird.</p>
+
+    <div class="live-map-frame">
+      <div class="live-map-svg-wrap">
+        <svg viewBox="0 0 1400 400" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+            </pattern>
+          </defs>
+          <rect width="1400" height="400" fill="url(#grid)"/>
+
+          <!-- Track Oval (Dudenhofen-Style) -->
+          <path id="trackPath" d="M 120,200 C 120,80 280,80 460,80 L 940,80 C 1120,80 1280,80 1280,200 C 1280,320 1120,320 940,320 L 460,320 C 280,320 120,320 120,200 Z"
+                fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="48"/>
+          <path d="M 120,200 C 120,80 280,80 460,80 L 940,80 C 1120,80 1280,80 1280,200 C 1280,320 1120,320 940,320 L 460,320 C 280,320 120,320 120,200 Z"
+                fill="none" stroke="rgba(0,0,254,0.45)" stroke-width="2" stroke-dasharray="6 6"/>
+
+          <!-- Start/Finish marker -->
+          <rect x="115" y="180" width="8" height="40" fill="var(--kvd-rot)"/>
+          <text x="60" y="208" fill="rgba(255,255,255,0.85)" font-size="10" font-family="Helvetica" letter-spacing="2" font-weight="700">START</text>
+
+          <!-- Speed boards (camera positions) -->
+          <circle cx="460" cy="80" r="6" fill="#0000FE"/>
+          <text x="470" y="68" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 01</text>
+          <circle cx="940" cy="80" r="6" fill="#0000FE"/>
+          <text x="950" y="68" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 02</text>
+          <circle cx="940" cy="320" r="6" fill="#0000FE"/>
+          <text x="780" y="345" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 03</text>
+          <circle cx="460" cy="320" r="6" fill="#0000FE"/>
+          <text x="300" y="345" fill="#0000FE" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">SPEED-BOARD · CAM 04</text>
+
+          <!-- RTW / Sani position -->
+          <rect x="690" y="186" width="20" height="14" fill="#FFFFFF" rx="2"/>
+          <rect x="697" y="184" width="6" height="18" fill="var(--kvd-rot)"/>
+          <text x="650" y="230" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">RTW · SANI · 24/7</text>
+
+          <!-- Drone -->
+          <circle cx="700" cy="40" r="5" fill="#FFFFFF"/>
+          <line x1="700" y1="40" x2="700" y2="80" stroke="rgba(255,255,255,0.4)" stroke-width="1" stroke-dasharray="3 3"/>
+          <text x="630" y="32" fill="#FFFFFF" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">DRONE · AERIAL CAM</text>
+
+          <!-- Red Bull Energy Home (gegenüberliegende Streckenseite) -->
+          <rect x="1028" y="192" width="30" height="16" fill="#0000FE" rx="2"/>
+          <path d="M 1028,192 L 1043,180 L 1058,192 Z" fill="#FFFFFF"/>
+          <text x="978" y="232" fill="rgba(255,255,255,0.85)" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">RED BULL ENERGY HOME</text>
+
+          <!-- Camping Ground · Unis -->
+          <path d="M 298,208 L 311,186 L 324,208 Z" fill="#FFFFFF"/>
+          <path d="M 320,208 L 331,191 L 342,208 Z" fill="#0000FE"/>
+          <text x="278" y="232" fill="rgba(255,255,255,0.85)" font-size="9" font-family="Helvetica" font-weight="700" letter-spacing="2">CAMPING GROUND · UNIS</text>
+
+          <!-- Live dots (SVG-native animateMotion, läuft in allen Browsern) -->
+          <circle r="9" class="map-dot">
+            <animateMotion dur="24s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#trackPath"/>
+            </animateMotion>
+          </circle>
+          <circle r="8" class="map-dot-2">
+            <animateMotion dur="26s" begin="-4s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#trackPath"/>
+            </animateMotion>
+          </circle>
+          <circle r="8" class="map-dot-3">
+            <animateMotion dur="28s" begin="-8s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#trackPath"/>
+            </animateMotion>
+          </circle>
+          <circle r="7" class="map-dot-4">
+            <animateMotion dur="30s" begin="-12s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#trackPath"/>
+            </animateMotion>
+          </circle>
+          <circle r="7" class="map-dot-5">
+            <animateMotion dur="32s" begin="-16s" repeatCount="indefinite" rotate="auto">
+              <mpath href="#trackPath"/>
+            </animateMotion>
+          </circle>
+        </svg>
+      </div>
+
+      <div class="live-map-overlay">
+        <h4>● Top 5 · Live · Eine Wertung · Stunde 42</h4>
+        <div class="live-rider-row">
+          <div class="pos">01</div>
+          <div class="nm">Uni-Team #17<small>Uni · TU Darmstadt</small></div>
+          <div class="val">312 W<small>HF 168 · 38.2 km/h</small></div>
+        </div>
+        <div class="live-rider-row">
+          <div class="pos">02</div>
+          <div class="nm">Influencer #42<small>Influencer · Endurance-Creator</small></div>
+          <div class="val">298 W<small>HF 172 · 37.4 km/h</small></div>
+        </div>
+        <div class="live-rider-row">
+          <div class="pos">03</div>
+          <div class="nm">Uni-Team #08<small>Uni · RWTH Aachen</small></div>
+          <div class="val">285 W<small>HF 165 · 36.8 km/h</small></div>
+        </div>
+        <div class="live-rider-row">
+          <div class="pos">04</div>
+          <div class="nm">Influencer #11<small>Influencer · Cycling-Pro</small></div>
+          <div class="val">272 W<small>HF 175 · 36.1 km/h</small></div>
+        </div>
+        <div class="live-rider-row">
+          <div class="pos">05</div>
+          <div class="nm">Uni-Team #23<small>Uni · Sporthochschule Köln</small></div>
+          <div class="val">261 W<small>HF 169 · 35.6 km/h</small></div>
+        </div>
+
+        <h4 style="margin-top: 14px;">Stream-Schaltung</h4>
+        <div class="live-rider-row">
+          <div class="pos" style="color: var(--kvd-gelb);">M</div>
+          <div class="nm">Konferenz-Feed<small>Race-Control Master</small></div>
+          <div class="val">YT/TW<small>Master</small></div>
+        </div>
+        <div class="live-rider-row">
+          <div class="pos" style="color: var(--kvd-gelb);">5×</div>
+          <div class="nm">Top-5 Indi-Streams<small>pro Fahrer eigene Cam</small></div>
+          <div class="val">YT<small>Multi-Cam</small></div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 18px; font-size: 13px; opacity: 0.7; max-width: 880px;">Vorschau-Layout. Daten-Felder werden von der Garmin-Schnittstelle befüllt: GPS-Position für die Map, Power/HF/Speed für das Overlay. Cam-Schaltung läuft über das Race-Control-Setup neben der Strecke.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIVIDER 04 · CAST & VOICE  (hidden per User-Request)
+     ============================================================ -->
+<section class="divider" style="display:none;">
+  <div class="divider-inner">
+    <p class="num">04 &nbsp; Team &amp; Veranstalter</p>
+    <h2>Ein Team.<br>Ein Veranstalter.<br><span class="rot">End-to-End in einer Hand.</span></h2>
+    <p class="divider-sub">Backyard × Bike wird komplett von Karl + Karla verantwortet · Konzept, Production, Live-Moderation, Sponsor-Architektur, Race-Control vor Ort. Keine Patchwork-Dienstleister, keine externen Voice-Talents, keine Pro-Cast-Akquise. Der Cast sind die Studenten-Teams.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     PRODUCTION TEAM · Karl+Karla End-to-End  (hidden per User-Request)
+     ============================================================ -->
+<section class="cast" style="display:none;">
+  <div class="cast-inner">
+    <div class="cast-header">
+      <h2 style="margin: 0;">Karl + Karla &middot; End-to-End</h2>
+      <span class="cast-status">Gesetzt &middot; Pre-Event Q1 2027</span>
+    </div>
+    <p class="cast-intro">
+      Backyard × Bike wird <strong>komplett vom Karl + Karla Team verantwortet</strong>: Konzept, Production, Live-Broadcast, Sponsor-Architektur, PR, Race-Control vor Ort. Karl + Karla ist die hauseigene Agentur der KarlvonDrais-Gruppe und kennt das Cycling-Universum, den Studenten-Cast-Pool und die Location. Keine externen Studio-Talents. Keine Pro-Cast-Akquise. Der Cast sind die Uni-Teams.
+    </p>
+
+    <div class="pillar" style="margin-top: 32px;">
+      <div class="pillar-label">Production-Lead · Host-Agentur · Sponsoring</div>
+      <h3 style="margin: 0 0 12px 0; font-size: 44px; letter-spacing: -0.01em;">Karl + Karla Team</h3>
+      <p style="font-size: 16px; margin-bottom: 32px;">Marketing-Unit und Agentur der KarlvonDrais-Gruppe. Spezialisiert auf Brand-Aktivierungen, Live-Events und Creator-Formate im Cycling- und Endurance-Universum. <strong>Karl + Karla konzipiert, organisiert, produziert, vermarktet und stellt den Race-Direktor vor Ort.</strong></p>
+
+      <div class="two-col" style="margin: 0;">
+        <div>
+          <h4 style="margin-top: 0; color: var(--kvd-rot);">Pre-Production</h4>
+          <ul style="font-size: 14px;">
+            <li>Format-Konzept &amp; Treatment</li>
+            <li>Partner-Architektur (Red Bull · Garmin · Cash-Partner)</li>
+            <li>Uni-Team-Auswahl &amp; Bewerbungs-Prozess</li>
+            <li>Behörden, Versicherung &amp; Sanitätsplan via Karl + Karla</li>
+            <li>Production-Setup (Crew, Tech, OB-Van, Race-Control)</li>
+            <li>Pre-Hype-Kampagne · Red-Bull-Channels &amp; Owned</li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="margin-top: 0; color: var(--kvd-rot);">Live &amp; Post</h4>
+          <ul style="font-size: 14px;">
+            <li>Live-Broadcast (Konferenz-Master + Top-5 Indi)</li>
+            <li>Race-Control vor Ort über Karl + Karla</li>
+            <li>Sponsor-Inserts &amp; Brand-Activation-Management</li>
+            <li>24/7-Clipping-Team &amp; Social-Distribution</li>
+            <li>Post-Production, Recap-Film, Highlight-Assets</li>
+            <li>Brand-Lift-Studie für Red Bull + Tech-Recap für Garmin</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tier-totals" style="margin-top: 40px; padding: 24px 28px; background: var(--kvd-sand); color: var(--kvd-black); border: 1px solid var(--kvd-black);">
+        <div>
+          <div class="tier-total-num rot" style="font-size: 28px;">1 Team</div>
+          <div class="tier-total-label" style="color: var(--kvd-black);">End-to-End-Verantwortung<br>kein Patchwork aus Dienstleistern</div>
+        </div>
+        <div>
+          <div class="tier-total-num" style="font-size: 28px; color: var(--kvd-black);">9+ Monate</div>
+          <div class="tier-total-label" style="color: var(--kvd-black);">Production-Pipeline<br>Q3 2026 bis Event-Start Q2 2027</div>
+        </div>
+        <div>
+          <div class="tier-total-num" style="font-size: 28px; color: var(--kvd-black);">KvD-Native</div>
+          <div class="tier-total-label" style="color: var(--kvd-black);">Inhouse-Agentur<br>kennt Cycling-Universum, Uni-Pool, Location</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AGENTUR · Karl + Karla — Fahrrad-Expertise & Hersteller-Draht
+     ============================================================ -->
+<section class="safety-block">
+  <div class="safety-inner">
+    <p class="eyebrow eyebrow-white">Die Agentur &middot; Wer dieses Format baut</p>
+    <h2>Karl + Karla. <span style="color: var(--kvd-rot);">Die Agentur für die Fahrrad-Welt.</span></h2>
+    <p class="safety-lead">
+      Karl + Karla ist eine Marketing- und PR-Agentur mit einem klaren Schwerpunkt: <strong>Fahrrad- und Cycling-Projekte</strong>. Wir arbeiten <strong>deutschlandweit</strong> und kennen die Branche nicht von außen, sondern von innen. Unser entscheidender Unterschied: der <strong>direkte Draht zu den Herstellern selbst</strong> &middot; nicht nur zu deren Marketing-Abteilungen, sondern zu den Menschen, die die Marken, Räder und Komponenten wirklich verantworten.
+    </p>
+
+    <div class="safety-grid">
+      <div class="safety-card">
+        <div class="stamp">01 &middot; Fokus</div>
+        <h3>Spezialisiert auf Fahrrad-Projekte.</h3>
+        <p>Cycling ist für uns kein Nebenschauplatz, sondern das Kerngeschäft. Wir denken Formate, Kampagnen und Aktivierungen aus der Fahrrad-Welt heraus &middot; von der Rennstrecke bis in die Community.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">02 &middot; Reichweite</div>
+        <h3>Deutschlandweit vernetzt.</h3>
+        <p>Wir arbeiten bundesweit &middot; mit Teams, Locations, Partnern und Communities in ganz Deutschland. Ein Format wie Backyard × Bike lässt sich überall im Land verankern, weil das Netzwerk schon steht.</p>
+      </div>
+      <div class="safety-card">
+        <div class="stamp">03 &middot; Hersteller-Draht</div>
+        <h3>Direkt zu den echten Herstellern.</h3>
+        <p>Andere Agenturen reden mit Marketing-Abteilungen. Wir reden mit den Herstellern selbst &middot; mit den Menschen hinter den Marken, Bikes und Komponenten. Dieser direkte Zugang in die gesamte Branche ist unser Vorsprung, den andere nicht haben.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIVIDER 05 · FORMAT
+     ============================================================ -->
+<section class="divider">
+  <div class="divider-inner">
+    <p class="num">05 &nbsp; Format</p>
+    <h2>Eine Strecke.<br>Eine Wertung.<br><span class="rot">100 Teilnehmer.</span></h2>
+    <p class="divider-sub">Backyard × Bike läuft auf fünf Säulen: die Backyard-Regel selbst, eine Strecke mit einer gemeinsamen Wertung über 100 Teilnehmer aus dem deutschen Cycling-Space, der Konferenz-Live-Stream plus Top-5-Indi-Feeds, der Garmin-Daten-Layer, und das Vor-Ort-Setup mit Energy Homes und Mechanik-Zone.</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     FORMAT PILLARS · Backyard
+     ============================================================ -->
+<section class="format-block">
+  <div class="format-inner">
+    <p class="eyebrow">Die fünf Säulen</p>
+    <h2 style="margin-top: 0;">Wie das Format läuft</h2>
+
+    <div class="format-pillars">
+      <div class="pillar">
+        <div class="pillar-label">Säule 01</div>
+        <h3>Backyard-Regel</h3>
+        <p>Eine Runde pro Stunde, jede Stunde, ohne Pause. Wer eine Stunde nicht voll fährt, beendet sein Rennen als Finisher. Wer am längsten fährt, ist <strong>Last One Riding</strong>. Kein Zeitlimit, das Format endet, wenn nur noch einer fährt. Die Streckenlänge der Runde ist so kalibriert, dass durchschnittliche Power 35-40 Minuten braucht und langsamere Teilnehmer in der Stunde am Limit ankommen.</p>
+        <ul>
+          <li>Loop pro Stunde, exakt auf die Minute</li>
+          <li>Jede gefahrene Stunde zählt · jeder Fahrer ist Finisher</li>
+          <li>Wer am längsten fährt = Last One Riding</li>
+          <li>Die letzten Stunden ab Stunde 24 werden Headline-Momente</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-label">Säule 02</div>
+        <h3>Ein Cast, eine Wertung</h3>
+        <p>Eine Strecke, eine Backyard-Regel, eine gemeinsame Wertung. <strong>Event 1: 30 Uni-Teams</strong> mit je 1 Rider plus Support-Crew. <strong>Event 2: 70 Influencer und Sportler</strong> als Einzelstarter. Alle 100 Teilnehmer fahren denselben Loop, im selben Stunden-Slot, gegen dieselbe Uhr. Die zwei Events sind die Cast-Communities und ihre Stories · Die Wertung ist EINE. Wer am Ende noch fährt, gewinnt das gesamte Format, egal ob Uni-Rider oder Influencer.</p>
+        <ul>
+          <li>Event 1 · 30 Uni-Teams (1 Rider + Support-Crew je Uni)</li>
+          <li>Event 2 · 70 Influencer und Sportler (Einzelstarter)</li>
+          <li>Eine Strecke, eine Backyard-Regel, ein gemeinsamer Stunden-Slot</li>
+          <li>Eine gemeinsame Wertung · alle im selben Rennen · Story-Dichte aus dem gemischten Cast</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-label">Säule 03</div>
+        <h3>Konferenz-Stream + Top-5-Indi</h3>
+        <p>Der Master-Feed läuft wie eine Sport-Konferenz: Race-Control-Moderation neben der Strecke, Schaltungen zwischen Strecken-Cams, Live-Map und den Top-5-Indi-Feeds. <strong>Jeder der Top 5 hat einen eigenen Stream</strong> · Multi-Cam-Switch zwischen Front, Heck und Rider-Facing plus Daten-Overlay. Zuschauer wählen selbst, ob sie das Race-Bigpicture oder ein einzelnes Uni-Team verfolgen.</p>
+        <ul>
+          <li>YouTube Live (Master · Konferenz)</li>
+          <li>Twitch (Race-Control-Cam · Community)</li>
+          <li>TikTok Live (24/7-Loop · Mobile)</li>
+          <li>YouTube Multi-Stream für Top-5-Indi-Feeds</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-label">Säule 04</div>
+        <h3>Garmin Live-Data-Layer</h3>
+        <p>Jeder Teilnehmer trägt ein <strong>Garmin-Armband</strong>. Über die Garmin-Schnittstelle ziehen wir Herzfrequenz, GPS, Speed, Power live in den Stream · Bei jedem Fahrer permanent on-screen, bei Top 5 mit erweitertem Overlay. Daten machen aus „eine Runde" ein Drama, weil jede Runde messbar wird.</p>
+        <ul>
+          <li>Herzfrequenz (BPM, Trend)</li>
+          <li>GPS-Position für die Live-Map</li>
+          <li>Speed (avg + peak pro Runde)</li>
+          <li>Power (Watt aus Garmin-Pedalen, soweit verfügbar)</li>
+          <li>Rundenzeit + Delta zur Stunde</li>
+        </ul>
+      </div>
+
+      <div class="pillar">
+        <div class="pillar-label">Säule 05</div>
+        <h3>Setup vor Ort: Energy Homes + Mechanik</h3>
+        <p>KvD stellt das gesamte Vor-Ort-Setup: <strong>Uni-Camp</strong> mit Modular-Energy-Homes für die 30 Uni-Teams, <strong>Influencer-Camp</strong> mit Versorgungs-Slots für die 70 Einzelstarter, plus zentrale Mechaniker-Zone für alle. Auf der Gegenseite der Strecke steht das <strong>Red-Bull-Energy-Home</strong> als Trinkversorgung für alle 100 Teilnehmer und beide Crews.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DATA STRIP · Garmin-Live-Daten Vorschau
+     ============================================================ -->
+<section class="data-strip">
+  <div class="data-strip-inner">
+    <div class="data-cell">
+      <div class="data-cell-label">Rider 02 · BPM</div>
+      <div class="data-cell-val rot">172</div>
+    </div>
+    <div class="data-cell">
+      <div class="data-cell-label">Rider 02 · Speed</div>
+      <div class="data-cell-val">37.4</div>
+    </div>
+    <div class="data-cell">
+      <div class="data-cell-label">Rider 02 · Watt</div>
+      <div class="data-cell-val">298</div>
+    </div>
+    <div class="data-cell">
+      <div class="data-cell-label">Stunde</div>
+      <div class="data-cell-val">42</div>
+    </div>
+    <div class="data-cell">
+      <div class="data-cell-label">Δ zum Stunden-Ende</div>
+      <div class="data-cell-val rot">07:18</div>
+    </div>
+    <div class="data-cell">
+      <div class="data-cell-label">Fahrer im Rennen</div>
+      <div class="data-cell-val">9 / 25</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ENERGY HOMES · Setup vor Ort
+     ============================================================ -->
+<section class="energy-block">
+  <div class="energy-inner">
+    <p class="eyebrow">06 &nbsp; Setup vor Ort</p>
+    <h2 style="margin-top: 0;">Fünf Hubs. Eine Strecke.</h2>
+    <p class="energy-lead">Auf der Strecke entstehen fünf Hubs, jeder mit klarer Rolle: eine zentrale Mechaniker-Zone von KvD für alle Teilnehmer, eigene Energy Homes pro Uni-Team, das General Red-Bull-Home auf der gegenüberliegenden Streckenseite als zentrale Anlaufstelle, individuelle Influencer-Homes für die Einzelstarter und ein Camping Ground für Zuschauer und Studenten mit eigenem Kiosk, ähnlich dem DTM-24-Stunden-Setup.</p>
+
+    <div class="energy-grid" style="grid-template-columns: repeat(5, 1fr); gap: 14px;">
+      <div class="energy-card">
+        <div class="badge">KvD</div>
+        <h3>Zentrale<br>Mechaniker-Zone</h3>
+        <p>KvD-Mechanik-Team rund um die Uhr für alle Teilnehmer: Pannen, Schaltung, Bremsen, Räder-Wechsel. Streckennah, mit eigenem Pit-Eingang.</p>
+        <div class="owner">Verantwortung: KvD-Service-Team</div>
+      </div>
+      <div class="energy-card">
+        <div class="badge">Uni</div>
+        <h3>Uni-Team<br>Energy Homes</h3>
+        <p>Jede Uni hat ihr eigenes Energy Home, wo der Uni-Rider verpflegt und versorgt wird. Eigene Mechanik-Slots, eigene Brand-Welt, Co-Working-Charakter für die Crew.</p>
+        <div class="owner">Verantwortung: jede Uni selbst</div>
+      </div>
+      <div class="energy-card is-redbull">
+        <div class="badge">Red Bull</div>
+        <h3>General<br>Red-Bull-Home</h3>
+        <p>Auf der gegenüberliegenden Streckenseite. <strong>Hauptverantwortlicher Hub</strong>: zentrale Trink- und Hospitality-Anlaufstelle, an der jeder Teilnehmer hält. Eigene Kamera am Eingang dokumentiert die Touchpoints live im Stream.</p>
+        <div class="owner">Verantwortung: Red Bull-Crew vor Ort</div>
+      </div>
+      <div class="energy-card">
+        <div class="badge">Influencer</div>
+        <h3>Influencer<br>Homes</h3>
+        <p>Einzelstarter (Influencer, Pro-Cast) können sich auf eigene Faust ein Home aufbauen: Branding, Versorgung, Stream-Setup nach eigenen Vorstellungen. Mehr Cast-Story, mehr Brand-Vielfalt im Paddock.</p>
+        <div class="owner">Verantwortung: jeder Cast-Member selbst</div>
+      </div>
+      <div class="energy-card">
+        <div class="badge">Zuschauer</div>
+        <h3>Camping<br>Ground</h3>
+        <p>Eigener Camping-Bereich für Studenten und Zuschauer über die gesamte Event-Dauer. Unis können ihre Studenten einladen, vor Ort zu campen und das Format als Live-Erlebnis mitzunehmen. Eigener Kiosk zur Verpflegung, vergleichbar dem Setup beim DTM-24-Stunden-Rennen.</p>
+        <div class="owner">Verantwortung: Karl + Karla</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     AUDIENCE · Dielgruppe + Strava + TTW
+     ============================================================ -->
+<style>
+.audience-block { padding: 96px 80px 64px; background: var(--kvd-sand); color: var(--kvd-black); }
+.audience-inner { max-width: 1280px; margin: 0 auto; }
+.audience-headline { font-size: 56px; line-height: 1.05; letter-spacing: -0.015em; margin: 0 0 16px 0; }
+.audience-headline .rot { color: var(--kvd-rot); }
+.audience-lead { font-size: 18px; line-height: 1.55; max-width: 940px; margin-bottom: 48px; }
+.audience-stat-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 56px; }
+.audience-stat { background: var(--kvd-white); border: 1px solid var(--kvd-black); padding: 24px 22px; display: flex; flex-direction: column; gap: 8px; }
+.audience-stat .stat-num { font-family: var(--kvd-display, "Helvetica Neue"), Helvetica, Arial, sans-serif; font-weight: 800; font-size: 48px; line-height: 1; color: var(--kvd-rot); letter-spacing: -0.01em; }
+.audience-stat .stat-label { font-size: 14px; line-height: 1.4; color: var(--kvd-black); }
+.audience-stat .stat-src { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(10,10,10,0.55); margin-top: 8px; }
+.audience-section-title { font-size: 16px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(10,10,10,0.55); margin: 0 0 18px 0; }
+.audience-trend-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.audience-trend { background: var(--kvd-black); color: var(--kvd-white); padding: 26px 24px; display: flex; flex-direction: column; gap: 10px; }
+.audience-trend .trend-name { font-size: 19px; font-weight: 700; color: var(--kvd-gelb); letter-spacing: -0.005em; }
+.audience-trend .trend-def { font-size: 14px; line-height: 1.5; color: rgba(255,255,255,0.85); }
+.audience-trend .trend-link { font-size: 13px; line-height: 1.5; color: var(--kvd-rot); border-top: 1px solid rgba(255,255,255,0.15); padding-top: 10px; margin-top: 6px; }
+.audience-thesis { margin-top: 56px; padding: 32px 36px; background: var(--kvd-black); color: var(--kvd-white); border-left: 6px solid var(--kvd-rot); font-size: 22px; line-height: 1.4; font-weight: 600; max-width: 1040px; }
+.audience-thesis .accent { color: var(--kvd-rot); }
+</style>
+<section class="audience-block">
+  <div class="audience-inner">
+    <p class="eyebrow eyebrow-rot">06.5 &nbsp; Reichweite über den Cast · Studien-Backing</p>
+    <h2 class="audience-headline">Der Cast ist die Reichweite.<br>100 Teilnehmer, <span class="rot">100 Fan-Communities.</span></h2>
+    <p class="audience-lead">Backyard × Bike läuft als zwei parallele Races: 30 Uni-Teams plus 70 Influencer und Sportler. Über diese 100 Cast-Mitglieder bringt das Format ihre eigenen Follower- und Campus-Netzwerke organisch in den Live-Moment · Junge Männer 18-25, sportlich, wettkampfgetrieben, Strava-Generation. Keine bezahlte Push-Mechanik, keine Cold-Reach. Das Publikum ist bereits Follower jedes einzelnen Teilnehmers. Zahlen unten aus Strava Year-In-Sport 2025 (180 Mio User, 30.494 Befragte) und Trends to Watch 2026 by trendbüro/Avantgarde · Die zeigen, warum dieser Cast und diese Audience gerade jetzt zusammenkommen.</p>
+
+    <p class="audience-section-title">Strava 2025 · Wo der Cast und seine Audience gerade stehen</p>
+    <div class="audience-stat-grid">
+      <div class="audience-stat">
+        <div class="stat-num">+39%</div>
+        <div class="stat-label">mehr Gen-Z-Race-Anmeldungen auf Strava (5K) ggü. Vorjahr. Halbmarathon +33%, Marathon +31%.</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">75%</div>
+        <div class="stat-label">häufiger nennt Gen Z „Wettkampf oder Event" als Trainings-Hauptmotivation (vs. Gen X).</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">~1 Mio</div>
+        <div class="stat-label">Strava-Clubs in 2025 (≈ 4×). +2,8× Radfahr-Clubs. IRL-Club-Events +1,5×.</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">30%</div>
+        <div class="stat-label">der Gen Z planen 2026 noch mehr Geld für Fitness auszugeben · Trotz Inflation-Druck.</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">+39%</div>
+        <div class="stat-label">mehr Gen Z als Gen X nutzen Fitness, um neue Menschen zu treffen. Sport ist Social-Layer Nr. 1.</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">&gt; 50%</div>
+        <div class="stat-label">der Gen Z erwartet, Strava 2026 häufiger zu nutzen · Instagram und TikTok gleich oder weniger.</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">79%</div>
+        <div class="stat-label">der Gen Z + Millennials suchen IRL-Events für authentische Offline-Connection.</div>
+        <div class="stat-src">Quelle: Eventbrite via TTW 2026</div>
+      </div>
+      <div class="audience-stat">
+        <div class="stat-num">2×</div>
+        <div class="stat-label">häufiger als Gen X nennt Gen Z Krafttraining als Hauptsport. 61% trainieren explizit für die Optik.</div>
+        <div class="stat-src">Quelle: Strava 2025</div>
+      </div>
+    </div>
+
+    <p class="audience-section-title">TTW 2026 · Die Trends, die das Format trägt</p>
+    <div class="audience-trend-grid">
+      <div class="audience-trend">
+        <div class="trend-name">Hyperfandoms</div>
+        <div class="trend-def">89% der Fans sagen, ihr Fandom ist zentral für die eigene Identität (Vevo via TTW).</div>
+        <div class="trend-link">→ Uni-Trikots, Startnummern, Podium-Fotos werden zu Identity-Artefakten. Red Bull wird Teil der Identität, nicht Logo daneben.</div>
+      </div>
+      <div class="audience-trend">
+        <div class="trend-name">Episodic Belonging</div>
+        <div class="trend-def">Langfristige Subkulturen sterben, ersetzt durch event-basierte, temporäre Zugehörigkeit (TTW 2026).</div>
+        <div class="trend-link">→ Backyard × Bike ist exakt diese kurze, intensive Belonging-Episode · Uni-Team-Identität für eine Race-Wave.</div>
+      </div>
+      <div class="audience-trend">
+        <div class="trend-name">Storyliving</div>
+        <div class="trend-def">75% der Gen Z + Millennials wollen Experiences zu ihren Lieblings-Stories besuchen (Netflix via TTW).</div>
+        <div class="trend-link">→ Red Bull baut seit Jahren Universen. Cycling-Uni-Format ist neues Kapitel im Red-Bull-Storyverse mit Doku-Potenzial.</div>
+      </div>
+      <div class="audience-trend">
+        <div class="trend-name">Loneliness Economy</div>
+        <div class="trend-def">80% der Gen Z fühlen sich digital überfordert und wollen aktiv „loggen off" (TTW 2026).</div>
+        <div class="trend-link">→ Studenten-Teams + Race-Day liefern echte Co-Presence · Der Antidot, den die Zielgruppe aktiv sucht.</div>
+      </div>
+      <div class="audience-trend">
+        <div class="trend-name">Fragile Selves</div>
+        <div class="trend-def">61% der Gen Z erkennen sich Jahr-zu-Jahr nicht wieder (Pew via TTW 2026).</div>
+        <div class="trend-link">→ Uni-Team-Zugehörigkeit liefert temporäre Identitäts-Anker. Das Sicherheits-Setup adressiert die Angst-Komponente direkt.</div>
+      </div>
+      <div class="audience-trend">
+        <div class="trend-name">Calculated Risk · Friction Maxxing</div>
+        <div class="trend-def">Kontrollierte Reibung wird zum kulturellen Catalyst · Endurance-Travel, Challenge-Seeking (TTW 2026).</div>
+        <div class="trend-link">→ Cycling-Race auf Closed Course ist controlled friction par excellence. Sicherheits-Layer ist Voraussetzung · und USP gegen Hobby-Veranstalter.</div>
+      </div>
+    </div>
+
+    <div class="audience-thesis">
+      <span class="accent">These:</span> Junge Männer 18-25 kommen über drei Layer in den Live-Moment · Sport, Crew, Campus. Backyard × Bike liefert alle drei gleichzeitig, organisch über den eigenen Cast: 30 Uni-Teams für den Campus-Layer, 70 Influencer und Sportler für den Crew- und Sport-Layer.
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SAFETY · Sicherheits-First-Argument
+     ============================================================ -->
+<style>
+.tg-safety-block { padding: 96px 80px 80px; background: var(--kvd-black); color: var(--kvd-white); }
+.tg-safety-inner { max-width: 1280px; margin: 0 auto; }
+.tg-safety-eyebrow { font-size: 14px; letter-spacing: 0.30em; text-transform: uppercase; color: var(--kvd-rot); margin: 0 0 24px 0; }
+.tg-safety-headline { font-size: 64px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 24px 0; color: var(--kvd-white); }
+.tg-safety-headline .rot { color: var(--kvd-rot); }
+.tg-safety-lead { font-size: 19px; line-height: 1.5; color: rgba(255,255,255,0.85); max-width: 960px; margin-bottom: 56px; }
+.tg-tg-safety-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 56px; }
+.tg-safety-pillar { padding: 28px 26px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-left: 4px solid var(--kvd-rot); display: flex; flex-direction: column; gap: 12px; }
+.tg-safety-pillar .pillar-num { font-size: 13px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+.tg-safety-pillar .pillar-title { font-size: 22px; font-weight: 700; color: var(--kvd-white); line-height: 1.2; }
+.tg-safety-pillar .pillar-body { font-size: 15px; line-height: 1.5; color: rgba(255,255,255,0.78); }
+.tg-safety-checklist { background: rgba(0,0,254,0.08); border: 1px solid var(--kvd-rot); padding: 32px 36px; }
+.tg-safety-checklist h3 { color: var(--kvd-rot); font-size: 20px; letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 18px 0; }
+.tg-safety-checklist ul { columns: 2; column-gap: 56px; padding: 0; list-style: none; }
+.tg-safety-checklist li { font-size: 15px; line-height: 1.5; padding: 6px 0 6px 22px; position: relative; color: rgba(255,255,255,0.88); break-inside: avoid; }
+.tg-safety-checklist li::before { content: ""; position: absolute; left: 0; top: 14px; width: 12px; height: 2px; background: var(--kvd-rot); }
+</style>
+<section class="tg-safety-block">
+  <div class="tg-safety-inner">
+    <p class="tg-safety-eyebrow">06.6 &nbsp; Sicherheit · Premium-Signal, nicht Auflage</p>
+    <h2 class="tg-safety-headline">Backyard ist hart.<br>Die Strecke und das Setup sind <span class="rot">sicher.</span></h2>
+    <p class="tg-safety-lead">Calculated Risk ist der kulturelle Trend (TTW 2026). Recklessness ist es nicht. Das Sicherheits-Setup ist kein Nebenpunkt · Es ist der USP, der Backyard × Bike von jedem Hobby-Veranstalter trennt. Im selben Atemzug ist es das, was Eltern, Universitäten, Behörden und Red-Bull-Legal entspannt zustimmen lässt. <strong>Hier ist die Premium-Signal-Logik:</strong></p>
+
+    <div class="tg-tg-safety-pillar-grid">
+      <div class="tg-safety-pillar">
+        <div class="pillar-num">01 · Location</div>
+        <div class="pillar-title">Closed Course statt offene Straße</div>
+        <div class="pillar-body">Opel Test Center Dudenhofen, eine der größten Auto-Test-Anlagen Deutschlands. Vollständig abgesperrt, eigener Security-Dienst, Zaun rund um das Areal. Kein Spontan-Besucher kann reinkommen, kein Dritter kreuzt die Strecke. Streckenprofil ohne steile Abfahrten, keine technischen Kurven, hindernisfreier Asphalt.</div>
+      </div>
+      <div class="tg-safety-pillar">
+        <div class="pillar-num">02 · Medical</div>
+        <div class="pillar-title">24/7 Sani vor Ort + RTW</div>
+        <div class="pillar-body">RTW direkt auf dem Gelände, Sanitäts-Team durchgehend in Schichten, Notfall-Standort innerhalb der Strecke. Bei Sekundenschlaf, Dehydration oder Hitzschlag liegt die Reaktionszeit im einstelligen Minuten-Bereich. Race-Control darf einzelne Fahrer aus medizinischen Gründen jederzeit aus dem Rennen ziehen.</div>
+      </div>
+      <div class="tg-safety-pillar">
+        <div class="pillar-num">03 · Überwachung</div>
+        <div class="pillar-title">Lückenlose Sicht, Race-Control-Stop-Recht</div>
+        <div class="pillar-body">Strecken-Cams, Drohne, 3 Onboard-Cams pro Bike (Front/Heck/Rider-Facing), Perimeter-Cams des Test-Centers. Race-Control sieht jeden Sturz, jeden Wackler, jeden nickenden Fahrer in Echtzeit und kann sofort eingreifen. Kein blinder Streckenabschnitt. Das ist nicht Marketing-Bild, das ist Pflicht-Setup.</div>
+      </div>
+    </div>
+
+    <div class="tg-safety-checklist">
+      <h3>Pflicht-Checks pro Teilnehmer</h3>
+      <ul>
+        <li>Helm-Pflicht für jede Runde (kein Helm = kein Start)</li>
+        <li>Bike-Sicherheits-Check vor Race-Start (Bremsen, Reifen, Lichter, Reflektoren)</li>
+        <li>3 Onboard-Cams Pflicht pro Bike · Front, Heck, Rider-Facing (Beweis- und Story-Layer)</li>
+        <li>Garmin-Armband 24/7 (HF, GPS, Sturz-Trigger)</li>
+        <li>Versicherungs-Paket pro Teilnehmer (Spezial-Police via Karl+Karla)</li>
+        <li>Sani-Eingangsuntersuchung vor Start (HF-Baseline, Hydration-Check)</li>
+        <li>Verbindliche Sleep-Slot-Erinnerungen ab Stunde 18 (Sekundenschlaf-Prävention)</li>
+        <li>Cool-Down-Zone bei jedem Boxenstopp (Body-Temperatur-Monitoring)</li>
+        <li>Race-Control-Stop-Recht ohne Diskussion (medizinische Entscheidung steht über Wettkampf)</li>
+        <li>Doping- und Medikamenten-Kontroll-Protokoll vertraglich vereinbart</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     UNI-TEAMS · Der Cast
+     ============================================================ -->
+<section class="uni-team-block">
+  <div class="uni-team-inner">
+    <p class="eyebrow">07 &nbsp; Event 1 · Uni-Teams im Race</p>
+    <h2 style="margin-top: 0;">30 Universitäten.<br>Komplette Team-Wertung.</h2>
+    <p style="max-width: 920px;">Event 1 des Formats: <strong>30 Uni-Teams</strong> bewerben sich als <strong>komplettes Team</strong> · Ein Rider 18-25 auf der Strecke, eine Support-Crew aus drei bis fünf Kommilitonen (Box, Mechanik, Verpflegung, Social), und eine <strong>Fan-Zone</strong> auf dem Campus mit Live-Watch-Partys und Alumni-Outreach. 30 Universitäten heißt 30 Campus-Communities, 30 Watch-Party-Hubs, 30 unabhängige Story-Spuren. Über die Bewerbungsphase entsteht Pre-Hype Wochen vor dem Race, über die Watch-Partys während des Race-Wochenendes ein paralleles Campus-Event-Format in 30 Städten gleichzeitig.</p>
+
+    <div class="uni-team-grid">
+      <div class="uni-team-card">
+        <div class="slot">Setup</div>
+        <div class="num">01</div>
+        <div class="role">Team-Struktur</div>
+        <p>1 Rider 18-25 auf der Strecke, 3-5 Studenten-Crew in der Box (Mechanik, Verpflegung, Social), 1 Fan-Zone auf dem Campus. KvD stellt 30 modulare Energy Homes, die Unis stellen die Menschen und die Reichweite.</p>
+        <div class="uni-stack">Rider · Crew · Fans</div>
+      </div>
+      <div class="uni-team-card">
+        <div class="slot">Pipeline</div>
+        <div class="num">02</div>
+        <div class="role">Bewerbung Q3 2026</div>
+        <p>Bewerbungsphase startet im Sommer 2026, ~120 Universitäten kontaktiert, 30 final ausgewählt. Auswahl entlang Cycling-Affinität, Sportwissenschaft, Engineering-Power und Media-Reichweite des Campus. Bewerbung selbst ist schon Pre-Hype.</p>
+        <div class="uni-stack">Rider · Crew · Fans</div>
+      </div>
+      <div class="uni-team-card">
+        <div class="slot">Jury</div>
+        <div class="num">03</div>
+        <div class="role">Karl+Karla + Red Bull</div>
+        <p>Jurybesetzung über das Karl + Karla Team und einen Red-Bull-Vertreter. Fokus auf Mix aus Größe, Geografie und Story-Potenzial, mit Schwerpunkt deutscher Cycling-Space.</p>
+        <div class="uni-stack">Rider · Crew · Fans</div>
+      </div>
+      <div class="uni-team-card">
+        <div class="slot">Campus</div>
+        <div class="num">04</div>
+        <div class="role">30 Watch-Party-Hubs</div>
+        <p>Pro Uni eine Fan-Zone auf dem Campus mit Live-Stream-Watch-Setup, Red-Bull-Sampling und Sponsoring-Touchpoint. 30 Watch-Partys parallel zum Race · Bestes Format für Studenten-Nachtleben, EU-weite Campus-Synchronität.</p>
+        <div class="uni-stack">Rider · Crew · Fans</div>
+      </div>
+      <div class="uni-team-card">
+        <div class="slot">Story</div>
+        <div class="num">05</div>
+        <div class="role">30 Davids gegen 30 Davids</div>
+        <p>Pre-Race-Recap-Reihe in den letzten zwei Wochen vor Start: jede Uni bekommt eine Kennenlern-Story. 30 unabhängige Erzählstränge, 30 Boxen-Crews, 30 Heim-Communities. Story-Dichte schlägt klassisches Pro-Race um Längen.</p>
+        <div class="uni-stack">Rider · Crew · Fans</div>
+      </div>
+    </div>
+
+    <div class="tier-totals" style="margin-top: 48px;">
+      <div>
+        <div class="tier-total-num rot">30</div>
+        <div class="tier-total-label">Uni-Teams<br>Event 1 des Race-Wochenendes</div>
+      </div>
+      <div>
+        <div class="tier-total-num">~150</div>
+        <div class="tier-total-label">Studenten 18-25 vor Ort<br>30 Rider + ~120 Boxen-Crew</div>
+      </div>
+      <div>
+        <div class="tier-total-num">30×</div>
+        <div class="tier-total-label">Campus-Watch-Partys<br>parallel zum Race in 30 Städten</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     INFLUENCER RACE · Event 2
+     ============================================================ -->
+<style>
+.influencer-block { padding: 96px 80px 80px; background: var(--kvd-black); color: var(--kvd-white); }
+.influencer-inner { max-width: 1280px; margin: 0 auto; }
+.influencer-eyebrow { font-size: 14px; letter-spacing: 0.30em; text-transform: uppercase; color: var(--kvd-rot); margin: 0 0 24px 0; }
+.influencer-headline { font-size: 60px; line-height: 1.02; letter-spacing: -0.02em; margin: 0 0 24px 0; color: var(--kvd-white); }
+.influencer-headline .rot { color: var(--kvd-rot); }
+.influencer-lead { font-size: 19px; line-height: 1.55; color: rgba(255,255,255,0.85); max-width: 960px; margin-bottom: 48px; }
+.influencer-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 48px; }
+.influencer-card { padding: 26px 24px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-left: 4px solid var(--kvd-rot); display: flex; flex-direction: column; gap: 10px; }
+.influencer-card .card-num { font-size: 13px; letter-spacing: 0.20em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+.influencer-card .card-title { font-size: 22px; font-weight: 700; line-height: 1.2; color: var(--kvd-white); }
+.influencer-card .card-body { font-size: 14.5px; line-height: 1.5; color: rgba(255,255,255,0.82); }
+.influencer-card .card-meta { font-size: 12px; letter-spacing: 0.10em; text-transform: uppercase; color: var(--kvd-gelb); margin-top: 6px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 10px; }
+.influencer-totals { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 28px 32px; background: rgba(0,0,254,0.08); border: 1px solid var(--kvd-rot); }
+.influencer-totals .num-big { font-size: 44px; font-weight: 800; color: var(--kvd-rot); line-height: 1; letter-spacing: -0.01em; }
+.influencer-totals .num-lbl { font-size: 13px; line-height: 1.45; color: rgba(255,255,255,0.85); margin-top: 8px; }
+</style>
+<section class="influencer-block">
+  <div class="influencer-inner">
+    <p class="influencer-eyebrow">08 &nbsp; Event 2 · Influencer und Sportler im Race</p>
+    <h2 class="influencer-headline">70 Cast-Mitglieder.<br>70 Communities. <span class="rot">Ein Loop.</span></h2>
+    <p class="influencer-lead">Parallel zu den Uni-Teams läuft <strong>Event 2</strong>: 70 Einzelstarter aus drei Welten · Cycling- und Endurance-Sportler, Fitness- und Lifestyle-Influencer, plus Athleten anderer Disziplinen, die das Format als Crossover-Bühne nutzen. Jeder dieser 70 Cast-Mitglieder bringt seine eigene Audience mit. Pre-Race-Teaser auf 70 eigenständigen Channels, Live-Updates aus 70 Perspektiven, Post-Race-Recaps in 70 Storyversen. Die Multiplikation passiert nicht durch Paid-Push, sondern durch den Cast selbst.</p>
+
+    <div class="influencer-grid">
+      <div class="influencer-card">
+        <div class="card-num">Bucket 01</div>
+        <div class="card-title">Cycling- und Endurance-Sportler</div>
+        <div class="card-body">~25 Slots für aktive Cycling-Athleten, Triathleten, Ultra-Endurance-Racer aus dem DACH/EU-Raum. Sie liefern die sportliche Glaubwürdigkeit und die Wettkampf-Spannung · Wer von ihnen schafft die Backyard-Mechanik wirklich?</div>
+        <div class="card-meta">~25 Slots · Pro/Semi-Pro</div>
+      </div>
+      <div class="influencer-card">
+        <div class="card-num">Bucket 02</div>
+        <div class="card-title">Fitness- und Lifestyle-Influencer</div>
+        <div class="card-body">~30 Slots für Influencer und Creator mit eigener Audience im Sport-, Fitness- und Lifestyle-Segment. Sie liefern die Reichweite in genau der Demographic, die das Format als Publikum erreicht · Junge Männer 18-25 plus Crossover in Frauen-Communities.</div>
+        <div class="card-meta">~30 Slots · Creator-Cast</div>
+      </div>
+      <div class="influencer-card">
+        <div class="card-num">Bucket 03</div>
+        <div class="card-title">Crossover-Athleten</div>
+        <div class="card-body">~15 Slots für Athleten anderer Disziplinen (Kampfsport, Klettern, Action-Sports, Fußball-Quereinsteiger), die den Backyard als Test-Format und Crossover-Bühne nutzen. Liefert ungewohnte Story-Linien und Erweiterung in adjazente Fan-Bases.</div>
+        <div class="card-meta">~15 Slots · Cross-Discipline</div>
+      </div>
+    </div>
+
+    <div class="influencer-totals">
+      <div>
+        <div class="num-big">70</div>
+        <div class="num-lbl">Einzelstarter Event 2<br>parallel zu den Uni-Teams</div>
+      </div>
+      <div>
+        <div class="num-big">70×</div>
+        <div class="num-lbl">eigene Channels<br>Pre-, Live-, Post-Distribution</div>
+      </div>
+      <div>
+        <div class="num-big">Multi-M</div>
+        <div class="num-lbl">Organic Reach kumuliert<br>indikativ über alle 70 Channels</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIVIDER 08 · MECHANIK & RISKS
+     ============================================================ -->
+<section class="divider">
+  <div class="divider-inner">
+    <p class="num">09 &nbsp; Mechanik · Timeline · Risiken</p>
+    <h2>Klare Regel.<br>Klares Risiko-Profil.<br><span class="rot">Klare Mitigation.</span></h2>
+  </div>
+</section>
+
+<main class="page">
+
+<p class="eyebrow">09 &nbsp; Mechanik &amp; Dramaturgie</p>
+<h2 style="margin-top: 0;">Wie das Rennen läuft</h2>
+
+<div class="quote-block">
+  „<span style="color: var(--kvd-rot); font-weight: 700;">Eine Runde. Jede Stunde.</span> So lange du kannst. Jede Runde ein Sieg."
+  <div class="quote-attr">· Backyard-Regel</div>
+</div>
+
+<p style="max-width: 760px;">Die Streckenlänge ist auf <strong>Backyard-Standard</strong> kalibriert: lang genug, dass Pro-Power deutliche Pufferzeit pro Stunde hat, und knapp genug, dass müde Fahrer im 50. Loop am Stunden-Ende ankommen. Die Mechanik ist absichtlich brutal-einfach: keine Punkte, keine Sonderregeln, kein Comeback-Joker. Das macht aus jeder Stunde ein klares Drama.</p>
+
+<h3>Mechanik-Bausteine</h3>
+<table>
+  <thead>
+    <tr><th style="width: 24%;">Baustein</th><th>Wirkung</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Eine Runde pro Stunde</strong></td><td>Loop muss innerhalb der 60 Minuten voll sein. Pünktlicher Stundenstart, kein Toleranz-Fenster.</td></tr>
+    <tr><td><strong>Verpasst = raus</strong></td><td>Wer nicht rechtzeitig am Stundenpunkt steht, ist ausgeschieden. Definitiv. Headline-Moment.</td></tr>
+    <tr><td><strong>Last One Riding</strong></td><td>Format endet, wenn nur noch einer fährt. Kein Zeitlimit. Erwartete Dauer: 40-80 Stunden.</td></tr>
+    <tr><td><strong>Race-Control-Stop-Recht</strong></td><td>Veranstalter darf einzelne Fahrer aus medizinischen Gründen aus dem Rennen ziehen (Sani-Entscheidung).</td></tr>
+    <tr><td><strong>3 Onboard-Cams Pflicht</strong></td><td>Front, Heck und Rider-Facing pro Bike. Fehlt eine, gibt es keinen Start.</td></tr>
+    <tr><td><strong>Garmin-Armband Pflicht</strong></td><td>Live-Daten werden geteilt. Wer nicht trägt, kann nicht starten.</td></tr>
+    <tr><td><strong>Kein Doping-Hilfsmittel</strong></td><td>Vertraglich klar. Standard-Kontroll-Protokoll des Veranstalters.</td></tr>
+  </tbody>
+</table>
+
+<h3>Dramaturgie über die Stunden</h3>
+<table>
+  <thead>
+    <tr><th>Phase</th><th>Energie</th><th>Storylines</th><th>Stream-Highlight</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>Stunde 1-8<br>Start &amp; Sortierung</strong></td><td>Hoch.</td><td>Erste Finisher, alle 30 Uni-Teams + 70 Influencer testen sich, Boxen-Crews finden ihren Rhythmus.</td><td>Opening-Show, Uni-Team-Vorstellung Campus-by-Campus</td></tr>
+    <tr><td><strong>Stunde 9-24<br>Erste Nacht</strong></td><td>Erste Erschöpfung.</td><td>Müdigkeit greift, erste Strategie-Pausen, Top-5 stabilisiert sich.</td><td>Erste Nacht-Schaltung · Sani-Visite live</td></tr>
+    <tr><td><strong>Stunde 25-48<br>Tiefpunkt</strong></td><td>Bruch.</td><td>Sekundenschlaf-Risiko, bewegende Finisher-Momente, Uni-Team-Story-Peak.</td><td>Race-Control-Cam · medizinische Entscheidungen</td></tr>
+    <tr><td><strong>Stunde 49+<br>Showdown</strong></td><td>Wieder hoch.</td><td>Letzte fünf, letzte drei, letzte zwei. Jede Stunde ist ein potenzielles Finale.</td><td>Multi-Stream-Switching, Live-Map als Hauptbild, Drohnen-Overflight</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================
+     TECH-STACK
+     ============================================================ -->
+<p class="eyebrow" style="margin-top: 96px;">10 &nbsp; Tech-Stack</p>
+<h2 style="margin-top: 0;">Wie aus jeder Runde ein Stream wird</h2>
+<table>
+  <thead>
+    <tr><th>Layer</th><th>Tool</th><th>Funktion</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Live-Daten</td><td>Garmin-Armband + Garmin-Connect-API</td><td>HF, GPS, Speed, Power live pro Fahrer</td></tr>
+    <tr><td>Live-Map</td><td>Eigenes Render-Layer auf Garmin-GPS</td><td>Dots auf Track, Daten-Overlay pro Top-5</td></tr>
+    <tr><td>3 Onboard-Cams</td><td>Insta360 / GoPro · Front, Heck, Rider-Facing</td><td>POV + Verfolger-View + Gesichts-Cam, 24/7, Pflicht-Setup</td></tr>
+    <tr><td>Strecken-Cams</td><td>4× Speed-Boards + Perimeter-Test-Center-Cams</td><td>Speed-Visualisierung + Sicht auf Strecke</td></tr>
+    <tr><td>Drohne</td><td>Aerial-Crew, BVLOS-Genehmigung</td><td>Hero-Aerial-Shots, Übertragungsmoment</td></tr>
+    <tr><td>Streaming</td><td>OB-Van + Studio · Multi-Plattform-Encoder</td><td>YouTube Master + Twitch + TikTok + Top-5-Multi-Stream</td></tr>
+    <tr><td>Race-Control</td><td>Eigener Raum mit Sani, Veranstalter, Producer</td><td>Live-Sicht auf alle Cams + Eskalationslogik</td></tr>
+    <tr><td>Audio</td><td>Studio-Headsets + Race-Mics</td><td>Stefan + Can im Master, Strecken-Geräusche im Drohne-Cut</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================
+     ERFOLGS-METRIKEN
+     ============================================================ -->
+<p class="eyebrow" style="margin-top: 96px;">11 &nbsp; Erfolgs-Metriken</p>
+<h2 style="margin-top: 0;">Womit wir messen</h2>
+<table>
+  <thead>
+    <tr><th>Dimension</th><th>Ziel</th><th>Logik</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Live-Stream Peak Viewer</td><td>10-30K gleichzeitig</td><td>Konferenz-Master + Top-5-Indi-Streams kombiniert</td></tr>
+    <tr><td>Red-Bull-Owned-Distribution</td><td>Deutschland · Red Bull TV + Cycling Social</td><td>Red-Bull-Channels als Owned-Bühne, kein Paid-Spend nötig</td></tr>
+    <tr><td>TikTok-Clip-Views</td><td>15-40M in Event-Woche</td><td>Dediziertes 24/7-Clipping-Team + Cast-Crossposts</td></tr>
+    <tr><td>Cast-Earned-Reach (Uni + Influencer)</td><td>+ 5-10M</td><td>30 × Uni-Fan-Zone + 70 Influencer-Channels</td></tr>
+    <tr><td>PR-Coverage</td><td>30+ Cycling/Sport/Tech-Titel EU</td><td>Format-Originalität + Red-Bull-Anker + Garmin-Tech-Story</td></tr>
+    <tr><td>Brand-Lift Red Bull</td><td>Pre/Post-Studie</td><td>Im Brand-Anker-Vertrag verankert</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================
+     TIMELINE
+     ============================================================ -->
+<p class="eyebrow" style="margin-top: 96px;">12 &nbsp; Timeline</p>
+<h2 style="margin-top: 0;">Von Sign-off bis Showdown</h2>
+<table>
+  <thead>
+    <tr><th>Phase</th><th>Zeitraum</th><th>Output</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Pitch-Sign-off Red Bull Deutschland</td><td>Juni-Juli 2026</td><td>Brand-Anker-Vereinbarung gezeichnet</td></tr>
+    <tr><td>Garmin-Tech-Setup</td><td>Juni-September 2026</td><td>API-Integration, Armband-Bestellung, Test-Live-Stream</td></tr>
+    <tr><td>Cash-Partner-Akquise</td><td>Juni-August 2026</td><td>Premium + Official Partner gezeichnet</td></tr>
+    <tr><td>Uni-Team-Bewerbungsphase</td><td>Juli-September 2026</td><td>30 Universitäten final, Bewerbung als Team (Rider + Support-Crew + Fan-Zone)</td></tr>
+    <tr><td>Uni-Team-Bewerbung</td><td>Q3 2026</td><td>30 Uni-Teams ausgewählt</td></tr>
+    <tr><td>Behörden, Versicherung, Sani via Sabin</td><td>Mai-Oktober 2026</td><td>Genehmigungen, Spezial-Police, RTW-Setup verbindlich</td></tr>
+    <tr><td>Tech- &amp; Produktions-Setup vor Ort</td><td>Sep-Okt 2026</td><td>OB-Van, Race-Control-Raum, Speed-Boards, Drohnen-Crew</td></tr>
+    <tr><td>Marketing &amp; Hype über Red-Bull-Channels</td><td>Sep-Okt 2026</td><td>Teaser, Cast-Reveal, Uni-Team-Reveals, Countdown</td></tr>
+    <tr><td><strong>Event</strong></td><td><strong>Q2 2027</strong></td><td><strong>Backyard × Bike Live · Last One Riding</strong></td></tr>
+    <tr><td>Post-Production &amp; Recap</td><td>Q4 2026</td><td>Highlight-Film, Sponsor-Reportings, Brand-Lift-Studie</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================
+     RISIKEN · Safety-First-Profile
+     ============================================================ -->
+<p class="eyebrow" style="margin-top: 96px;">13 &nbsp; Risiko-Management</p>
+<h2 style="margin-top: 0;">Wo das Format kippen kann · und wie wir es absichern</h2>
+<table>
+  <thead>
+    <tr><th>Risiko</th><th>Likelihood</th><th>Mitigation</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Sekundenschlaf auf dem Rad</td><td>Hoch</td><td>Live-Sicht über alle Strecken-Cams + Onboard-Cams (Front/Heck/Rider-Facing), Race-Control darf einzelne Fahrer aus Sani-Sicht ziehen. 24/7 Sani vor Ort, RTW in Minuten. Verbindliche Sleep-Slot-Erinnerungen ab Stunde 18.</td></tr>
+    <tr><td>Sturz / Kollision</td><td>Mittel</td><td>Streckenprofil ohne steile Abfahrten, breite Asphalt-Fläche. Helm-Pflicht (kein Helm = kein Start). Bike-Sicherheits-Check vor Race-Start. Sani-Trupp am Streckenrand.</td></tr>
+    <tr><td>Dehydration / Hitzschlag</td><td>Mittel</td><td>Garmin-HF-Monitoring 24/7, Cool-Down-Zone bei jedem Boxenstopp, Sani-Eingangsuntersuchung mit Hydration-Check, Red-Bull-Versorgung plus Wasser-Station je Energy Home.</td></tr>
+    <tr><td>Stream-Ausfall</td><td>Mittel</td><td>OB-Van + Backup-Encoder, dedizierte Glasfaser des Test-Centers, Edge-Recording.</td></tr>
+    <tr><td>Wetter (Niederschlag, Wind)</td><td>Mittel</td><td>Backyard-Mechanik läuft witterungsunabhängig. Sani-Protokoll passt Aussichtszone an. Drohne wetterabhängig.</td></tr>
+    <tr><td>Ungewollter Zugriff Aussenstehender</td><td>Niedrig</td><td>Test-Center ist abgesperrt, eigener Security-Dienst, Zugang nur über Schleusen.</td></tr>
+    <tr><td>Behörden- und Versicherungs-Gaps</td><td>Mittel</td><td>Karl + Karla verantwortet Behörden-Track ab Sommer 2026. Spezial-Police pro Teilnehmer.</td></tr>
+    <tr><td>Doping / Medikamenten-Missbrauch</td><td>Niedrig</td><td>Standard-Kontroll-Protokoll, vertragliche Vereinbarung pro Uni-Team.</td></tr>
+  </tbody>
+</table>
+
+<!-- ============================================================
+     OFFENE PUNKTE
+     ============================================================ -->
+<p class="eyebrow" style="margin-top: 96px;">14 &nbsp; Was noch offen ist</p>
+<h2 style="margin-top: 0;">Was wir vor Sign-off klären</h2>
+<ul>
+  <li>Konkretes Event-Datum 2026 (Empfehlung: Spätsommer / früher Herbst · Wetterfenster)</li>
+  <li>Final-Sign-off Red Bull Deutschland als Hauptpartner (Brand-Anker-Vereinbarung)</li>
+  <li>Garmin-Vertragsentwurf (Armband-Sachleistung + API-Integration)</li>
+  <li>Cash-Partner: Bike, Apparel, Nutrition, weitere Cycling-Performance-Marken</li>
+  <li>30 Uni-Teams + 70 Influencer/Sportler final via Bewerbungsprozess + Karl+Karla-Jury</li>
+  <li>Uni-Team-Bewerbungsprozess (Karl + Karla + Red-Bull-Vertreter)</li>
+  <li>Letzte Streckenführung (Backyard-Loop-Länge final, Opel Test Center Layout)</li>
+  <li>Genehmigungs- und Versicherungs-Paket über Karl + Karla</li>
+  <li>Format-Name markenrechtlich finalisieren (EUIPO-Check)</li>
+  <li>Stream-Schaltungs-Logik (Top-5-Auswahl-Kriterium, Indi-Stream-Cap)</li>
+</ul>
+
+<div class="quote-block">
+  „Backyard ist nicht ein Race, das man dem Format aufdrückt. Backyard ist das Format, das einfacher nicht sein könnte · und genau deshalb so brutal."
+  <div class="quote-attr">· Backyard × Bike · Pitch für Red Bull</div>
+</div>
+
+</main>
+
+<!-- ============================================================
+     STRATEGISCHE BRIDGE · 3 Red-Bull-Argumente
+     ============================================================ -->
+<section class="strat-bridge">
+  <div class="strat-bridge-inner">
+    <p class="strat-bridge-eyebrow">Drei Argumente · warum jetzt, warum ihr</p>
+    <h2 class="strat-bridge-h">Warum dieser Pitch genau bei<br>Red Bull landet.</h2>
+    <p class="strat-bridge-lead">
+      Wir hätten Backyard × Bike generisch ausschreiben können. Haben wir nicht. <strong>Red Bull ist die einzige Marke in Europa, die ein Format wie dieses tragen kann</strong> · DNA, Reichweite, Athleten-Pool, Risk-Appetite. Drei kompakte Argumente, ohne Marketing-Lyrik.
+    </p>
+
+    <div class="bridge-grid">
+      <article class="bridge-card">
+        <div class="bridge-num">01</div>
+        <div class="bridge-label">DNA-Match · „Verleiht Flügel"</div>
+        <h3>Backyard nimmt euren Slogan <span class="rot">wörtlich</span></h3>
+        <p>„Verleiht Flügel" ist seit Jahrzehnten Marketing. Backyard macht daraus 24/7 Live-Content. Jede Stunde im Sattel ein Flügel-Moment, jede Achse ein Cam-Stop, jede Runde ein Brand-Beat · Live, vor laufender Kamera, mit Garmin-Daten als Zeuge.</p>
+        <p>Drohnen-Aerial-Shots verstärken das visuell. Kein Format inszeniert „fliegen" so wörtlich. Monster wäre zu loud, Celsius zu cardio-fitness, Lucozade zu Mainstream · Red Bull ist der einzige natürliche Anker für diese These.</p>
+        <div class="bridge-payoff">
+          <strong>Konsequenz für Red Bull</strong>
+          Eure DNA wird Format-Mechanik, nicht Lower-Third-Logo.
+        </div>
+      </article>
+
+      <article class="bridge-card">
+        <div class="bridge-num">02</div>
+        <div class="bridge-label">Brand-Anker statt Cash-Logo</div>
+        <h3>Content-Co-Production · <br><span class="rot">nicht ein statisches Logo</span></h3>
+        <p>Red Bull steigt nicht als zahlendes Logo neben anderen ein. Red Bull Deutschland ist <strong>Brand-Anker und Content-Co-Producer</strong>: 24/7 Live aus jeder Achse, Highlight-Edits aus dem eigenen Content-Stack, Athleten-Storys über Red Bull Media-House. Plus Brand-Hoheit auf dem General Energy Home, Naming-Anker, Distribution über Red Bull TV und Cycling Social.</p>
+        <p>Cash-Partner finanzieren die restliche Produktion separat · Bike, Apparel, Nutrition, weitere Cycling-Performance-Marken. Red Bull steht über diesem Tier-Stack als Brand-Pate, nicht als gleichrangiger Logo-Slot.</p>
+        <div class="bridge-payoff">
+          <strong>Konsequenz für Red Bull</strong>
+          Maximale Brand-Authority durch Content-Co-Production, nicht durch Logo-Platzierung.
+        </div>
+      </article>
+
+      <article class="bridge-card">
+        <div class="bridge-num">03</div>
+        <div class="bridge-label">Reichweite Deutschland</div>
+        <h3>Ein Format, das im <span class="rot">deutschen Cycling-Space</span> sichtbar ist</h3>
+        <p>Backyard × Bike spielt im deutschen Markt. Distribution über Red Bull TV, Red Bull Cycling Social und die Channels der 100 Cast-Mitglieder. Produktion in Frankfurt-Nähe (25 km östlich), Cast aus Unis, Cycling-Creator und Pro-Athleten · Junge Männer 18-25, Red-Bull-Kern-Zielgruppe.</p>
+        <p>Der Test Center in Dudenhofen liefert die Live-Sichtbarkeit der Strecke · Red Bull macht aus dem Format einen sichtbaren Moment im deutschen Endurance-Space.</p>
+        <div class="bridge-payoff">
+          <strong>Konsequenz für Red Bull</strong>
+          Owned-Reichweite in Deutschland mit Pull statt Push.
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     WARUM RED BULL · Personalisierter Pitch
+     ============================================================ -->
+<section class="why-dryll">
+  <div class="why-dryll-inner">
+    <p class="eyebrow eyebrow-white">Closing &middot; An Red Bull persönlich</p>
+    <h2>Warum nur Red Bull diesen Slot <span class="rot">verkörpern</span> kann.</h2>
+    <p class="why-dryll-lead">
+      „Verleiht Flügel" ist nicht nur euer Claim · Es ist die <strong>Format-These von Backyard × Bike</strong>. Backyard ist die Bühne, auf der Flügel 24/7 sichtbar werden. Wir bieten den <strong>Brand-Anker-Slot Red Bull Deutschland als Erstem</strong>, weil keine andere Marke diese These glaubwürdig tragen kann. Beitrag aus Brand, Bühne, Athleten, Versorgung und Content-Co-Production · Nicht aus einem Cash-Check allein.
+    </p>
+
+    <div class="why-dryll-grid">
+      <div class="why-dryll-card">
+        <div class="num">01</div>
+        <h3>„Verleiht Flügel" wird Mechanik</h3>
+        <p>Jede Stunde im Sattel ist ein wörtlicher Flügel-Moment. <strong>Eure DNA wird zur Regel des Spiels</strong> · und nicht zu einem Logo, das daneben steht.</p>
+      </div>
+      <div class="why-dryll-card">
+        <div class="num">02</div>
+        <h3>Brand-Anker, nicht Sponsor</h3>
+        <p>Red Bull Deutschland steht über dem Cash-Tier-Stack · Als <strong>Brand-Anker und Content-Co-Producer</strong>. Beitrag aus Channels, Athleten, Drinks und einer fairen Beteiligung an der Produktion. Kein klassischer Logo-Slot, in dem ihr neben drei anderen Marken steht.</p>
+      </div>
+      <div class="why-dryll-card">
+        <div class="num">03</div>
+        <h3>General Energy Home für alle</h3>
+        <p>Das gegenüberliegende Energy Home ist Red-Bull-Brand-Fläche. <strong>Red Bull für alle Teilnehmer</strong> · Rider, Studenten-Crews, Mechanik · Als sichtbare Trinkversorgung. Jede Stunde ein Brand-Image im Stream, jeder Sani-Stop ein Refill am Red-Bull-Tresen.</p>
+      </div>
+      <div class="why-dryll-card">
+        <div class="num">04</div>
+        <h3>Studenten als Plot-Träger</h3>
+        <p>5 Uni-Teams, durchschnittliches Teilnehmer-Alter 18-25, exakt Red-Bull-Kern-Zielgruppe. <strong>Die Studenten werden zu Plot-Trägern</strong>, nicht zu Statisten. Jedes Uni-Trikot, jeder Boxenstopp, jede Finisher-Szene erzählt eine neue Story · Campus-Identifikation statt Werbespot.</p>
+      </div>
+      <div class="why-dryll-card">
+        <div class="num">05</div>
+        <h3>Naming-Anker · Owned DE</h3>
+        <p>„Backyard × Bike powered by Red Bull". Naming-Recht im Master-Feed, im PR-Material, in jedem Recap-Clip. Plus Owned-Distribution über Red Bull TV und Red Bull Cycling Social im deutschen Markt · Keine Bidding-Konkurrenz, keine Paid-Push-Pflicht.</p>
+      </div>
+      <div class="why-dryll-card">
+        <div class="num">06</div>
+        <h3>Brand-Lift-Studie inklusive</h3>
+        <p>Pre/Post-Studie über die Red-Bull-Owned-Channels. Brand-Recall, Affinity, Buying-Intent. Eingebaut in den Brand-Anker-Vertrag, kein Add-on · Ihr seht in harten Zahlen, was die wörtliche Inszenierung eurer DNA bewirkt.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CLOSING · Persönlich an Red Bull
+     ============================================================ -->
+<main style="background: var(--kvd-sand);">
+<div class="page">
+  <p class="eyebrow" style="margin-top: 24px;">15 &nbsp; Nächster Schritt</p>
+  <h2 style="margin-top: 0;">Wie wir das zu Ende denken</h2>
+  <p style="font-size: 18px; max-width: 760px;">
+    Wenn der Brand-Anker-Slot für Red Bull Deutschland passt: 30-Minuten-Call mit dem Karl + Karla Team, danach Partner-Letter mit allen Beitragspositionen (Brand · Bühne · Cast · Drinks · Content · Investment). Garmin-Setup läuft in derselben Welle parallel an. Cash-Partner-Akquise für die restliche Produktion startet, sobald Red Bull als Anker steht.
+  </p>
+  <p style="font-size: 18px; max-width: 760px;">
+    <strong>Karl + Karla Team</strong> &middot; Marketing-Unit der KarlvonDrais-Gruppe &middot; <a href="mailto:hi@karlpluskarla.de" style="color: var(--kvd-rot);">hi@karlpluskarla.de</a><br>
+    Verantwortlich für Backyard × Bike: Konzept, Partner-Architektur, Live-Production, Race-Control vor Ort. Direkter Ansprechpartner für Red Bull Deutschland.
+  </p>
+
+  <div class="quote-block">
+    „Wenn am Ende nur noch einer fährt, ist die wichtigste Frage nicht, wer gewonnen hat · sondern wer im richtigen Moment nicht aufgegeben hat. Genau diese Frage will Red Bull seit Jahrzehnten gestellt sehen."
+    <div class="quote-attr">· Backyard × Bike · Pitch für Red Bull</div>
+  </div>
+</div>
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div style="font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;text-transform:uppercase;letter-spacing:-.02em;color:#fff;display:flex;align-items:center;gap:5px;line-height:1;">
+      KARL+KARLA
+    </div>
+    <div class="footer-meta">
+      Backyard × Bike &nbsp;·&nbsp; Pitch für Red Bull · Hauptpartner-Slot<br>
+      Produced &amp; hosted by <span style="color: var(--kvd-rot); font-weight: 700;">Karl + Karla</span> &nbsp;·&nbsp; KvD-Agentur<br>
+      Opel Test Center Dudenhofen &nbsp;·&nbsp; Q2 2027 &nbsp;·&nbsp; <span style="color: var(--kvd-rot);">Vertraulich · Für Red Bull Deutschland</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

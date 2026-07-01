@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Zucker, ohne Filter · Hitschies Pitch · Karl+Karla</title>
+<meta name="description" content="Markenkampagnen-Pitch von Karl+Karla für Hitschies.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;0,900;1,700;1,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --hs-black:   #0A0A0A;
+  --hs-white:   #FFFFFF;
+  --hs-cream:   #FFF6E9;
+  --hs-grau:    #F0E9DD;
+  --hs-pink:    #FF2D78;
+  --hs-purple:  #2B0A4E;
+  --hs-yellow:  #FFD400;
+  --hs-tint:    rgba(255,45,120,.10);
+  --f-standard: 'Plus Jakarta Sans', 'Helvetica Neue', sans-serif;
+  --f-display:  'Barlow Condensed', 'Bebas Neue', sans-serif;
+  --pad: 96px;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  background: var(--hs-cream);
+  color: var(--hs-black);
+  font-family: var(--f-standard);
+  font-size: 17px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.page { max-width: 1080px; margin: 0 auto; padding: 64px var(--pad) 96px; }
+.eyebrow {
+  color: var(--hs-pink);
+  font-size: 13px;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 24px 0;
+}
+h1, h2, h3, h4 { font-family: var(--f-display); margin: 0; }
+h1 { font-weight: 800; font-size: 60px; line-height: 1.02; letter-spacing: -0.01em; text-transform: uppercase; }
+h2 { font-weight: 800; font-size: 40px; line-height: 1.06; letter-spacing: -0.005em; text-transform: uppercase; margin: 0 0 24px 0; }
+h3 { font-weight: 700; font-size: 22px; line-height: 1.25; text-transform: uppercase; letter-spacing: 0.01em; margin: 0 0 12px 0; }
+p { margin: 0 0 16px 0; font-family: var(--f-standard); }
+strong { font-weight: 700; }
+ul { padding-left: 1.2em; margin: 0; }
+li { margin: 8px 0; }
+a { color: var(--hs-black); text-decoration: underline; text-underline-offset: 3px; }
+
+/* ============ NAV ============ */
+.kk-nav{position:fixed;top:20px;left:50%;transform:translateX(-50%);z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:32px;padding:10px 10px 10px 20px;border-radius:100px;background:rgba(10,10,10,.55);backdrop-filter:blur(24px) saturate(180%);-webkit-backdrop-filter:blur(24px) saturate(180%);border:1px solid rgba(255,255,255,.14);box-shadow:0 4px 24px rgba(0,0,0,.25);white-space:nowrap}
+.kk-nav-logo{font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:16px;text-transform:uppercase;letter-spacing:-.01em;color:#fff;text-decoration:none;display:flex;align-items:center;gap:3px}
+.kk-nav-logo .plus{color:var(--hs-pink)}
+.kk-nav-badge{font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);padding:0 4px}
+.kk-nav-logout{display:inline-flex;align-items:center;gap:6px;padding:9px 18px;border-radius:100px;background:var(--hs-pink);color:#fff;font-size:12px;font-weight:600;letter-spacing:.03em;text-decoration:none;transition:opacity .2s,transform .2s;border:none;cursor:pointer}
+.kk-nav-logout:hover{opacity:.8;transform:translateY(-1px)}
+@media(max-width:600px){.kk-nav{top:12px;padding:8px 8px 8px 16px;gap:16px}.kk-nav-badge{display:none}}
+
+/* ============ HERO ============ */
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: var(--hs-purple);
+  color: var(--hs-white);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -30%; right: -15%;
+  width: 70%; height: 140%;
+  background: radial-gradient(circle, rgba(255,45,120,.40) 0%, rgba(255,45,120,0) 70%);
+  z-index: 0;
+}
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: -20%; left: -10%;
+  width: 50%; height: 100%;
+  background: radial-gradient(circle, rgba(255,212,0,.20) 0%, rgba(255,212,0,0) 70%);
+  z-index: 0;
+}
+.hero-content { position: relative; z-index: 1; padding: 140px var(--pad) 0; flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 1280px; margin: 0 auto; width: 100%; }
+.hero-eyebrow { color: var(--hs-yellow); font-size: 15px; letter-spacing: 0.25em; text-transform: uppercase; margin-bottom: 32px; font-weight: 700; }
+.hero h1 { font-size: 148px; line-height: 0.9; letter-spacing: -0.02em; color: var(--hs-white); margin: 0 0 32px 0; }
+.hero h1 .pink { color: var(--hs-pink); }
+.hero-tagline { font-size: 24px; line-height: 1.4; font-weight: 400; max-width: 720px; color: rgba(255,255,255,.85); margin-bottom: 0; }
+.hero-cta { position: relative; z-index: 1; padding: 32px var(--pad) 48px; display: flex; justify-content: space-between; align-items: center; gap: 32px; flex-wrap: wrap; border-top: 1px solid rgba(255,255,255,0.15); max-width: 1280px; margin: 48px auto 0; width: 100%; }
+.hero-cta-left { font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; line-height: 1.6; color: rgba(255,255,255,.6); }
+.hero-cta-right { font-size: 12px; letter-spacing: 0.20em; text-transform: uppercase; color: var(--hs-yellow); font-weight: 700; }
+
+/* ============ STATEMENT ============ */
+.statement { background: var(--hs-cream); padding: 120px var(--pad); }
+.statement-inner { max-width: 900px; margin: 0 auto; }
+.statement-quote {
+  font-family: var(--f-display);
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 1.2;
+  color: var(--hs-black);
+  margin: 0;
+  letter-spacing: -0.005em;
+}
+.statement-quote .pink { color: var(--hs-pink); }
+
+/* ============ INSIGHT NUMBERS ============ */
+.stats { background: var(--hs-purple); color: var(--hs-white); padding: 80px var(--pad); }
+.stats-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; }
+.stat-num { font-family: var(--f-display); font-size: 64px; font-weight: 800; line-height: 1; letter-spacing: -0.02em; color: var(--hs-yellow); margin-bottom: 12px; }
+.stat-label { font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,.7); line-height: 1.5; }
+
+/* ============ BIG IDEA ============ */
+.idea { background: var(--hs-cream); padding: 120px var(--pad); }
+.idea-inner { max-width: 1280px; margin: 0 auto; }
+.idea-header { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; margin-bottom: 48px; flex-wrap: wrap; }
+.idea-header-right { font-size: 14px; letter-spacing: 0.10em; text-transform: uppercase; color: rgba(10,10,10,.6); max-width: 320px; line-height: 1.6; text-align: right; }
+.idea-card { background: var(--hs-white); border: 1px solid rgba(10,10,10,.12); padding: 56px; }
+.idea-headline { font-family: var(--f-display); font-weight: 800; font-size: 44px; line-height: 1.1; text-transform: uppercase; color: var(--hs-black); margin-bottom: 24px; }
+.idea-headline .pink { color: var(--hs-pink); }
+.idea-body { font-size: 18px; line-height: 1.6; max-width: 760px; color: rgba(10,10,10,.85); }
+
+/* ============ PILLARS ============ */
+.pillars { background: var(--hs-cream); padding: 0 var(--pad) 120px; }
+.pillars-inner { max-width: 1280px; margin: 0 auto; }
+.pillars-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
+.pillar { background: var(--hs-white); border-left: 6px solid var(--hs-pink); padding: 32px 28px; display: flex; flex-direction: column; }
+.pillar-num { font-family: var(--f-display); font-size: 15px; font-weight: 800; color: var(--hs-pink); letter-spacing: 0.15em; margin-bottom: 16px; }
+.pillar h3 { margin-bottom: 12px; font-size: 21px; }
+.pillar p { font-size: 14.5px; line-height: 1.55; color: rgba(10,10,10,.75); margin: 0; }
+
+/* ============ CHANNELS TABLE ============ */
+.channels { background: var(--hs-purple); color: var(--hs-white); padding: 120px var(--pad); }
+.channels-inner { max-width: 1280px; margin: 0 auto; }
+.channels h2 { color: var(--hs-white); }
+table.ch-table { width: 100%; border-collapse: collapse; margin-top: 32px; font-size: 15px; }
+.ch-table th, .ch-table td { text-align: left; vertical-align: top; padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.ch-table thead th { color: var(--hs-yellow); text-transform: uppercase; font-size: 11px; letter-spacing: 0.15em; font-weight: 700; border-bottom: 2px solid rgba(255,255,255,.3); }
+.ch-table td { color: rgba(255,255,255,.85); }
+.ch-table td strong { color: var(--hs-white); }
+
+/* ============ TIMELINE ============ */
+.timeline { background: var(--hs-cream); padding: 120px var(--pad); }
+.timeline-inner { max-width: 1280px; margin: 0 auto; }
+.tl-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 48px; }
+.tl-step { background: var(--hs-white); border: 1px solid rgba(10,10,10,.12); padding: 28px 24px; position: relative; }
+.tl-step-num { font-family: var(--f-display); font-size: 40px; font-weight: 800; color: var(--hs-pink); line-height: 1; margin-bottom: 16px; }
+.tl-step h4 { font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; margin: 0 0 10px 0; }
+.tl-step p { font-size: 14px; line-height: 1.5; color: rgba(10,10,10,.75); margin: 0; }
+
+/* ============ CTA / CONTACT ============ */
+.cta { background: var(--hs-pink); color: var(--hs-white); padding: 120px var(--pad); text-align: center; }
+.cta-inner { max-width: 760px; margin: 0 auto; }
+.cta h2 { color: var(--hs-white); font-size: 48px; }
+.cta p { font-size: 19px; line-height: 1.5; color: rgba(255,255,255,.92); max-width: 620px; margin: 24px auto 32px; }
+.cta-contact { font-size: 13px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,.85); }
+
+@media (max-width: 900px) {
+  .hero h1 { font-size: 84px; }
+  .stats-inner, .pillars-grid, .tl-grid { grid-template-columns: 1fr; }
+  .idea-card { padding: 32px; }
+  .statement-quote { font-size: 32px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="kk-nav">
+  <a href="https://karlpluskarla.de" class="kk-nav-logo">KARL<span class="plus">+</span>KARLA</a>
+  <span class="kk-nav-badge">Hitschies · Pitch</span>
+  <a href="/hitschies?logout=1" class="kk-nav-logout">Abmelden ↗</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-eyebrow">Hitschies × Karl+Karla</div>
+    <h1>Zucker,<br><span class="pink">ohne Filter.</span></h1>
+    <p class="hero-tagline">Eine Markenkampagne, die Hitschies vom Supermarktregal ins kulturelle Zentrum der Gen Z katapultiert — laut, absurd und zutiefst teilbar.</p>
+  </div>
+  <div class="hero-cta">
+    <div class="hero-cta-left">Karl+Karla · Brand &amp; Campaign Pitch<br>Vertraulich · Nur für internen Gebrauch</div>
+    <div class="hero-cta-right">Scroll für das Konzept ↓</div>
+  </div>
+</section>
+
+<section class="statement">
+  <div class="statement-inner">
+    <div class="eyebrow">Ausgangspunkt</div>
+    <p class="statement-quote">Süßwaren sind austauschbar. Aufmerksamkeit ist es nicht. <span class="pink">Wir bauen die lauteste Marke im Regal.</span></p>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stats-inner">
+    <div>
+      <div class="stat-num">87%</div>
+      <div class="stat-label">der Gen Z entscheidet Markentreue über Meme-Fähigkeit, nicht über Geschmack allein</div>
+    </div>
+    <div>
+      <div class="stat-num">1.</div>
+      <div class="stat-label">Marke, die Trends selbst setzt statt nur mitzumachen, gewinnt Share of Voice im Snack-Regal</div>
+    </div>
+    <div>
+      <div class="stat-num">0</div>
+      <div class="stat-label">Ernsthaftigkeit im Creative — Ton: absurd, schnell, unverschämt ehrlich</div>
+    </div>
+  </div>
+</section>
+
+<section class="idea">
+  <div class="idea-inner">
+    <div class="idea-header">
+      <div>
+        <div class="eyebrow">Die große Idee</div>
+        <h2 style="margin:0;max-width:640px;">Vom Regal zur Regel-Verweigerung</h2>
+      </div>
+      <div class="idea-header-right">Ein Kampagnen-Dach für Content, Produkt-Drops und Community — kanalübergreifend einsetzbar</div>
+    </div>
+    <div class="idea-card">
+      <div class="idea-headline">Nicht zuckerfrei. <span class="pink">Aber regelfrei.</span></div>
+      <p class="idea-body">Hitschies positioniert sich als die Marke, die sich traut, was andere Süßwarenhersteller nicht dürfen — im Ton, im Format, im Humor. Statt braver Produktkommunikation liefert die Kampagne ungefilterte Reaktionen auf Kultur, Trends und den eigenen Wahnsinn. Die Idee funktioniert als Leitmotiv über Social, Produkt-Drops und Community hinweg und lässt sich pro Sorte und Anlass immer wieder neu zuspitzen.</p>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="pillars-inner">
+    <div class="eyebrow">Umsetzung</div>
+    <h2>Drei Kampagnen-Säulen</h2>
+    <div class="pillars-grid">
+      <div class="pillar">
+        <div class="pillar-num">01 · Content</div>
+        <h3>Die Meme-Fabrik</h3>
+        <p>Tägliche, ungefilterte Reaction-Formate für TikTok &amp; Instagram, die in Echtzeit auf Trends, Kulturmomente und Kommentare reagieren — schnell produziert, schneller geteilt.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02 · Community</div>
+        <h3>Community-Chaos</h3>
+        <p>User entscheiden mit: Ranking-Wars um beste/schlechteste Sorte, Voting über neue Geschmacksrichtungen, Fan-generierte Slogans — die Community wird zur Content-Maschine.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03 · Produkt</div>
+        <h3>Limited Drops</h3>
+        <p>Absurde, zeitlich begrenzte Sorten-Editionen, die FOMO erzeugen, PR triggern und den Handel mit echten Verkaufsanlässen versorgen.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="channels">
+  <div class="channels-inner">
+    <div class="eyebrow">Kanäle &amp; Formate</div>
+    <h2>Wo „regelfrei" stattfindet</h2>
+    <table class="ch-table">
+      <thead>
+        <tr><th>Kanal</th><th>Rolle in der Kampagne</th><th>Format</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>TikTok / Instagram</strong></td><td>Reichweite, virale Reaction-Formate, Trend-Jacking</td><td>Skits, Duette, Meme-Posts</td></tr>
+        <tr><td><strong>YouTube Shorts</strong></td><td>Comedy-Content, Behind-the-Scenes-Chaos</td><td>Kurzformat-Serie</td></tr>
+        <tr><td><strong>PR &amp; Earned Media</strong></td><td>Aufmerksamkeit für Produkt-Drops</td><td>Launch-Stunts, Presskits</td></tr>
+        <tr><td><strong>Packaging / POS</strong></td><td>Markenerlebnis am Point of Sale</td><td>Limited-Edition-Verpackung</td></tr>
+        <tr><td><strong>Community / Discord</strong></td><td>Fan-Bindung, Co-Creation</td><td>Voting, Sneak-Peeks</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="timeline">
+  <div class="timeline-inner">
+    <div class="eyebrow">Nächste Schritte</div>
+    <h2>Roadmap</h2>
+    <div class="tl-grid">
+      <div class="tl-step">
+        <div class="tl-step-num">01</div>
+        <h4>Workshop</h4>
+        <p>Gemeinsamer Kick-off zur Zielgruppen- und Sorten-Priorisierung</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-step-num">02</div>
+        <h4>Creative Sprint</h4>
+        <p>Ausarbeitung Kernkampagne, Meme-Formate, erste Trend-Watchlist</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-step-num">03</div>
+        <h4>Produktion</h4>
+        <p>Content-Dreh, Drop-Planung, Community-Aufbau</p>
+      </div>
+      <div class="tl-step">
+        <div class="tl-step-num">04</div>
+        <h4>Launch</h4>
+        <p>Rollout über alle Kanäle, erster Limited Drop, laufendes Reporting</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="cta-inner">
+    <h2>Lass uns lauter werden.</h2>
+    <p>Wir freuen uns auf das Gespräch mit Hitschies und darauf, „Regelfrei" gemeinsam zum Leben zu erwecken.</p>
+    <div class="cta-contact">Karl+Karla · hello@karlpluskarla.de</div>
+  </div>
+</section>
+
+</body>
+</html>
