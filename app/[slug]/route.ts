@@ -74,6 +74,7 @@ export async function POST(req: NextRequest, ctx: { params: Promise<{ slug: stri
       path: '/',
       httpOnly: true,
       sameSite: 'lax',
+      secure: true,
     })
     return res
   }
