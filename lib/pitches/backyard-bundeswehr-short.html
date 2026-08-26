@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>Backyard × Bike · Kurzfassung · Red Bull Deutschland · Karl+Karla</title>
+<title>Backyard × Bike · Kurzfassung · Bundeswehr · Karl+Karla</title>
 <style>
 /* ============================================================
    CERTIFIED LIFECYCLE MANAGEMENT — Pilot Specialized
@@ -590,6 +590,56 @@ a{color:inherit}
 }
 .hero-foot a{ color:var(--acc); font-weight:700; text-decoration:none; }
 .hero-foot a:hover{ text-decoration:underline; }
+
+/* ============================================================ FORMAT-ANIMATION ============================================================ */
+.fmt{padding:96px var(--pad);background:var(--k);color:var(--w);text-align:center}
+.fmt-k{font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:20px}
+.fmt h2{font-size:clamp(28px,4vw,48px);font-weight:900;text-transform:uppercase;letter-spacing:-.02em;line-height:1.05;margin-bottom:16px}
+.fmt h2 .b{color:var(--blue)}
+.fmt-sub{font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,.68);max-width:520px;margin:0 auto 48px}
+.loopviz{display:flex;justify-content:center;margin-bottom:40px}
+.loopviz-track{position:relative;width:min(320px,68vw);height:min(320px,68vw);border-radius:50%;border:2px dashed rgba(255,255,255,.22);flex-shrink:0}
+.loopviz-spin{position:absolute;inset:0;animation:lv-spin 7s linear infinite}
+.loopviz-spin.rev{animation-duration:9s;animation-direction:reverse;opacity:.5}
+.loopviz-rider{position:absolute;top:-7px;left:50%;width:14px;height:14px;margin-left:-7px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 7px rgba(0,0,254,.22)}
+.loopviz-spin.rev .loopviz-rider{width:9px;height:9px;margin-left:-4.5px;background:var(--acc);box-shadow:none}
+@keyframes lv-spin{to{transform:rotate(360deg)}}
+.loopviz-center{position:absolute;inset:15%;border-radius:50%;background:var(--k);box-shadow:0 0 0 1px rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;text-align:center}
+.loopviz-phase{position:absolute;opacity:0;animation:lv-cycle 16s infinite}
+.loopviz-phase.p1{animation-delay:0s}
+.loopviz-phase.p2{animation-delay:4s}
+.loopviz-phase.p3{animation-delay:8s}
+.loopviz-phase.p4{animation-delay:12s}
+@keyframes lv-cycle{0%{opacity:0}4%{opacity:1}21%{opacity:1}25%{opacity:0}100%{opacity:0}}
+.lv-h{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);margin-bottom:8px;font-weight:700}
+.lv-n{font-size:clamp(24px,4vw,36px);font-weight:900;letter-spacing:-.03em;line-height:1}
+.lv-n span{display:block;font-size:12px;font-weight:700;color:rgba(255,255,255,.68);letter-spacing:.08em;text-transform:uppercase;margin-top:6px}
+.loopviz-phase.p4 .lv-n{color:var(--blue)}
+@media (prefers-reduced-motion:reduce){
+  .loopviz-spin{animation:none}
+  .loopviz-phase{animation:none;opacity:0}
+  .loopviz-phase.p4{opacity:1}
+}
+@media (max-width:680px){
+  .fmt{padding:64px var(--pad)}
+}
+
+/* ============================================================ PRESSE-WAND ============================================================ */
+.press-wall{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.press-card{display:flex;gap:14px;align-items:flex-start;background:var(--w);border-radius:var(--r);padding:18px 20px;text-align:left}
+.press-src{flex-shrink:0;width:34px;height:34px;border-radius:7px;display:flex;align-items:center;justify-content:center;color:#fff;font-weight:800;font-size:12.5px;letter-spacing:-.02em}
+.press-body{min-width:0}
+.press-outlet{font-size:11.5px;font-weight:700;color:#5f6368;margin-bottom:4px}
+.press-headline{font-size:14.5px;font-weight:700;line-height:1.32;color:#1a0dab;margin-bottom:5px}
+.press-snippet{font-size:12px;line-height:1.45;color:#3c3c3c;margin-bottom:6px}
+.press-time{font-size:11px;color:#70757a}
+@media (max-width:1100px){
+  .press-wall{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:680px){
+  .press-wall{grid-template-columns:1fr}
+  .press-card{padding:16px}
+}
 </style>
 </head>
 <body>
@@ -602,9 +652,9 @@ a{color:inherit}
   </div>
 
   <div class="hero-body">
-    <p class="hero-pre">Pitch für Red Bull Deutschland · Q2 2027</p>
+    <p class="hero-pre">Pitch für die Bundeswehr · Nachwuchsgewinnung · Q2 2027</p>
     <h1>Backyard<br><span class="b">×</span> <span class="out">Bike</span></h1>
-    <p class="hero-lead">Ein <strong>24/7-Radrennen</strong> nach der Backyard-Regel: eine Runde pro Stunde, jede Stunde, ohne Pause. Wer am längsten durchhält, ist <strong>Last One Riding</strong>. 100 Teilnehmer auf einer abgesperrten Hochsicherheits-Strecke bei Frankfurt · rund um die Uhr live.</p>
+    <p class="hero-lead">Eine Runde pro Stunde. Ohne Pause. Wer am längsten durchhält, ist <strong>Last One Riding</strong>. <strong>100 Teilnehmer, Closed Course, 24/7 live.</strong></p>
   </div>
 
   <div class="hero-foot">
@@ -612,14 +662,14 @@ a{color:inherit}
     <span>Termin <b>Q2 2027</b></span>
     <span>Ort <b>Opel Test Center Dudenhofen</b></span>
     <span>Cast <b>100 Teilnehmer</b></span>
-    <span class="hero-scroll"><a href="/redbull-backyard">Langversion ↗</a></span>
+    <span class="hero-scroll"><a href="/backyard-bundeswehr">Langversion ↗</a></span>
   </div>
 </header>
 
 <!-- ============================================================ HINWEIS ============================================================ -->
 <div class="note">
   <b>Kurzfassung</b>
-  Diese Seite verdichtet den vollständigen Pitch auf die Kernaussagen und Zahlen. Keine neuen Fakten, keine neuen Zahlen · alle Details, Strecken- und Stream-Architektur sowie die vollständige Sign-off-Roadmap stehen in der Langversion.
+  Kernaussagen und Zahlen verdichtet, keine neuen Fakten · alle Details in der Langversion.
 </div>
 
 <!-- ============================================================ KURZFASSUNG ============================================================ -->
@@ -627,43 +677,72 @@ a{color:inherit}
   <div class="wrap">
     <div class="sum-k">Die Idee in sechzig Sekunden</div>
     <h2>Kein Rennen ums Schnellsein.<br>Eines ums <span class="b">Durchhalten.</span></h2>
-    <p class="intro">Backyard × Bike ist ein 24/7-Radrennen nach der Backyard-Regel: eine Runde pro Stunde, jede Stunde, ohne Pause. Wer seine Stundenrunde schafft, bleibt im Rennen · so lange er kann. 100 Fahrer (30 Uni-Teams + 70 Influencer &amp; Sportler) drehen ihre Runden auf einer abgesperrten Hochsicherheits-Strecke bei Frankfurt, rund um die Uhr live übertragen. Nicht das schnellste Rad zählt, sondern das längste Durchhalten.</p>
+    <p class="intro">Eine Runde pro Stunde, ohne Pause, bis nur noch einer fährt. 100 Fahrer, ein Loop, eine Wertung. Nicht das schnellste Rad zählt, sondern das längste Durchhalten im Team.</p>
 
     <div class="sum-grid">
       <div class="sc">
         <div class="q">Format</div>
-        <p>Eine Runde pro Stunde, jede Stunde, ohne Pause. Last One Riding.<span>Kein Zeitlimit · das Format endet, wenn nur noch einer fährt.</span></p>
+        <p>Last One Riding.<span>Kein Zeitlimit, bis nur noch einer fährt.</span></p>
       </div>
       <div class="sc">
         <div class="q">Reichweite</div>
-        <p>100 Teilnehmer, 100 Fan-Communities. Junge Männer 18-25.<span>Cast = Reichweite. Organisch über die Channels der Teilnehmer, keine Cold-Reach.</span></p>
+        <p>100 Teilnehmer, 100 Communities.<span>Organisch, keine Cold-Reach.</span></p>
       </div>
       <div class="sc">
         <div class="q">Strecke</div>
-        <p>Opel Test Center Dudenhofen, 22-28 km Yard-Loop.<span>Vollständig abgesperrt, eigene Security, 24/7 Sanität · Closed Course statt Stadtrennen.</span></p>
+        <p>Opel Test Center Dudenhofen.<span>Vollständig abgesperrt, Bundeswehr-Sanitätsdienst vor Ort. Alternativen in Prüfung.</span></p>
       </div>
       <div class="sc">
-        <div class="q">Benefits Red Bull</div>
-        <p>24/7 Live aus jeder Achse, Highlights über Red Bull Media-House.<span>Content-Co-Production statt Logo-Platzierung · Only Red Bull can do.</span></p>
+        <div class="q">Benefits Bundeswehr</div>
+        <p>Content im Stil von „Die Rekruten".<span>Glaubwürdig, weil dokumentarisch statt gestellt.</span></p>
       </div>
     </div>
 
     <div class="sum-kpi">
       <div class="sk lead-kpi">
         <div class="v">100<em> Teilnehmer</em></div>
-        <p>30 Uni-Teams + 70 Influencer &amp; Sportler. Jeder Teilnehmer bringt seine eigene Fan-Community mit · Reichweite ohne Cold-Reach im deutschen Cycling-Space.</p>
+        <p>30 Uni-Teams + 70 Influencer &amp; Sportler, jeder mit eigener Reichweite.</p>
       </div>
       <div class="sk">
         <div class="v">40-80 Std.</div>
-        <p>Erwartete Event-Dauer, bis der letzte Fahrer nicht mehr fährt. 24/7 live auf 4 Stream-Plattformen.</p>
+        <p>Bis der letzte Fahrer nicht mehr fährt. 24/7 live.</p>
       </div>
       <div class="sk">
         <div class="v">25 km</div>
-        <p>Östlich von Frankfurt am Main · Opel Test Center Dudenhofen, vollständig abgesperrter Closed Course.</p>
+        <p>Östlich von Frankfurt · vollständig abgesperrt.</p>
       </div>
     </div>
 
-    <p class="sum-foot"><b>Wer was macht:</b> Red Bull Deutschland ankert Brand und Content-Co-Production, Karl+Karla produziert End-to-End (Format, Strecke, Stream, Cast, Genehmigungen), Canyon liefert Material &amp; Tech, Garmin die Live-Telemetrie. <b>Nächster Schritt:</b> ein 45-minütiger Auftakt-Call.</p>
+    <p class="sum-foot"><b>Wer was macht:</b> Bundeswehr ankert Brand &amp; Content, Karl+Karla produziert End-to-End, Canyon liefert Material, Garmin die Live-Daten. <b>Nächster Schritt:</b> 45-Minuten-Auftakt.</p>
+  </div>
+</section>
+
+<!-- ============================================================ FORMAT-ANIMATION ============================================================ -->
+<section class="fmt">
+  <div class="wrap">
+    <div class="fmt-k">So funktioniert die Backyard-Regel</div>
+    <h2>Eine Runde. Jede Stunde.<br>Bis nur noch <span class="b">einer fährt.</span></h2>
+    <p class="fmt-sub">Kein Tempo entscheidet, kein Zeitlimit rettet. Nur Durchhalten, Stunde für Stunde, im Team.</p>
+
+    <div class="loopviz">
+      <div class="loopviz-track">
+        <div class="loopviz-spin"><div class="loopviz-rider"></div></div>
+        <div class="loopviz-spin rev"><div class="loopviz-rider"></div></div>
+        <div class="loopviz-center">
+          <div class="loopviz-phase p1"><div class="lv-h">Stunde 1-8</div><div class="lv-n">100<span>Start &amp; Sortierung</span></div></div>
+          <div class="loopviz-phase p2"><div class="lv-h">Stunde 9-24</div><div class="lv-n">Nacht<span>Erschöpfung greift</span></div></div>
+          <div class="loopviz-phase p3"><div class="lv-h">Stunde 25-48</div><div class="lv-n">Tiefpunkt<span>Wer aufgibt, ist raus</span></div></div>
+          <div class="loopviz-phase p4"><div class="lv-h">Stunde 49+</div><div class="lv-n">Showdown<span>Last One Riding</span></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="data" style="justify-content:center">
+      <div class="dp">Kein Zeitlimit</div>
+      <div class="dp">Verpasst = raus</div>
+      <div class="dp">Ohne Team kein Ziel</div>
+      <div class="dp">Last One Riding gewinnt</div>
+    </div>
   </div>
 </section>
 
@@ -671,37 +750,65 @@ a{color:inherit}
 <section id="warum" class="sec dark">
   <div class="wrap">
     <div class="sec-head">
-      <p class="eyebrow">Warum Red Bull · Warum jetzt</p>
-      <h2>Junge Männer wollen<br>Wettkampf. Und <span class="b">Live.</span></h2>
-      <p class="lead">Kern-Zielgruppe: junge Männer 18-25, Strava-Generation, Studenten und Berufsanfänger im urbanen Raum. Die Strava-Daten 2025 zeigen, warum dieser Cast genau jetzt zusammenkommt · und warum Backyard × Bike das Format ist, das diese Generation sucht.</p>
+      <p class="eyebrow">Warum Bundeswehr · Warum jetzt</p>
+      <h2>Junge Menschen wollen<br>Orientierung. Und <span class="b">Herausforderung.</span></h2>
+      <p class="lead">Bundeswehr-Nachwuchszielgruppe 18-25, Strava-Generation. Egal welche Herkunft: Backyard × Bike zeigt, wie weit man kommt, wenn man sich auf sein Team verlässt · genau der Gedanke, den auch die Bundeswehr lebt.</p>
     </div>
 
     <div class="honest" style="margin-bottom:44px">
-      <p>„Red Bull verleiht Flügel · <span class="b">Backyard × Bike macht daraus ein 24/7-Format.</span>"</p>
-      <p>Stunde für Stunde, vor laufender Kamera, bis nur noch einer fährt. Nicht Logo-Platzierung, sondern Content-Co-Production, die nur Red Bull liefern kann.</p>
+      <p>„Mach, was wirklich zählt." · <span class="b">Backyard × Bike macht daraus ein 24/7-Format.</span></p>
+      <p>Team- und Ausdauer-Geschichte im Stil von „Die Rekruten" · echt, weil niemand allein ins Ziel kommt.</p>
     </div>
+
+    <h4 style="font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);margin-bottom:16px">Medien-Echo · Der Extremsport-Hype ist längst da</h4>
+    <p class="lead" style="font-size:15px;margin-bottom:28px">„Last Soul Ultra" 2026 lief nach demselben Prinzip zu Fuß · und wurde in den letzten Tagen von praktisch jedem großen deutschen Medienhaus aufgegriffen.</p>
+
+    <figure class="showcase" style="margin-bottom:16px">
+      <img src="/assets/backyard-bundeswehr/references/last-soul-ultra-night.jpg" alt="Last Soul Ultra 2026, nächtlicher Start- und Zielbogen mit Countdown-Uhr">
+    </figure>
+    <p class="showcase-cap" style="margin-bottom:36px">
+      <span class="warn">Last Soul Ultra · Referenzfoto des externen Events</span>
+    </p>
+
+    <div class="press-wall" style="margin-bottom:20px">
+      <div class="press-card"><div class="press-src" style="background:#e4032e">S</div><div class="press-body"><div class="press-outlet">Spiegel</div><div class="press-headline">Ultraläufe wie der Last Soul Ultra</div><div class="press-snippet">Was hinter dem Boom mehrtägiger Backyard-Ultras steckt.</div><div class="press-time">vor 8 Stunden</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#ff9800">Z</div><div class="press-body"><div class="press-outlet">ZDF</div><div class="press-headline">Last Soul Ultra 2026</div><div class="press-snippet">630,4 km in 94 Stunden · wird Extremsport immer extremer?</div><div class="press-time">vor 5 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#0c4da1">N</div><div class="press-body"><div class="press-outlet">NDR</div><div class="press-headline">Dramatisches Final-Duell</div><div class="press-snippet">Das Kopf-an-Kopf-Rennen der letzten beiden Fahrer.</div><div class="press-time">vor 6 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#e2001a">rbb</div><div class="press-body"><div class="press-outlet">rbb24</div><div class="press-headline">„Es gibt keine Grenze"</div><div class="press-snippet">Gelaufen wird, bis niemand mehr weiterkann.</div><div class="press-time">vor 5 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#0057a8">F</div><div class="press-body"><div class="press-outlet">FOCUS online</div><div class="press-headline">Wie weit der Körper geht</div><div class="press-snippet">Die körperlichen Grenzen eines mehrtägigen Ultra-Formats.</div><div class="press-time">vor 4 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#004b93">RP</div><div class="press-body"><div class="press-outlet">RP Online</div><div class="press-headline">„Das ist wirklich brutal"</div><div class="press-snippet">Ein Teilnehmer hält mit kaum Schlaf über Tage durch.</div><div class="press-time">vor 3 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#c22026">St</div><div class="press-body"><div class="press-outlet">STERN</div><div class="press-headline">Warum Limits ausgereizt werden</div><div class="press-snippet">Warum Extremsport gerade jetzt Millionen fasziniert.</div><div class="press-time">vor 3 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#0a2540">W</div><div class="press-body"><div class="press-outlet">WELT</div><div class="press-headline">„Es verändert dich"</div><div class="press-snippet">Die persönliche Wandlung eines Teilnehmers ohne Profi-Hintergrund.</div><div class="press-time">vor 23 Stunden</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#111">taz</div><div class="press-body"><div class="press-outlet">taz</div><div class="press-headline">623 Kilometer in 4 Tagen</div><div class="press-snippet">Ein Wuppertaler Teilnehmer als Held der eigenen Stadt.</div><div class="press-time">vor 3 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#6a3d9a">DR</div><div class="press-body"><div class="press-outlet">Die Rheinpfalz</div><div class="press-headline">Die Faszination Extremsport</div><div class="press-snippet">Zwischen tiefem Respekt und Sorge kulturell eingeordnet.</div><div class="press-time">vor 3 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#f57c00">DK</div><div class="press-body"><div class="press-outlet">Deutschlandfunk Kultur</div><div class="press-headline">Von der Fitness zum Extremsport</div><div class="press-snippet">Vom Breitensport-Marathon zum gesellschaftlichen Trend.</div><div class="press-time">vor 2 Tagen</div></div></div>
+      <div class="press-card"><div class="press-src" style="background:#003c71">BR</div><div class="press-body"><div class="press-outlet">BR / ARD Mediathek</div><div class="press-headline">Übers Limit</div><div class="press-snippet">Marathon, Hyrox, Ultralauf erreichen längst nicht mehr nur Profis.</div><div class="press-time">vor 2 Tagen</div></div></div>
+    </div>
+    <p style="font-size:12.5px;color:rgba(255,255,255,.5);margin-bottom:44px">Auswahl von 12 Titeln, Berichterstattung der letzten 8 Tage · vollständige Quellenangabe in der Langversion.</p>
 
     <div class="cards" style="grid-template-columns:repeat(3,1fr);margin-bottom:28px">
       <div class="card">
         <div class="n">Wettkampf-Hunger</div>
         <h3>+39 %</h3>
-        <p>Anstieg 10K-Race-Anmeldungen Gen Z gegenüber Gen X (+7 %). Backyard × Bike liefert das Format dafür: eine klare Regel, eine messbare Leistung.</p>
+        <p>Mehr Gen-Z-Race-Anmeldungen auf Strava ggü. Vorjahr.</p>
       </div>
       <div class="card">
         <div class="n">Motivation</div>
         <h3>75 %</h3>
-        <p>Gen Z gibt Wettkampf bzw. Event als Hauptmotivation fürs Training an · nicht Fitness allein. Backyard × Bike ist der Wettkampf, an den sich die Strava-Generation hochtrainiert.</p>
+        <p>Wettkampf ist für Gen Z die Trainings-Hauptmotivation.</p>
       </div>
       <div class="card">
         <div class="n">Strava-Reach</div>
         <h3>180 Mio.</h3>
-        <p>Aktive Strava-User, über 50 % der Gen Z will Strava 2026 noch mehr nutzen. Cycling-Clubs +280 % in 2025 · der Aufmerksamkeits-Gewinner liegt im Format selbst.</p>
+        <p>Aktive User · Cycling-Clubs +280 % in 2025.</p>
       </div>
     </div>
     <p style="font-size:13px;color:rgba(255,255,255,.55);margin-bottom:44px">Quelle: Strava „Year in Sport / Das Sportjahr 2025" (DE, 30.494 Befragte plus 180-Mio.-User-Datenbasis).</p>
 
     <div class="data">
       <div class="dp">22-28 km Yard-Loop</div>
+      <div class="dp">Sanitätsdienst Bundeswehr · 24/7 medizinische Präsenz vor Ort</div>
+      <div class="dp">Energy Home auf halber Runde · Nachtsicht- &amp; Wärmebildtechnik</div>
       <div class="dp">Garmin Live-Telemetrie je Fahrer</div>
       <div class="dp">4 Stream-Plattformen</div>
       <div class="dp">3 Onboard-Cams pro Bike</div>
@@ -713,7 +820,7 @@ a{color:inherit}
     </figure>
     <p class="showcase-cap">
       <b>Echtes Testgelände, kein Stadtrennen.</b>
-      <span>Opel Test Center Dudenhofen: vollständig abgesperrt, seit Jahrzehnten im Fahrzeug-Testbetrieb.</span>
+      <span>Opel Test Center Dudenhofen: vollständig abgesperrt, seit Jahrzehnten im Fahrzeug-Testbetrieb, ideal abgestimmt mit dem Sanitätsdienst der Bundeswehr.</span>
       <span class="warn">Opel Test Center Dudenhofen</span>
     </p>
   </div>
@@ -725,30 +832,51 @@ a{color:inherit}
     <div class="sec-head">
       <p class="eyebrow">Rollen · Wer macht was</p>
       <h2>Vier Rollen.<br>Eine <span class="b">Bühne.</span></h2>
-      <p class="lead">Backyard × Bike läuft End-to-End in einer Hand: Karl+Karla produziert, Red Bull ankert die Brand und das Content-Universum, Canyon stellt das Material, Garmin das Live-Data-Layer. Keine Agentur-Kette, kein Asset-Loch.</p>
+      <p class="lead">End-to-End in einer Hand: Bundeswehr ankert Brand &amp; Content, Karl+Karla produziert, Canyon liefert Material, Garmin die Live-Daten.</p>
     </div>
 
     <div class="cards">
       <div class="card">
         <div class="n">01 · Brand-Anker</div>
-        <h3>Red Bull Deutschland</h3>
-        <p>Naming-Anker, Brand-Hoheit auf dem General-Energy-House, Highlight-Edits über Red Bull Media-House, Distribution über Red Bull TV und Cycling Social.</p>
+        <h3>Bundeswehr</h3>
+        <p>Naming-Anker, Energy Home auf halber Runde mit Technik-Erlebniszone (Nachtsicht, Wärmebild), Content im Stil von „Die Rekruten".</p>
       </div>
       <div class="card">
         <div class="n">02 · Veranstalter</div>
         <h3>Karl+Karla</h3>
-        <p>End-to-End-Produktion: Format, Strecke, Stream, Cast, Genehmigungen, Pre-Hype, Sign-off-Roadmap. KvD-Agentur Frankfurt · 10 Minuten Fahrt zur Strecke.</p>
+        <p>Format, Strecke, Stream, Cast, Genehmigungen · alles aus einer Hand.</p>
       </div>
       <div class="card">
         <div class="n">03 · Bike-Co-Partner</div>
         <h3>Canyon</h3>
-        <p>Race-Bikes für den Cast, Mechaniker-Zone, Material-Wechsel-Logistik. Co-Branding, nicht-konkurrierend zum Red-Bull-Slot.</p>
+        <p>Race-Bikes, Mechanik, Co-Branding neben der Bundeswehr.</p>
       </div>
       <div class="card">
         <div class="n">04 · Live-Data</div>
         <h3>Garmin</h3>
-        <p>Puls, Watt, GPS pro Fahrer. Live-Map-Layer, Leaderboard, Daten-Overlay für den Stream. Die Tech-Story trägt das Format.</p>
+        <p>Puls, Watt, GPS live im Stream.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ WARUM PERFEKT FÜR DIE BUNDESWEHR ============================================================ -->
+<section id="warum-perfekt" class="sec ink2">
+  <div class="wrap">
+    <div class="sec-head">
+      <p class="eyebrow">Warum perfekt für die Bundeswehr</p>
+      <h2>Acht Gründe.<br>Ein <span class="b">klarer Fall.</span></h2>
+    </div>
+
+    <div class="moat">
+      <div class="mo"><div class="n">01</div><h4>Werte-Match statt Wortspiel</h4><p>„Mach, was wirklich zählt." wird echte Renn-Mechanik.</p></div>
+      <div class="mo"><div class="n">02</div><h4>Sicherheit ist real</h4><p>Sanitätsdienst der Bundeswehr vor Ort, kein eingekaufter Notdienst.</p></div>
+      <div class="mo"><div class="n">03</div><h4>Athletische Glaubwürdigkeit</h4><p>Sportfördergruppe bringt echte Spitzensportler in den Cast.</p></div>
+      <div class="mo"><div class="n">04</div><h4>Eigene Uni-Teams</h4><p>Bundeswehr-Universitäten München &amp; Hamburg als Sonder-Teams.</p></div>
+      <div class="mo"><div class="n">05</div><h4>Bewährtes Content-Format</h4><p>„Die Rekruten" beweist: Doku-Content zieht bei dieser Zielgruppe.</p></div>
+      <div class="mo"><div class="n">06</div><h4>Energy Home an jeder Runde</h4><p>Einmal pro Stunde Pflicht-Stopp: Karriereberatung, Sanitätsdienst, Nachtsicht- &amp; Wärmebildtechnik zum Ausprobieren, organisch statt Werbebanner.</p></div>
+      <div class="mo"><div class="n">07</div><h4>Exakte Zielgruppe</h4><p>18-25-Jährige = genau die Bundeswehr-Nachwuchszielgruppe.</p></div>
+      <div class="mo"><div class="n">08</div><h4>Der Zeitpunkt stimmt</h4><p>Last-Soul-Ultra-Hype beweist: das Prinzip zieht jetzt.</p></div>
     </div>
   </div>
 </section>
@@ -757,14 +885,14 @@ a{color:inherit}
 <section class="cta">
   <p class="k">Nächster Schritt · Auftakt</p>
   <h2>Gemeinsamer Auftakt zur Besprechung. PS auf die Straße.</h2>
-  <p class="lead">45-minütiger Auftakt zwischen Red Bull Deutschland und dem Karl+Karla Team. Format-Check, offene Punkte, Slot-Klarheit. Im Anschluss läuft das Setup: Canyon-Gespräch, Garmin-Setup, Uni-Bewerbungsphase, Influencer-Cast-Akquise.</p>
-  <a href="mailto:hello@karlundkarla.com?subject=Backyard%20x%20Bike%20%C2%B7%20Red%20Bull%20Deutschland" class="cta-btn">Auftakt-Call vereinbaren ↗</a>
-  <p class="cta-sub">Karl+Karla · Backyard × Bike · Red Bull Deutschland · Canyon · Garmin</p>
+  <p class="lead">45 Minuten, Bundeswehr und Karl+Karla: Format-Check, offene Punkte, Slot-Klarheit.</p>
+  <a href="mailto:hello@karlundkarla.com?subject=Backyard%20x%20Bike%20%C2%B7%20Bundeswehr" class="cta-btn">Auftakt-Call vereinbaren ↗</a>
+  <p class="cta-sub">Karl+Karla · Backyard × Bike · Bundeswehr · Canyon · Garmin</p>
 </section>
 
 <!-- ============================================================ FOOTER ============================================================ -->
 <footer class="footer">
-  KARL<span class="p">+</span>KARLA · PR- &amp; Marketing-Agentur · Kontakt: <a href="mailto:hello@karlundkarla.com">hello@karlundkarla.com</a> · Kurzfassung · <a href="/redbull-backyard">Vollständigen Pitch lesen ↗</a>
+  KARL<span class="p">+</span>KARLA · PR- &amp; Marketing-Agentur · Kontakt: <a href="mailto:hello@karlundkarla.com">hello@karlundkarla.com</a> · Kurzfassung · <a href="/backyard-bundeswehr">Vollständigen Pitch lesen ↗</a>
 </footer>
 
 <script>
